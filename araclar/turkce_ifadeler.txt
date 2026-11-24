@@ -1,0 +1,221 @@
+﻿ac|ac
+ac|bunu ac
+ac|ac bakalim
+ac|aciver
+ac|acsaniza
+ac|acabilir misin
+ac|acar misin
+ac|lutfen ac
+ac|hemen ac
+ac|simdi ac
+ac|tekrar ac
+ac|yeniden ac
+ac|acik hale getir
+ac|devreye al
+ac|calistir
+ac|baslat
+ac|on isigi ac
+ac|isigi ac
+ac|bataryayi ac
+ac|kapiyi ac
+ac|aç
+ac|bunu aç
+ac|aç bakalım
+ac|açıver
+ac|açsanıza
+ac|açabilir misin
+ac|açar mısın
+ac|lütfen aç
+ac|hemen aç
+ac|şimdi aç
+ac|tekrar aç
+ac|yeniden aç
+ac|açık hale getir
+ac|çalıştır
+ac|başlat
+ac|ön ışığı aç
+ac|ışığı aç
+ac|bataryayı aç
+ac|kapıyı aç
+kapat|kapat
+kapat|bunu kapat
+kapat|kapat bakalim
+kapat|kapatsana
+kapat|kapativer
+kapat|kapatir misin
+kapat|kapatabilir misin
+kapat|lutfen kapat
+kapat|hemen kapat
+kapat|simdi kapat
+kapat|devre disi birak
+kapat|durdur
+kapat|sonlandir
+kapat|kapat gitsin
+kapat|on isigi kapat
+kapat|isigi kapat
+kapat|ana bataryayi kapat
+kapat|yedek bataryayi kapat
+kapat|kapiyi kapat
+kapat|bunu kapat
+kapat|kapat bakalım
+kapat|kapatsana
+kapat|kapatıver
+kapat|kapatır mısın
+kapat|kapatabilir misin
+kapat|lütfen kapat
+kapat|hemen kapat
+kapat|şimdi kapat
+kapat|devre dışı bırak
+kapat|durdur
+kapat|sonlandır
+kapat|kapat gitsin
+kapat|ön ışığı kapat
+kapat|ışığı kapat
+kapat|ana bataryayı kapat
+kapat|yedek bataryayı kapat
+kapat|kapıyı kapat
+durum|durum
+durum|durum ne
+durum|ne durumda
+durum|durum nedir
+durum|genel durum
+durum|gemi durumu ne
+durum|batarya kac
+durum|batarya yuzdesi ne
+durum|guc ne kadar
+durum|oksijen kac
+durum|hidrojen ne kadar
+durum|durum raporu ver
+durum|durumu soyler misin
+durum|her sey yolunda mi
+durum|neler oluyor gemide
+durum|durum nedir
+durum|gemi durumu ne
+durum|batarya kaç
+durum|batarya yüzdesi ne
+durum|güç ne kadar
+durum|oksijen kaç
+durum|hidrojen ne kadar
+durum|durum raporu ver
+durum|durumu söyler misin
+durum|her şey yolunda mı
+durum|neler oluyor gemide
+hasar|hasar var mi
+hasar|hasarli blok var mi
+hasar|gemide hasar var mi
+hasar|en hasarli parca hangisi
+hasar|hasar durumu ne
+hasar|hasar raporu
+hasar|parcalarda hasar var mi
+hasar|ne kadar hasar var
+hasar|hasarli parca sayisi kac
+hasar|hasar kontrolu yap
+hasar|hasar var mı
+hasar|hasarlı blok var mı
+hasar|gemide hasar var mı
+hasar|en hasarlı parça hangisi
+hasar|hasar durumu ne
+hasar|hasar raporu
+hasar|parçalarda hasar var mı
+hasar|ne kadar hasar var
+hasar|hasarlı parça sayısı kaç
+hasar|hasar kontrolü yap
+baglanti_kes|baglantiyi kes
+baglanti_kes|baglanti kes
+baglanti_kes|baglantiyi kessene
+baglanti_kes|baglantiyi keser misin
+baglanti_kes|kopruyu kes
+baglanti_kes|baglantiyi kopar
+baglanti_kes|baglantiyi sonlandir
+baglanti_kes|baglantiyi kapat
+baglanti_kes|hemen baglantiyi kes
+baglanti_kes|lutfen baglantiyi kes
+baglanti_kes|bağlantıyı kes
+baglanti_kes|bağlantı kes
+baglanti_kes|bağlantıyı kessene
+baglanti_kes|bağlantıyı keser misin
+baglanti_kes|köprüyü kes
+baglanti_kes|bağlantıyı kopar
+baglanti_kes|bağlantıyı sonlandır
+baglanti_kes|bağlantıyı kapat
+baglanti_kes|hemen bağlantıyı kes
+baglanti_kes|lütfen bağlantıyı kes
+evet|evet
+evet|tamam
+evet|olur
+evet|kabul
+evet|aynen
+evet|dogru
+evet|haklisin
+evet|tabii
+evet|peki
+evet|onayliyorum
+evet|tamamdir
+evet|doğru
+evet|haklısın
+evet|tabii
+evet|peki
+evet|onaylıyorum
+evet|tamamdır
+evet|evet yap
+evet|tamam uygula
+evet|aynen oyle
+hayir|hayir
+hayir|hayir istemiyorum
+hayir|olmaz
+hayir|vazgectim
+hayir|iptal
+hayir|gerek yok
+hayir|yapma
+hayir|kabul etmiyorum
+hayir|yanlis
+hayir|degil
+hayir|hayır
+hayir|hayır istemiyorum
+hayir|olmaz
+hayir|vazgeçtim
+hayir|iptal
+hayir|gerek yok
+hayir|yapma
+hayir|kabul etmiyorum
+hayir|yanlış
+hayir|değil
+sus|sus
+sus|sessiz ol
+sus|konusma
+sus|biraz sus
+sus|sussana
+sus|ses cikarma
+sus|sessiz kal
+sus|susar misin
+sus|bir sey deme
+sus|agzini acma
+sus|susar mısın
+sus|bir şey deme
+sus|ağzını açma
+sus|sessiz ol
+sus|konuşma
+sus|biraz sus
+sus|sussana
+sus|ses çıkarma
+sus|sessiz kal
+konus|konus
+konus|bir seyler soyle
+konus|konussana
+konus|ses ver
+konus|konusabilir misin
+konus|anlat bakalim
+konus|bir sey soyle
+konus|geri gel
+konus|sesini ac
+konus|konusmaya basla
+konus|konuş
+konus|bir şeyler söyle
+konus|konuşsana
+konus|ses ver
+konus|konuşabilir misin
+konus|anlat bakalım
+konus|bir şey söyle
+konus|geri gel
+konus|sesini aç
+konus|konuşmaya başla

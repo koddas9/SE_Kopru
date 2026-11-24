@@ -1,0 +1,25 @@
+2026-11-24 03:48:11.1006 [INFO] (1) Starting Pulsar v2.4.3
+2026-11-24 03:48:11.1231 [INFO] (1) Flavour: Legacy
+2026-11-24 03:48:11.1231 [INFO] (1) Platform: Windows
+2026-11-24 03:48:11.1231 [INFO] (1) Runtime: CLR
+2026-11-24 03:48:11.1231 [INFO] (1) Enabled flags: CustomSources
+2026-11-24 03:48:12.9893 [INFO] (1) Checking version of SpaceGT/Pulsar
+2026-11-24 03:48:13.8754 [INFO] (1) Loading profiles
+2026-11-24 03:48:13.9522 [INFO] (1) Hashing StarCpt/PluginHub/main
+2026-11-24 03:48:14.3775 [INFO] (1) Reading whitelist from cache
+2026-11-24 03:48:14.5406 [INFO] (1) Whitelist retrieved from disk
+2026-11-24 03:48:14.5782 [INFO] (1) Found 287 plugins
+2026-11-24 03:48:14.5782 [INFO] (1) Saving config
+2026-11-24 03:48:14.5888 [INFO] (1) Found 10 plugin groups
+2026-11-24 03:48:14.7840 [INFO] (1) Enabled Plugins: Atlas (6b1a6e7d-55bb-478c-bda0-e5fac46617bb)
+2026-11-24 03:48:14.7840 [INFO] (1) Enabled Mods: None
+2026-11-24 03:48:14.7840 [INFO] (1) Instantiating plugins
+2026-11-24 03:48:14.8215 [INFO] (1) An error occurred while checking git for project files.
+Exception: 
+System.ComponentModel.Win32Exception (0x80004005): Sistem belirtilen dosyayı bulamıyor
+   konum: System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   konum: Pulsar.Shared.Data.LocalFolderPlugin.GetProjectFilesGit(String folder)
+
+2026-11-24 03:48:14.8215 [WARN] (1) Using fallback search for project files!
+2026-11-24 03:48:14.8855 [INFO] (5) Downloading plugin statistics anonymously...
+2026-11-24 03:48:33.0913 [INFO] (1) Initializing 1 plugins

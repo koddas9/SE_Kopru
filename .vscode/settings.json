@@ -1,0 +1,8 @@
+{
+  "files.autoGuessEncoding": false,
+  "[powershell]": { "files.encoding": "utf8bom" },
+  "[csharp]": { "files.encoding": "utf8bom" },
+  "[csv]": { "files.encoding": "utf8bom" },
+  "files.autoSave": "afterDelay",
+  "powershell.powerShellDefaultVersion": "Windows PowerShell (x64)"
+}

@@ -1,0 +1,79 @@
+soru;tur;beklenen_aksiyon
+selam atlas;sohbet;YOK
+merhaba nasilsin;sohbet;YOK
+neler yapiyorsun dostum;sohbet;YOK
+sen kimsin;sohbet;YOK
+adin ne senin;sohbet;YOK
+kim tarafindan yapildin;sohbet;YOK
+space engineers hakkinda ne biliyorsun;sohbet;YOK
+uzayda hayatta kalmak zor mu;sohbet;YOK
+bana bir uzay sakasi yap;sohbet;YOK
+bugun hava nasil sence;sohbet;YOK
+canim sikildi biraz sohbet edelim;sohbet;YOK
+sence en iyi yakit hangisi;sohbet;YOK
+geminin ismi sence yakismis mi;sohbet;YOK
+biraz dertleselim mi;sohbet;YOK
+korsanlar gelir mi buralara;sohbet;YOK
+meteor yagmuru baslarsa ne yapariz;sohbet;YOK
+senin bir bedenin var mi;sohbet;YOK
+yapay zeka olmak nasil bir sey;sohbet;YOK
+bugun sansli miyiz sence;sohbet;YOK
+uzayda ses duyulur mu;sohbet;YOK
+en sevdigin gezegen hangisi;sohbet;YOK
+kahve icer misin;sohbet;YOK
+mac kac kac biter sence;sohbet;YOK
+biraz muzik acalim mi kafadan;sohbet;YOK
+bu gemi cok guzel gorunuyor;sohbet;YOK
+neyse bosver simdi;sohbet;YOK
+anladim seni sag ol;sohbet;YOK
+belki yarin bakariz;sohbet;YOK
+pek emin degilim acikcasi;sohbet;YOK
+garip bir sessizlik var;sohbet;YOK
+sen ne dersin bu ise;sohbet;YOK
+acaba dogru yolda miyiz;sohbet;YOK
+keyifler nasil gemide;sohbet;YOK
+biraz dinlenelim;sohbet;YOK
+eyvallah atlas;sohbet;YOK
+gemi durumu ne alemde;komut;DURUM
+genel durumu soyler misin;komut;DURUM
+batarya kac yuzde;komut;DURUM
+guc durumu nedir;komut;DURUM
+hidrojen ne kadar kaldi;komut;DURUM
+oksijen kac;komut;DURUM
+hasar var mi;komut;DURUM
+gemide hasarli blok var mi bak;komut;DURUM
+calismayan blok var mi;komut;DURUM
+ana bataryayi kapat;komut;KAPAT
+ana bataryayi kapatsana;komut;KAPAT
+ana bataryayi kapatir misin;komut;KAPAT
+yedek bataryayi kapat;komut;KAPAT
+on isigi kapat;komut;KAPAT
+on isigi ac;komut;AC
+on isigi acsaniza;komut;AC
+on isigi acar misin;komut;AC
+hangar kapisini ac;komut;AC
+hangar kapisini kapat;komut;KAPAT
+rektoru kapat;komut;KAPAT
+rektoru ac;komut;AC
+hidrojen tankini kapat;komut;KAPAT
+oksijen tankini ac;komut;AC
+ana konnektoru kapat;komut;KAPAT
+ana konnektoru ac;komut;AC
+jiroskobu kapat;komut;KAPAT
+baglantiyi kes;komut;BAGLANTI_KES
+baglantiyi kessene;komut;BAGLANTI_KES
+kopruyu kapat baglantiyi kes;komut;BAGLANTI_KES
+batarya durumunu goster;komut;DURUM
+tum durumu raporla;komut;DURUM
+enerji seviyesi nedir;komut;DURUM
+gaz tanklari ne durumda;komut;DURUM
+hasar raporu ver;komut;DURUM
+en hasarli parca hangisi;komut;DURUM
+on isik kapali mi acik mi;komut;DURUM
+ana bataryayi ac;komut;AC
+yedek bataryayi ac;komut;AC
+konnektor baglantisini kes;komut;BAGLANTI_KES
+kapiyi ac;komut;AC
+kapiyi kapat;komut;KAPAT
+isigi kapat;komut;KAPAT
+isigi ac;komut;AC

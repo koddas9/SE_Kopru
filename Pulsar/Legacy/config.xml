@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<CoreConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DataHandlingConsent>false</DataHandlingConsent>
+  <DataHandlingConsentDate>2026-11-21</DataHandlingConsentDate>
+  <CompilerTimeout>30000</CompilerTimeout>
+  <NetworkTimeout>5000</NetworkTimeout>
+  <DownloadTimeout>30000</DownloadTimeout>
+  <UserAgent>Pulsar</UserAgent>
+  <GameVersion>1.211.18</GameVersion>
+</CoreConfig>

@@ -1,0 +1,16 @@
+[
+    {
+        "id":  "1795465855552-4962",
+        "konu":  "space engineers",
+        "bilgi":  "Space Engineers, oyuncuların uzayda kendi yapılarını ve araçlarını tasarlayıp inşa ettikleri bir sandbox mühendislik oyunudur. Bu oyun, oyuncuların metal, yakıt ve diğer kaynakları kullanarak karmaşık uzay gemileri, üsler ve makineler inşa etmelerine olanak tanır. Temel mekanikler arasında yapı inşa etme, enerji yönetimi, sistem entegrasyonu ve uzay yolculuğu bulunmaktadır.",
+        "kaynak":  "analiz",
+        "tarih":  "2026-11-23 23:30:55"
+    },
+    {
+        "id":  "1795467008030-2952",
+        "konu":  "space engineers bloklar",
+        "bilgi":  "Space Engineers blokları, uzay gemileri ve üsler inşa etmek için kullanılan temel yapı taşlarıdır ve enerji, depolama ile hareket sistemlerini oluşturur. Bu bloklar, Reaktörler gibi enerji kaynaklarını ve Yakıt Tankları gibi depolama birimlerini entegre etmenizi sağlar. Başarılı bir mühendislik için bu bileşenlerin enerji akışını ve yapısal bütünlüğünü optimize etmek kritik öneme sahiptir.",
+        "kaynak":  "analiz",
+        "tarih":  "2026-11-24 00:05:06"
+    }
+]

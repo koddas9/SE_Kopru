@@ -1,0 +1,24 @@
+# Pulsar kurulumu (ayri indirilir: https://github.com/SpaceGT/Pulsar)
+Pulsar/
+
+# Calisma zamani dosyalari (protokol / canli veri)
+sohbet.txt
+cevap.txt
+komut.txt
+telemetri.txt
+pb_ozet.txt
+dogrula.txt
+log_ozet.txt
+bellek/
+bellek_durum.json
+
+# Loglar
+*.log
+
+
+# Test ciktilari
+araclar/*_sonuc_*.csv
+
+# Editor / OS
+Thumbs.db
+*.tmp

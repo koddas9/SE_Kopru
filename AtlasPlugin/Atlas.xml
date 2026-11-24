@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="GitHubPlugin">
+  <Id>6b1a6e7d-55bb-478c-bda0-e5fac46617bb</Id>
+  <FriendlyName>Atlas</FriendlyName>
+  <Author>Yerel</Author>
+  <Tooltip>Atlas: Space Engineers otonom yapay zeka operatoru (yerel gelistirme)</Tooltip>
+  <Description>Sohbetten komut alan, gemi durumunu okuyan yerel yapay zeka koprusu.</Description>
+  <Hidden>false</Hidden>
+</PluginData>

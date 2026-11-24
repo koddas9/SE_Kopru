@@ -1,0 +1,2223 @@
+
+∆∫a
+(213f893a52697f7b7a52610164b6581c7d636d55ClientPluginShared2blazeblue32/AbsolutePositionFix
+$ab9d0284-fa5a-490d-8198-dc94f775e877Absolute Position Fix*0Fixes position errors far from the world origin.2BlazeBlue32:„Fixes numerous issues with large systems like stations spawning in the air or in the ground, the searchlight light appearing offset from the source, AI pathing issues, and more. Voxel planets were advised to stay within 50,000 Km of the origin; with this fix they can be as far as 915 ls before double-precision accuracy begins to cause noticeable issues.
+í∫n
+(b74ee30f165d58a2b1d5313a1f45b59e4ac52417ClientPlugin2viktor-ferenczi/se-space-jump:
+AssetFolderAssets
+$5F00E9A7-B436-461E-90AA-E3AD577D58A4Abyss Drives*:Replaces the jump drive effect with a black smoke teleport2Space; Viktor:üJump drives now open an Elite Dangerous style gate to move the ship between two points:
+- Clouds appear at both the entry and exit locations.
+- Crew members will see the outside environment become a dark abyss.
+- Aborted and chained jumps are handled.
+
+The plugin also works in multiplayer (though the smoke is a slight self-nerf for PVP).
+Options are highly configurable and can be adjusted in the plugin settings!
+ô∫N
+(6bf331141e303d6b730242ccac103e9200bb06bc2"WesternGamer/AddMissingSearchBoxes
+"WesternGamer/AddMissingSearchBoxesAdd Missing Search Boxes*<Adds searchboxes to parts of the SE ui that should have one.2WesternGamer:<Adds searchboxes to parts of the SE ui that should have one.
+∑∫I
+(fb092dc8a5e45791db5f5722979a79e26854c2a72Pas2704/AdminAbilitiesTracker
+Pas2704/AdminAbilitiesTrackerAdminAbilitiesTracker*@Lets you keep track of admin abilities being used on the server.2Pas2704:ÁLets you keep track of admin abilities being used on the server.
+More specifically, it can keep track of players using:
+Invulnerable,
+ShowPlayers,
+UseTerminals,
+Untargetable, 
+KeepOriginalOwnershipOnPaste,
+IgnoreSafezones,
+IgnorePCU
+It also shows what abilities are currently in use in your shift + f11 menu.
+Changes are tracked with local chat messages, but will only work in multiplayer games where you are not the host.
+These chat messages can be disabled in the config if you choose.
+“
+∫`
+(d97cece8560018b1bb9a0cc057ebf302dc28ddbdPolarsADSImprovements2Po11arr/PolarsADSImprovements
+$4E0107FD-F943-42FF-BAE2-66C3A0F4A0D2Polar's ADS Improvements*sReplaces vanilla's twitchy first-person weapons with CoD / Battlefield ADS sensitivity and variable per-weapon zoom2Polar:∞
+        Aim-down-sights tuning for hand weapons, CoD / Battlefield style.
+
+        - FOV-based sensitivity: replaces vanilla's flat 0.6x ironsight look speed with monitor distance matching (coefficient 1.33, the CoD / Battlefield default), so aim feels the same at any zoom.
+        - Per-weapon zoom: set the magnification of every hand weapon, modded guns included. Vanilla presets: pistols 1.5x, launchers 1.75x, MR-8P 3x, others 2x.
+        - Smooth zoom: eased zoom in and out (0.15 s).
+
+        Keys: none of its own. Aim with your usual key; hold or toggle aim is the vanilla option in Options > Game.
+        Settings: coefficient 0 to 2, ADS multiplier, zoom time, default zoom 1 to 6x, one row per weapon.
+
+        Client-side only, works on any server. Only your view and mouse speed change.
+        Compatible with Polar's PVP Lean, Scrollable FOV and Zoom (their zoom stacks on top).
+        Known issues: modded guns join the list once a world with them is loaded.
+
+        Docs and bug reports:
+        https://github.com/Po11arr/PolarsADSImprovements
+    
+Ø∫T
+(b76a0a2859531f733c7506fe74a6e6ce3331591a2(ananace/dotnet-SEAnalogGridControlPlugin
+(ananace/dotnet-SEAnalogGridControlPluginAnalog Grid Control*PAllows for true analog control of both ships and rovers, with sticks and wheels.2Ananace:´
+    Device lists and bind management are available under Plugin settings.
+
+    The plugin needs to be installed on any server as well in order to fully support rovers.
+  RWindows;Proton
+í∫N
+(8f4ed267b74786616961e8174176c73d52b17eca2"wolfe-labs/SE-AnalogThrottlePlugin
+"wolfe-labs/SE-AnalogThrottlePlugin#WL Analog Script Input and Throttle*oAllows in-game scripts to access data from connected controllers such as gamepads, joysticks and HOTAS devices.2Wolfe
+∆∫h
+(c915277100c4fa11c135488498a56cd46ff430e4ClientPlugin2PhoenixTheSage/Anomaly:
+AssetFolderAssets/
+$A9C29274-E447-49EE-881B-C980E6D190FDAnomaly Shader Framework*$Shader Framework for Space Engineers2PhoenixTheSage:c
+Does nothing on its own. API that provides a common layer for shaders and advanced rendering.
+    
+®∫L
+(b87dd4792cd3631ca459152d0b1ae48d045094822 Allen-Wrench/ArmorReplacerPlugin
+ Allen-Wrench/ArmorReplacerPluginArmor Replacer*#Swap between armor types with ease.2dude:˘
+    Type '/replacearmor' while looking at or controlling a ship to open the selection UI. Select the type of armor you want to convert to, and click ok, this will save a new blueprint of the ship converted into the selected type of armor.
+    
+    Works in creative and survival, with small grids and large grids, and should detect modded armor types of the vanilla shapes.
+  
+†	∫X
+(2d5b5a698f1f1eb8622e7a3a5536c18fab39c3f0Source/2#Arstraea/Korean-Localization-Plugin
+$1e60723a-305f-4ef6-9bbb-4a13f7330f1aKorean Localization Plugin*UWorks with the Workshop localization pack to add Korean language support to the game.2Arstraea:Ö Works with the Korean Localization Pack on the Steam Workshop
+ (1843839106) to add Korean language support to the game.
+
+ Pulsar subscribes to the required pack when you enable this plugin
+ and apply the changes.
+
+ * Select Korean language in the game settings!
+
+ * Loads Korean fonts from a plugin cache and enables Korean input.
+   Korean input also works regardless of the UI language.
+
+ * Automatically adds Korean fonts to useful mods such as
+   TextHudAPI, RichHudMaster, and Build Info.
+
+ Legacy font-only mods 2409196107 and 2940288034, also maintained
+ by Arstraea, are skipped client-side when replacement fonts are ready.
+ Subscriptions and saved world mod lists remain unchanged.
+
+ For questions, contact Arstraea through any of the following:
+  - Korean Localization Pack on the Steam Workshop
+  - Naver Cafe (cafe.naver.com/spaceengineersforum)
+  - Ruliweb: Arstraea (member ID 5042027)BCLRJ
+1843839106RWindows
+Æ∫W
+(c78d31f73b4e70a0189332326ce897c204629e39ClientPlugin2theit8514/AssemblerSortPlugin
+theit8514/AssemblerSortPluginAssembler Sorting*Sort Assemblers the best way2	theit8514:ˆSorts the assemblers on the Production GUI.
+  
+Sort order:
+  1. The current selected block (if it is an Assembler) which is default selected.
+  2. Incomplete blocks are sorted to the bottom.
+  3. Then the assemblers are sorted by display name.
+  
+Ï∫y
+(12570d9327e794ad34aae7dcdb1ab670cd47c320ClientPlugin2viktor-ferenczi/se-aurora:$
+AssetFolderClientPlugin/Shaders/
+$EAE23956-6E0C-420C-A57A-1C3BEF85436EAurora Borealis*OAurora Borealis (Northern Lights) over the poles of planets with an atmosphere.2Viktor:›Renders volumetric Aurora Borealis (Northern Lights)
+over the poles of planets which have an atmosphere.
+
+Open the plugin's Settings for the configuration.
+        
+Original algorithm:
+
+https://blog.roytheunissen.com/2022/09/17/aurora-borealis-a-breakdown/
+https://github.com/RoyTheunissen/Aurora-Borealis-Unity
+        
+For support please join the Pulsar Discord: https://discord.gg/z8ZczP2YZY
+Please consider supporting my work on Patreon: https://www.patreon.com/semods
+    
+˘∫J
+(404d5d3c4572d05c48424fdccc058adb363adc01ClientPlugin2OwendB1/AutoDock
+$657962B9-EF6A-4052-A62B-2BDCBF3D0C64AutoDock**SE2-inspired automatic docking and landing2OwendB:≈Brings a Space Engineers 2-inspired automatic docking and terrain landing workflow to Space Engineers 1.
+
+Press the docking key once (default Ctrl+P) to scan for nearby compatible connector pairs on the ship you currently control and preview them with an in-world overlay. Press the landing key once (default Alt+P) to preview a terrain-aware landing pose based on your landing gear and hull clearance.
+
+Cycle through available connectors and target pairs, adjust lock rotation in 45 degree steps, then press the same key again to let AutoDock align, approach, and complete the maneuver automatically. Supports ships with multiple connectors, clean manual override cancellation, and in-world previews for both docking and landing.
+
+Hotkeys, connector search radius, and advanced docking behavior can be configured in the plugin settings.
+Á∫C
+(9a92ce81bfbb7104cab5bf807b1ac8f7339c46f02Pas2704/AutoFactionChat
+Pas2704/AutoFactionChatAutoFactionChat**Start in faction channel instead of global2Pas2704:øThis plugin forces your chat to start in the faction channel instead of the global channel.
+This will happen even if you are not in a faction. 
+To switch back to the global channel, use "/g".
+¬∫L
+(80ec63564de8afc41ea59081c20f95e858d79db0ClientPlugin2MalzSmith/AutoJump
+MalzSmith/AutoJumpAutoJump"MalzSmith/AutoJump*†This client side plugin adds a toolbar action that can toggle a jump drive to jump automatically when charged. This can be useful when traveling long distances.2	MalzSmith:ê
+        AutoJump
+        
+        This client side plugin adds a toolbar action that can toggle a jump drive to jump automatically when charged. This can be useful when traveling long distances.
+        
+        To use the plugin, simply add the new "AutoJump" action to your hotbar. Select a GPS target on your jump drive (or don't, I'm not your dad) and enable the "AutoJump" toggle. The ship should keep initiating jumps automatically until it reaches the target (or forever if you are blind jumping).
+        
+        
+    
+Í∫F
+(3a59fa65837ca1cc1906a9bc7978917de39222732RevelsSE/AutoRemoveSilicon
+RevelsSE/AutoRemoveSiliconAutomatic Silicon Removal*4Automatically removes Silicon ingots from your ship.2Revels:©When enabled, Silicon ingots will automatically be deleted from your ships cargo. Enable by either using the button at the bottom of a ship drills terminal page, or by adding the toggle action to your toolbar. Function will stay on until you toggle it back off, or release control of your ship.
+  
+í∫H
+(cfde1947faa607d2de79637221b0722e3bf33a132Allen-Wrench/AutoRemoveStone
+Allen-Wrench/AutoRemoveStoneAutomatic Stone Removal*6Automatically removes stone and/or ice from your ship.2dude:œWhen enabled, stone will automatically be deleted from your ships cargo. Enable by either using the button at the bottom of a ship drills terminal page, or by adding the toggle action to your toolbar. Function will stay on until you toggle it back off, or release control of your ship. *NEW* Added ice as another material to remove.
+  
+≈	∫˜
+(e31f251c951251fed606934e3cac5cdf92285164Projects/BaR Maid/Source/Shared/PluginSwitcher.csShared/Toolbox.csShared/ListSearch.csShared/AssemblerModes.csShared/Personality.csShared/PluginStorage.cs2#scotlandsyard/SpaceEngineersPlugins
+$51968B8B-6D3E-4B1D-9080-C1351A559182BaR Maid*NRuns the BaR companion script for Nanobot Build and Repair in an in-game menu.2scotlandsyard:∏The BaR companion script for the SKO Nanobot Build and Repair System as a client-side plugin, with an in-game menu instead of LCD panels.
+
+- Queues the components your Build and Repair systems are missing into assemblers.
+- Shows weld and grind targets, missing components and priority lists live.
+- Handles any number of independent groups, and finds the systems by itself.
+
+Quick start:
+1. Needs the SKO maintained Nanobot Build and Repair mod (workshop 2111073562).
+2. Type /barmaid in chat. In Setup: groups, assign an assembler to a group and set it to Main or Co-op. Assemblers start unused and Manual.
+3. Switch Auto-queue on. It's off until you do.
+
+Guide: https://github.com/scotlandsyard/SpaceEngineersPlugins/tree/main/Projects/BaR%20Maid
+Report bugs: https://github.com/scotlandsyard/SpaceEngineersPlugins/issues
+ù∫F
+(eba2192ca1e29bfdb82f3ba80cc2deea8175a27d2Bushfiend/BallTurretHelper
+Bushfiend/BallTurretHelperBall Turret Helper*4Adds a custom control to the large grid hinge block.2Bushy:‰Adds a custom control to the large grid hinge block that will autoplace and attach the smallest top part, useful for compact custom turrets. In Survival you will require a steel plate in your inventory for the part to be placed.
+Ï∫N
+(6f5f5b461842e3cff52cfc457114096f362d09f12"austinvaness/BetterInventorySearch
+"austinvaness/BetterInventorySearchBetter Inventory Search*6Highlights the item you searched for in the inventory.2avaness:öHighlights the item you searched for in the inventory. Also tweaks the production tab so that the assembler list is sorterd and your search is persistent.
+Â∫J
+(d0f72a7084c4e8d31ed90d88c8a5695d77be50f82StarCpt/SE-BetterJumpCountdown
+StarCpt/SE-BetterJumpCountdownBetter Jump Countdown**Better jump countdown with a progress bar.2StarCpt:*Better jump countdown with a progress bar.
+ó	∫Y
+(96b6fd277ae67f3f474a983e94c750a007578bb6ClientPlugin2viktor-ferenczi/se-better-store
+$22C5F3D1-AE85-4FB1-96FB-E53E9ABBF035Better Store*WA Store screen that trades with your whole ship: buy what fits, sell all, round amounts2Viktor:£
+        Replaces the screen of the Store block with one that is quicker to trade on.
+
+        - Pick your docked ship instead of a cargo container. The plugin puts what you buy into the containers with room for it, and takes what you sell from the containers that hold it.
+        - Round amounts with one click: 100 kg, 1 t, 10 t, 100 t, half, or all that fits. Type "2.5t" if you want something else.
+        - Buy what fits: the most your cargo space, your money and the Store's stock allow.
+        - Sell all of an item, or all the cargo the Store wants, with one button.
+        - Gas offers fill your ship's tanks.
+        - Works with Stores that sell bulk goods in 1,000 kg lots next to single units, like Octahedron's.
+
+        Store owners still manage their Store on the game's own screen, behind the Administration button.
+
+        Report bugs on GitHub: https://github.com/viktor-ferenczi/se-better-store/issues
+    
+ä∫\
+(f59b1c4189413e928d861c872ced243d2382492dClientPlugin2"viktor-ferenczi/se-better-terminal
+"viktor-ferenczi/se-better-terminalBetter Terminal*QTerminal UI improvements: Group renaming, block filter, show default block names.2Viktor:òTerminal UI improvements
+- Group renaming
+- Block filter
+- Show default block names
+- Block context menus
+- Ship organizer: systematic block names, groups and cockpit toolbar, with revert
+- Other QoL improvements
+
+Please see the full documentation on GitHub:
+https://github.com/viktor-ferenczi/se-better-terminal
+
+Please consider supporting my work:
+- Patreon: https://www.patreon.com/semods
+- PayPal: https://www.paypal.com/paypalme/vferenczi/
+
+Bug reporting channel: #bug-reports
+SE Mods Discord https://discord.gg/PYPFPGf3Ca
+
+Enjoy!
+
+ˇ∫I
+(53a1d342f9b1493c2fd72e6b4687ed019a0348d32StarCpt/SE-BigAssemblerOrders
+StarCpt/SE-BigAssemblerOrdersLarger Assembler Orders*%Allows larger assembler order amounts2StarCpt:IThis plugin adds Ctrl+Shift+Alt keybind to add 10,000 items to the queue.
+´∫D
+(486e1380b375920ec0ebdb2f01790f3ad99417422austinvaness/BlockPicker
+austinvaness/BlockPickerBlock Picker*1Allows you to pick the target block using Ctrl+G.2avaness
+è∫F
+(609ddde26f18dcbdb7db0a997fc4c81426fa632b2WesternSpace/BreathControl
+FerrenF/BreathControlBreathControl*8Disable or adjust the engineer's heavy breathing sounds.2Ferren:\Disables or adjusts the sound of heavy breathing by the engineer while in realistic mode.
+  
+“∫U
+(be95d6c6a20e60657f72cb553200e5650d263812ClientPluginShared2CometWorks/bugfixes
+bugfixesBugfixes*>Fixes long-standing bugs may never be fixed in the game client2
+CometWorks:See the README on GitHub
+ù∫@
+(8aaf51aab48e2cab06c7c4cfad0a613f269cc1982KlimeSE/BuildFreedom
+KlimeSE/BuildFreedomBuild Freedom*,Build tools for SE. Currently: Paste freedom2Klime
+…	∫Y
+(2f9b90ccb570e80f8158205853de5cc440f47f4dClientPlugin2viktor-ferenczi/se-camera-group
+viktor-ferenczi/se-camera-groupCamera Group*?Allows cycling over groups of cameras, searchlights and turrets2Viktor:ÚAllows cycling over groups of cameras, searchlights, turrets and turret controllers using a single toolbar button.
+
+Configuration option to disable the third person view even if the world would allow for using that. This option is for increased realism and should only be used by experienced SE players.
+
+1. Group the relevant blocks (cameras, searchlights, turrets or turret controllers)
+2. Add the groups to the relevant cockpit or RC toolbar as a View or Control action
+3. Use the toolbar buttons to cycle through (view or control) the working blocks
+
+Do NOT group cameras with the other supported blocks. Cameras have a View action, while the searchlight and turrets have a Control action. They cannot be mixed.
+
+More information:
+https://github.com/viktor-ferenczi/se-camera-group
+
+For support join the SE Mods Discord:
+https://discord.gg/PYPFPGf3Ca
+
+Please consider supporting my work on Patreon:
+https://www.patreon.com/semods
+
+One time support via PayPal:
+https://www.paypal.com/paypalme/vferenczi/
+
+  
+¢∫K
+(91931059690b3b46fba58f65424015f48fc6338f2StarCpt/SE-CameraLCD-Remastered
+StarCpt/SE-CameraLCD-RemasteredCamera LCD Remastered*?A plugin that allows a camera to be displayed on an LCD screen.2StarCpt:œA plugin that allows a camera to be displayed on an LCD screen.
+
+This is a rewritten version of the original plugin that fixes several issues and improves performance.
+
+To use, set the LCD screen to Apps mode and then select Camera Display in the list. You must also put the name of the camera in the block Custom Data. To specify a specific screen, use [Index]:[CameraName] example: 1:Camera. The index starts at 0, so the second display in the list is index 1.
+
+Ç∫Z
+(b3feec7c58a69b4d7cac221f8b22a9b52a89edf4ClientPlugin2 dawidmachon/se-cargo-hud-overlay
+ dawidmachon/se-cargo-hud-overlayCargo HUD Overlay*aPassive HUD overlay showing ore / ingot / component / ammo totals of the local grid while seated.2dawidmachon:˝Displays a compact overlay on the HUD with the current cargo of the grid you are seated in (local grid only, no subgrids). Categories: ore, ingot, components, ammunition. Updates only when cargo changes. Hidden on foot, in spectator, and in minimal HUD.
+õ∫C
+(06cf791d10e1b836e26cb0981f4ae492ed2292812Allen-Wrench/ChatFilter
+Allen-Wrench/ChatFilterChat Filter*6Mute individual players chat messages, or all of them!2dude:ÓBlock chat messsages from specific players or hide chat messages by type (global/faction/whisper). 
+  ** Gui improved so you dont need to use chat commands anymore **
+  /mute [player name] - blocks chat messages from a player.
+  /unmute [player name] - unblocks players messages.
+  /cfconfig - open configuration window to set visibility for a specific chat channel.
+È∫`
+(e774fcbf745d8a55afb999ad9ab4e87cbce2a850src/LinuxHotas/2#cheezecake-dev/CheezecakeLinuxHotas
+$44E8E046-B17D-41AB-80DB-D9686350F95ACheezecake's Linux HOTAS*[Early release: fly with joysticks, a separate stick and throttle included, on native Linux.2
+Cheezecake: EARLY RELEASE, not yet tried with a physical HOTAS. Fly with joysticks on native Linux (Interim, no Proton), flat or in VR with Cheezecake's SE VR.
+
+- Every joystick, throttle and pedal set at once, read straight from the kernel; devices can come and go while the game runs
+- Axes add to the keyboard, mouse and VR hands: move, pitch, yaw, roll and the camera
+- Buttons and hats: fire, target lock, lights, dampeners, handbrake, power, parking, wheel jump, brakes, toolbar
+- Wheels: steering, drive force by throttle (single player or a lobby you host), and a brake lever
+- Programmable blocks named [AnalogThrottle] get wolfe's AnalogThrottle format, so his scripts work unchanged
+
+Set up binds under Plugin settings. On Windows, use ananace's Analog Grid Control instead.
+
+Bug reports: https://github.com/cheezecake-dev/CheezecakeLinuxHotasBCoreCLRRLinux
+¯∫‹
+(822673938f8ef1b79f8bda3b852adef0fe2c6055src/SpaceEngineersVR/2cheezecake-dev/CheezecakeSEVR:z
+openxr_loaderlib/openxr/openxr_loader.dll"@66946ea6e9cc2649e299ec412521c5eafe56c635d05055097fe4db81e11932df(JWindows
+$600D4D7F-D4FE-41F4-8A35-CB848B8B3E3FCheezecake's SE VR*TEarly access: play Space Engineers in a VR headset, with your hands, through OpenXR.2
+Cheezecake:›
+EARLY ACCESS. Play Space Engineers 1 in a PC VR headset. The game's own renderer draws each eye, through OpenXR: no VorpX, ReShade or other injector.
+
+- Tools sit in your hands and aim where you point; hold rifles and tools with both hands
+- Hold the stick and throttle to fly; press buttons with a fingertip; grab seats, doors and terminals to use them
+- Climb along hulls and ladders by hand; open your helmet by gripping it
+- Tools wheel, actions wheel, a wrist panel, and your suit status on your wrist
+- Standing or seated play, with height calibration; dynamic resolution
+
+To start: connect the headset first, start the game with Pulsar's Legacy launcher, and hold the left Menu button to recentre. Settings are in Options > VR.
+
+Linux (native, no Proton): start the game with Pulsar's Interim launcher. It needs the distribution's OpenXR loader, WiVRn and, for now, a patched DXVK Native; the README has the steps.
+
+Early access: tested only on a Quest 3 over Meta Link (cable) with an RTX 3060. Other OpenXR headsets and runtimes should work but are untested; Vive wands have their own layout, not yet tried on real wands. Meta advises that NVIDIA drivers newer than 591.86 can make Link freeze.
+
+Controls, known issues and bug reports: https://github.com/cheezecake-dev/CheezecakeSEVR
+
+A separate project, not related to Math0424's earlier SpaceEngineersVR plugin.BCLR,CoreCLRRWindows,Linux
+Ω	∫T
+(baf963c0e86232aa457e08093a793797f63b93dcClientPlugin2lolifamily/ChineseAnywhere
+$09540800-AB40-476F-B4BC-A708CF797D96Chinese Anywhere*9Display and type Chinese and Japanese in any UI language.2
+lolifamily:‘Display and type Chinese and Japanese in any UI language, without translating anything.
+
+Missing characters come from the game's own Chinese and Japanese fonts: all common Simplified Chinese and kana, about 3/4 of common kanji and 2/3 of common Traditional Chinese; the rest show as boxes.
+
+Also fixes the game's IME support:
+- the candidate window shows at the caret
+- Enter confirms the word, not also the dialog
+- Enter, Tab, undo and redo work in multi-line boxes like the Programmable Block editor
+- undo takes back a whole word from the IME
+- Up and Down keep the caret's column after typing
+- mods receive the typed text
+- IME work now runs on the game thread: no crashes while composing, no garbled text at low FPS
+- text box focus changes no longer wait for the render thread: no hitch, no freeze with -render_sync
+- no system-wide keyboard hook, which delayed every keystroke in other programs
+
+In every UI language, undo and redo leave the caret where the text changed.RWindows,Proton
+à
+∫ò
+(bfd2834fd945106a6d6285869e5916062514f805CompatibilityCoreDiagnostics
+EntrypointOverlayProfilesRenderScreensTools2arsnekfcn/CleanFeed
+arsnekfcn/CleanFeed	CleanFeed*QKeep selected HUD elements visible while hiding them from supported game capture.2arsnek:ÂIndependent HUD privacy controls for Space Engineers recording and streaming.
+
+CleanFeed can leave selected HUD elements visible to the player while removing them from NVIDIA, OBS Game Capture, and other compatible game-capture recordings. Player visibility can also be configured independently, and an unfocused-window privacy guard prevents supported HUD from appearing in a stream during alt-tab.
+
+Explicit compatibility controls for vanilla HUD, HUDLCD, WeaponCore, WC Radar, Flight HUD, Flight Vector, Beaconless Thrust/Power Signals, Flip and Burn, GameCore's Hand Terminal, and BuildInfo's toolbar info panel, plus best-effort discovery for other HUD providers. Unsupported render paths remain visible and are reported in the settings screen.
+
+Requires Windows and Pulsar (Legacy or Interim), and windowed or fullscreen-window mode. Capture compatibility varies by recorder; Display Capture is not a clean-feed route.
+
+MIT. Source and issue reporting: https://github.com/arsnekfcn/CleanFeedRWindows
+µ∫|
+(cb93d481b60c605872314ea6a3832262cfb3a0dcClientDiagnosticsPlugin#Shared/Cluster/Diagnostics/Protocol2CometWorks/cluster
+$e040c838-8e95-41c1-b38b-15774b1cc5c5Cluster Diagnostics*/Rank-aware cluster diagnostics in the F11 menu.2
+CometWorks:ÆCurrent node diagnostics for players; node roster, World Authority and registry diagnostics for admins and owners. Requires a cluster release with client diagnostics support.BCLR,CoreCLR
+í∫=
+(b371e29cb8f879400adeb07cb0180a68266c6b132arsnekfcn/Conduit
+arsnekfcn/ConduitConduit*ÃA generic pipe: forwards tagged [CDT:...] data from block Custom Data (only on grids you can vanilla-access) to a backend you run (or a local file). It never senses anything itself and sends no positions.2arsnek:ÃA generic, format-agnostic data pipe for Space Engineers.
+
+Conduit forwards any block Custom Data tagged [CDT:...] to a backend you run (HTTPS POST) or a local file, wrapped in a small standard envelope. It never interprets the payload and never senses anything itself.
+
+Bring-your-own-backend: there is no author server; data goes only where you point it. The in-game menu (Ctrl+Shift+Home) sets destination, auth (none / bearer / OAuth2), sinks, and sync rate; optional in-game sign-in binds a per-member token, stored DPAPI-encrypted.
+
+MIT. Source: https://github.com/arsnekfcn/ConduitRWindows;Proton
+ ∫R
+(3623f9ceb45c3b670dbab61ea1832a28131fb0bbClientPlugin2KerboNerd/ConveyorHelper
+KerboNerd/ConveyorHelperConveyor Helper*6Shows conveyor port directions on the placement ghost.2LYNX:âClient-only placement helper for conveyor ports.
+
+While you are placing a block, Conveyor Helper draws thick cyan markers on every conveyor port of the ghost, pointing outward so you can see how the block will connect before you confirm.
+
+Works with vanilla conveyors and modded ones (including AQD armored T/X/corner pieces) by reading the block's conveyor dummies - no per-mod setup.
+
+Toggle on/off with NumPad * (configurable in the plugin settings). Visuals only; does not change placement rules or conveyor behavior.
+˜∫D
+(7f795a0b2850935e039f9b3ad134cfd312ae40f72opekope2/CosmicWineFixes
+opekope2/CosmicWineFixesCosmic Wine Fixes*ÓFixes the clipboard bug (enabled by default)
+Lets you automatically open log when the game crashes (in case the log button shows an error) (disabled by default)
+Lets you replace 'Exit to Windows' with 'Exit to Linux' (disabled by default)2opekope2RProton
+Ü∫Q
+(a4630325dfdd85c25e1218073869f80312d04c152%WesternGamer/CreativeModeEnhancements
+%WesternGamer/CreativeModeEnhancementsCreative Mode Enhancements*=Tools and changes that make building in creative mode easier.2WesternGamer:üTools and changes that make building in creative mode easier. Features that could be abused in multiplayer will disable in multiplayer if you are not an admin.
+˝∫Q
+(d40e6ed37b7df85e28864063880788bf7a94f9a62%WesternGamer/CustomLoadingBackgrounds
+%WesternGamer/CustomLoadingBackgroundsCustom Menu Backgrounds*YA plugin that allows you to customize the background on the loading screen and main menu.2WesternSpace
+∆∫t
+(dce1aed9be7a284d87d344decb8812b1cf64900cClientPluginShared*
+
+LiteNetLib1.3.12CometWorks/direct-transport
+direct-transportDirect Transport"direct-transport*3Non-Steam direct UDP multiplayer transport (client)2
+CometWorks: Lets a Space Engineers client join a dedicated server over raw UDP
+        without Steam, for headless multi-client test setups (functional and load
+        testing). Activated by the --connect option on the command line.
+        --host-lobby and --join-lobby run friends (lobby) games the same way, one
+        client hosting its world and others joining it. Also provides
+        --client-id (fake Steam identity, own user data folder, concurrent
+        instances) and --client-name (player name).
+        Requires the matching server-side Direct Transport plugin on the server.
+    BCoreCLR
+∞∫I
+(a3aab21e3aa4bd81e97e6aee0016beaeff1e85852austinvaness/DisableAnalytics
+austinvaness/DisableAnalyticsDisable Analytics*'Disables tracking and analytics by EOS.2avaness
+˝∫]
+(d930c0262c4012e5fdb544f01f1a099b551082d3ClientPlugin2#viktor-ferenczi/se-disable-autosave
+$EA345E32-38B1-454B-8AC3-729C1DC40BE4Disable Autosave*>Turns the Autosave option off in all newly created world saves2Viktor:öTurns the Autosave option off in all newly created world saves.
+
+It applies to worlds started from classic content, custom worlds, scenarios, campaigns and missions, to the Save As command of the in-game menu and to the Save As command of the Load World screen. The Autosave checkbox of the world settings screen (New World and Edit Settings) is unchecked and disabled while the plugin is enabled.
+
+World saves which already exist are never modified by this plugin, their autosave setting is left as it is until their settings are edited.
+∏∫F
+(fe94d015c143f28214086c73c66a7eccb347050f2StarCpt/DisableExportModel
+StarCpt/DisableExportModelDisable Export Model*Disable Export Model2StarCpt:Disables Export Model hotkey
+£∫U
+(ce04f6604eff85eb331d2581e17591f5baf8dc192)Math0424/DisableSpectatorMouseSensitivity
+)Math0424/DisableSpectatorMouseSensitivity#Disable Spectator Mouse Sensitivity*7Disable the ctrl+scrollwheel keybind in spectator mode.2Math0424:6Disable the ctrl+scrollwheel keybind in spectator mode
+˜∫C
+(4300caca06d0897468dc5493f9de84bb783ab8322Math0424/SERichPresence
+Math0424/SERichPresenceDiscord Rich Presence*2Enables Discord rich presence for Space Engineers.2Math0424:*Enable discord rich presence for your gameBNETFramework;CLR;Mono
+Ñ∫‚
+(e31b28532a57521040d69e50994c9256b7457f61ClientPlugin2buttheadbob/DoomForSe:
+AssetsClientPlugin/Assets:r
+Freedoom"ClientPlugin/GameData/freedoom1.7z"@e874d52701148b9dc62f1ae8144d7c4707322ea0f2d502f09f2e2d69afe7e95e0
+$426FC8AE-C04A-4F6C-806A-5384049A3211Doom for Space Engineers*APlay Doom in an in-game window. Ctrl+Shift+D opens and closes it.2SentorX:èPlay Doom inside Space Engineers. Press Ctrl+Shift+D to open or close the Doom screen.
+
+The free Freedoom game data comes with the plugin, so it works straight away. To play the original Doom, copy your own DOOM.WAD or DOOM2.WAD into the Storage\DoomForSe folder under the game's user data folder (%AppData%\SpaceEngineers); it is used instead of Freedoom.
+
+Doom keeps running while its screen is open, so the game world does too. Sound effects and music play through the game's audio (mono). Mouse look and fire are supported.
+Ã∫ó
+(a7ee058e5fda854791e44897f3f24a4ff0a32123SharedClientPlugin*;
+System.Management4.5.0
+System.Formats.Nrbf10.0.12CometWorks/dotnet-compat
+dotnet-compatDotNetCompat*%.NET 10.0 support for Space Engineers2Viktor:XPatches Space Engineers to run on .NET 10.0. The plugin loads automatically when needed.BCoreCLR
+ú∫è
+(90b08f2456030625fa06322eb76476b1f5eea71aClientPlugin*;
+System.Management4.5.0
+System.Formats.Nrbf10.0.12CometWorks/dotnet-compat
+se-dotnet-compatDotNetCompat"se-dotnet-compat*Compatibility with .NET 10.02Viktor:†Support plugin for Pulsar to run the game on .NET 10.0.
+        
+Do NOT add this plugin manually, it won't work.
+It is added by Pulsar automatically on demand.
+B
+NETCoreApp
+ì∫R
+(2f2f494aa58f2d9cb4e7574b33845d2243b81348
+plugin/src2lucakrowinkel123-dot/EMM-A
+$7e2dcfc2-62ac-5d55-aa17-c5157c72b5d5EMM-A*;Plans asteroid mining routes for the EMM-A 0.9.40B scripts.2EMM-A:Khttps://github.com/lucakrowinkel123-dot/EMM-A/tree/v0.9.40B/scripts/0.9.40B
+≤∫Q
+(7b09ca617ed865df80b8589c7c01a85e3be857a12%StrongBroArina2/SE_EasyServerConnectP
+%StrongBroArina2/SE_EasyServerConnectPEasy Server Connect*iQOL Adds a customisable window with shortcuts to the server IP connection. !!! It opens a separate window2DogBoy:chesburgar with extra picklesRWindows;Proton
+Â∫R
+(c914a7f4be36fa9edaabf02676aeeb8afe6579ceClientPlugin2BDCarrillo/EyeAdaptation
+BDCarrillo/EyeAdaptationFixedEyeAdaptation*SCorrects eye adaption to actually allow you to see, dimly, in dark interior spaces.2BDCarrillo and Muzzled:sCorrects eye adaption to actually allow you to see, dimly, in dark interior spaces.  Values provided by Muzzled.
+  
+∑∫N
+(53a294a43bea9648bf62e0bf0628fec9e684ff63	SEVersion2WesternGamer/FPSCounter
+WesternGamer/FPSCounterFPS Counter* FPS Counter for Space Engineers.2WesternGamerRWindows;Proton
+˘∫]
+(9d3c23cb0e2fc194608fe2a038748fe80bac4523ClientPlugin2#viktor-ferenczi/se-fair-server-list
+$5BD64355-A190-45AC-827E-6125BB95642CFair Server List*HServer list sorted by player count, without pinned "recommended" servers2Viktor:åMakes the server list in Join Game fair to every server.
+
+        - Keen's "recommended" servers are no longer pinned to the top of the list.
+        - The star marks your favorite servers instead. Right click a server to add it to your favorites or remove it, on any tab.
+        - Favorite servers that move to a new address are recognized by their server and world name.
+        - The list is sorted by player count by default, busiest first.
+        - Click any column header to sort by it instead, as before. All the vanilla filters work as before.
+
+        Report bugs on GitHub: https://github.com/viktor-ferenczi/se-fair-server-list/issues
+    
+¥∫[
+(d5be514dd923d421db280a2c90ae0a49a4e8d17eClientPlugin2!WesternGamer/FasterLoadGameScreen
+!WesternGamer/FasterLoadGameScreenFaster Load Game Screen*'Makes the load game screen load faster.2WesternGamer:‡This plugin will make the load game screen load up the world list faster.
+
+This plugin can be especially useful if you have many worlds on your computer.
+
+1.204+ - The plugin may improve load times of the new game screen.
+  
+ÿ	∫ﬂ
+(5c03cb22b33eb0cb2fd8489eb90a46d9dcdff631Projects/Fat Albert/Source/Shared/PluginSwitcher.csShared/Toolbox.csShared/ListSearch.csShared/Personality.csShared/PluginStorage.cs2#scotlandsyard/SpaceEngineersPlugins
+$E6CC2487-3A00-4544-B51F-49E9D1A96FB2
+Fat Albert*VCan this ship lift off and leave the planet's gravity, with the fuel and power it has?2scotlandsyard:ŸAnswers one question: can this ship lift off and get out of the planet's gravity well, and does it have the fuel and power to do it?
+
+It reads the ship's thrusters, mass, tanks, batteries, reactors and engines and the planet's gravity and atmosphere, then flies the ship straight up on paper, burning fuel and power the way the game does. Nothing on the ship is changed, so it works on any server.
+
+Quick start:
+1. Type /fat in chat, or put Fat Albert: lift-off check from a cockpit or remote control onto a toolbar.
+2. Pick your Ship and the Planet (Where I am now, or Visit a planet), then read the Lift-off check.
+3. The HUD overlay is off until you press Ctrl+Alt+F or type /fat hud.
+
+Guide: https://github.com/scotlandsyard/SpaceEngineersPlugins/tree/main/Projects/Fat%20Albert
+Report bugs: https://github.com/scotlandsyard/SpaceEngineersPlugins/issues
+ ∫D
+(4518fde375ecd6b8e9c17ff37630552abee1539d2WesternGamer/FileCleaner
+WesternGamer/FileCleanerFile Cleaner*KThis plugin deletes temporary files and log files when you launch the game.2WesternGamer
+Ò∫N
+(34f42684215a01ce3a23ea2a08e9b1eb94486bbbPlugin2WhiteFang34/FoliageRewrite
+WhiteFang34/FoliageRewriteFoliage Rewrite - Crash Fix*NFixes the RTX 50-series foliage crash. Same vanilla grass, no geometry shader.2	WhiteFang:âOn RTX 50-series GPUs, Space Engineers can crash to desktop with a graphics-device error (DXGI device-removed) whenever grass and foliage are on screen. The crash comes from the engine's original geometry-shader foliage pipeline.
+
+Foliage Rewrite replaces that pipeline with a modern compute-shader path that draws the same grass with no geometry shader, removing the crash trigger. The result matches vanilla: the same blades, wind sway, density, and draw distance.
+
+The settings cog exposes grass draw distance, density, and distance falloff, plus an enable toggle. Press Ctrl+F8 to switch the rewrite off and back on instantly, no restart needed.
+≤∫V
+(8b7448b34eb4b68be20b3e540eedb056abb6666eSharedClientPlugin2ritaelyn/FPSUnlocker
+ritaelyn/FPSUnlockerFps Unlocker*.Sets Space Engineer's Framerate Cap to 500 fps2Ritaelyn:y
+	  This plugin sets Space Engineer's Framerate Cap to 500 fps. Edit the config if you desire to have a different cap.
+  
+Ñ∫O
+(661ce581dae2533e184ed6f891f71045db3ef4082#WesternSpace/ProperGPSMarkerScaling
+#WesternSpace/ProperGPSMarkerScalingGPS Marker Scaling*$Allows GPS Icon Scale to be changed.2WesternSpace:CAllows GPS Icon Scale to be changed with Alt + Shift + Scrollwheel.
+õ∫K
+(863f502a72d09eac461593a714c33c2e9a030d5cClientPlugin2GyverX1/GXCompass
+GyverX1/GXCompass
+GX Compass*;Client-side recolorable, movable planetary compass + clock.2GyverX:ÊA clean, configurable planetary compass and clock drawn straight onto the HUD.
+
+- Client-side only: works on any server, no world mod and no Text HUD API required.
+- Recolor the text, move and resize it, with a tinted backing plate so it stays readable.
+- Cardinal letters or degrees, optional UTC + Local clock + in-game survival date, live settings dialog.
+- Follows your vehicle/character, or the view camera (V chase / ALT free-look).
+- Configure in the F2 settings dialog or with /gxc chat commands.
+
+Configure it in the plugin's settings screen. Purely visual ‚Äî it never affects the world or other players.
+ˆ∫S
+(3e545d623758792b7f96dcdfe07b5a50d62a9344ClientPlugin2shihan42/se-gps2clipboard
+shihan42/se-gps2clipboardGps2Clipboard*DAutomatically copies a newly created GPS coordinate to the clipboard2shihan42:£Gps2Clipboard is a client-side plugin for Space Engineers.
+
+It automatically copies the GPS string into the system's clipboard after using `/gps` in the chat.
+    
+≥∫A
+(1d1029ed91a1ac6158fc99ba975641651a0508692StarCpt/SE-GpsFolders
+StarCpt/SE-GpsFoldersGPS Folders*Folders in the GPS tab2StarCpt:ßAdds folders for the gps tab.
+To add gpses to a folder, set a name in the Folder Name textbox.
+It must be between 1 and 32 characters long, cannot contain colons and not be all whitespace characters.
+DO NOT delete or modify the folder information in the gps description.
+Other Features:
+- Copying and pasting whole folders if both people are using the plugin.
+- Show/Hide folders on hud
+- Double click on a folder to only browse its gpses
+- Button to copy all gpses to clipboard
+- Distance in gps tooltip
+  
+Visit the github page for more information.
+¬∫B
+(2a2cba46e087ee4cee25366ea5e43088513636a72Pas2704/GrabSingleItem
+Pas2704/GrabSingleItemGrab Single Item*3Grab inventory items one at a time with Alt + Click2Pas2704:íAllows you to grab a single item in the terminal with Alt + click.
+  Particularly useful for grabbing tools and bottles, now that they're stacked.
+ÿ∫B
+(424ac8bc4fcdef937389533eae39694cb5293b002maxpowa/GradientHelper
+maxpowa/GradientHelperGradient Helper"maxpowa/GradientHelper*-Paint color gradients across blocks on a grid2maxpowa:óCreate color gradients across blocks on a grid. Supports linear and radial modes with four interpolation options (RGB, HSV, Lab, Perceptual).
+
+Usage:
+  1. Pre-paint two blocks with the desired start and end colors.
+  2. Press Ctrl+G for linear gradient mode (or Ctrl+R for radial).
+  3. Paint action on the first block to pick the START position and color.
+  4. Paint action on a second block to pick the END position and color.
+  5. Paint any blocks on the grid to apply gradient-interpolated colors.
+  6. Newly placed blocks are also auto-colored to match the gradient.
+  7. Press the hotkey again to exit gradient mode.
+
+Hotkeys: Ctrl+G (linear), Ctrl+R (radial), Ctrl+T (cycle interpolation), Ctrl+K (toggle apply skin).
+Configure hotkeys and settings in the plugin settings dialog.
+    
+â∫P
+(c9fd46842e09d953829f3451360bdb4575908140GridImpostors2empireu/GridImpostors
+$0BAD6C9F-C5E4-46A4-9CAD-C02E62EA7AACGridImpostors*6Replaces distant grids with impostors for performance.2empireu:Ω
+    Replaces distant grids with a simple model that costs nothing to render. This makes rendering distant grids basically free.
+    Meant for heavy combat in an SDX-like environment.
+    No stability guarantees. If you have issues, report them to me.
+
+    To start, set a distance that makes the visual impact acceptable. P.S. if you zoom into the grid, it will get reverted, so don't get confused by that. WC-locked grids are also reverted.
+  
+∫∫>
+(11197e481a6c9834cff821367ce4746d5b5563002maxpowa/GridMirror
+maxpowa/GridMirrorGrid Mirror"maxpowa/GridMirror*=Mirror clipboard grids along an axis via configurable hotkeys2maxpowa:˘Mirrors the grid on your clipboard along the X, Y, or Z axis using configurable hotkeys.
+
+Usage:
+  1. Copy a grid (Ctrl+C).
+  2. "Paste" (Ctrl+V) the grid to enable paste mode and show the ghost preview.
+  3. Press the configured hotkey to mirror along the desired axis. (Default: Ctrl+Shift+X to mirror along the X axis.)
+
+Configure hotkeys in the plugin settings dialog.
+    
+ ∫A
+(2a6a94b7c9fa41e9a66ff65ed4bb745e13f5da5a2Pas2704/GridRenameFix
+Pas2704/GridRenameFixGrid Rename Fix*FStops the grid name from being updated in the info tab while it's open2Pas2704:äTired of using !rename? 
+This plugin stops the grid name from being updated while the info tab is open, allowing it to be edited properly.
+æ∫]
+(b4e2aeefeb8008a0c7d883d395b616d0b9569969HangarManager2"lucakrowinkel123-dot/HangarManager
+$b3040d0c-c7bc-5f20-b51b-dc4497cbf79cHangarManager*6Toolbar and timer commands for physical Hangar blocks.2EVY:jAdds hangar controls, automatic numbered timer commands, and exact live hangar-zone pose output for EMM-A.
+“	∫s
+(082f1a50a751dc754821a27e1a902007218144c8ClientPlugin2lolifamily/HdrRender:#
+AssetFolderClientPlugin/Assets/
+$65ECACE0-FF8F-4166-962E-495E7A93CF78
+HDR Render*yFull HDR pipeline: fp16 scRGB swapchain, BT.2390 tonemapping, R16 lighting buffer, separate UI brightness, emissive boost2
+lolifamily:†Replaces SE's SDR tonemapping pipeline with a true HDR path.
+Swapchain is upgraded to flip model R16G16B16A16_Float with scRGB color space.
+Lighting, bloom and post-process buffers are upgraded to R16G16B16A16 for full-precision HDR.
+BT.2390 tonemapping keeps the original shadows and midtones at a configurable paper white and extends highlights up to the display peak.
+Emissive billboards and GPU particles (flames, muzzle flashes, exhaust) can be boosted; diffuse content is untouched.
+UI and in-world overlays (block highlight, gizmos, crosshair) have their own brightness setting.
+Screenshots are captured as OpenEXR (HDR) and tonemapped PNG (SDR) in parallel.
+Optional G-Sync/FreeSync tearing support and low-latency mode (1-frame GPU queue).
+Auto-disables itself if it crashes during init, with a flag in the config to re-enable.
+Requires Windows HDR enabled and a supported display; can be force-enabled on SDR displays.
+Œ∫_
+(69a67baa21fc55b55f35fca60ea72b25ee05504eHeadTrackingPlugin2Corben-SpacedOut/SEHeadTracking
+Corben-SpacedOut/SEHeadTrackingHead Tracking*2Enable head tracking using the freetrack protocol.2Corben
+Ñ∫N
+(7aed7c934b5ed407aaf89c44e30c003e87a1604b2"StrongBroArina2/SEHeadTrackingPlus
+"StrongBroArina2/SEHeadTrackingPlusHeadTrackingPlus*(Move ur head like u crazy in dat cockpit2Dogboy:IUpdated version of Corben's SEHeadTracking Plugin with more functionality
+π∫D
+(e52bfc3537b2fd7251e255bc0653a6a6bf78f4f32StarCpt/SE-HideIpAddress
+StarCpt/SE-HideIpAddressHide Ip Address* 2StarCpt::Hides the IP Address in the "Continue Game" button tooltip
+œ∫J
+(e63f1235edc50cf51c9da4da2b6cce138e69d3052WesternGamer/HideVersionString
+WesternGamer/HideVersionStringHide Version String*=Makes the Main Menu cleaner by hiding the the version string.2WesternGamer
+ú∫Q
+(8d912fe20ccecf3105ca70fac591763330bd75daHudHooks2VanirDev/se-plugin-hudhooks
+$AF7C26DB-2142-46C3-AC11-2DC7771A4F39	HUD Hooks*ILets mods hide the crosshair and hold ESC while their own screen is open.2VanirDev:øGives mods control over parts of the HUD that the Mod API does not expose, over a mod message channel.
+
+    Hooks available so far:
+    - Hide the in-world crosshair.
+    - Intercept ESC, so the pause menu does not open on top of the mod's screen.
+
+    Tokens are tracked per screen, so several mods can hold hooks at the same time without interfering with each other, and the HUD returns to normal once the last token is released. Pressing ESC twice within half a second always opens the pause menu, so a mod that fails to release its token cannot lock you out.
+
+    The plugin does nothing on its own. Install it when a mod you use asks for it. Mods keep working without it, just without the hooks.
+  
+ﬂ∫C
+(51631f8df0686fb8d442acbd40b530c2d7df924a2StarCpt/SE-HudLcdSprite
+StarCpt/SE-HudLcdSpriteHudLcd 3 with sprites*)Now with 100% more sprites and cameralcd.2StarCpt:≤Spiritual successor to HudLcd.
+Features:
+- Same config format as the original mod
+- Sprite support! Screens in script mode will draw the displayed script on hud
+- CameraLCD Remastered compatibility
+- Better performance (3-4x in tests)
+- Multi-screen block support. Any blocks with lcd screens are supported
+¨∫G
+(1a7bce55615618afb7f04db2d35e6e189d5255512Garbius/HydrogenEngineSound
+Garbius/HydrogenEngineSoundDynamic Hydrogen Engine Sound*Make engine go vroom!2Garbius:ÉMakes the engine sound pitch and volume change depending on load, making the engine "rev". This effect goes really well with hydrogen powered ground vehicles but can also serve as an indicator to quickly gauge the load on the power systems of ships and bases.
+ÿ∫~
+(826a5e854d6168c4de1061536ef7ee9cd4156467*<
+Hexa.NET.ImGui2.2.9!
+Hexa.NET.ImGui.Backends1.0.182StarCpt/Pulsar.ImGui
+StarCpt/Pulsar.ImGuiImGui Dependency Plugin*.Dependency for enabling ImGui usage in plugins2StarCpt:kDependency for enabling ImGui usage in plugins.
+Check the readme at https://github.com/StarCpt/Pulsar.ImGui
+í∫^
+(af20070bfc8b3eb55a2a05d8bf31d3969aa7cdcfClientPluginShared2viktor-ferenczi/se-image-gen
+$DD45EEE2-E0BC-420E-9787-35E4EE7E75A1Image Generation*<Write /ig <prompt> on an LCD to show a generated image there2Viktor:∞Write /ig followed by a prompt as the text of an LCD or any other screen, or look at a screen and send it in chat. An image model draws the picture onto that screen in color characters.
+
+        Works offline and when hosting a friends game. Players who join need no plugin. On a server without the server plugin it generates the images you ask for, and the other players see them too.
+
+        Needs the MOSS-Image model running in a stable-diffusion.cpp sd-server, on this PC or another one with a 16 GB GPU. Setup: https://github.com/viktor-ferenczi/se-image-gen/blob/main/Docs/image-server.md
+
+        Report bugs on GitHub: https://github.com/viktor-ferenczi/se-image-gen/issues
+    
+£∫°
+(ae1d1d1d61ff7be78ffc666bb689fe6c5ed9cb0bClientPluginShared'ImpostorsMod/Mod/Data/Scripts/Impostors2CometWorks/impostors: 
+ImpostorsModImpostorsMod/Mod
+$66AA3D09-1732-445D-A2B6-A377B31AE76C	Impostors*CShows far grids and asteroids beyond the sync distance as impostors2Viktor:˝
+        Shows grids and asteroids beyond the sync distance as impostors on servers running the
+        Impostors server plugin, even when the world doesn't have the Impostors mod. In offline games
+        and when hosting a lobby, builds them for you with the Impostors mod, loaded by the plugin
+        if the world doesn't list it, and sends them to the players who joined.
+    
+∂∫C
+(b967e987dafc8a000d5e5aeba93583f84e4aa20c2WesternGamer/InGameExit
+WesternGamer/InGameExitIn Game Exit*9Allows you to exit the game directly from the pause menu.2WesternGamer
+Ì∫K
+(b31a23d3438d026ad266266d1f522b8e282681b32WesternGamer/InGameWorldLoading
+WesternGamer/InGameWorldLoadingIn Game World Loading*WAdds the ability to load, join, or start a new world while playing in a active session.2WesternGamer
+ó∫J
+(1cb0be0f339151d49071beadc902f2818a5a3f3c2Bushfiend/InteriorTurretLoader
+Bushfiend/InteriorTurretLoaderInterior Turret Loader*!Interior Turret terminal controls2Bushy:ÂThis plugin adds terminal controls to Interior Turrets so you can reload one or multiple turrets directly from the terminal. Ammo magazines must be in your player inventory or in a cargo inventory on the same grid as the turrets.
+…∫P
+(5329d8f870dcd1fd2945ee2367b7614340559b9a2$thejoun/se-jetpack-gravity-alignment
+$thejoun/se-jetpack-gravity-alignmentJetpack Gravity Alignment*Jetpack yaw around gravity axis2thejoun:àBy keeping a flying player aligned with current gravity, this plugin addresses a UX/QoL/Accessibility issue where turning to the sides while looking slighly up or down would make you immediately lose balance, potentially inducing nausea or just being inconvenient.
+‰∫C
+(8ef73a70d9b80833cc08660ee58f0cef4857ec2b2Pas2704/JumpParticleFix
+Pas2704/JumpParticleFixJump Particle Fix* Fix for jump particle visibility2Pas2704:EIncreases the max distance of the jump particle to sync/view distance
+é∫E
+(04cce0b3459d003f9dc6e8cdf07e2d265795ce0f2Allen-Wrench/JumpSelector
+Allen-Wrench/JumpSelectorJump Selector*'The better way to use your jump drives.2dude:ÍAdds a new toolbar action for your jump drives: Jump Select.
+  This amazing little window lets you input a specific distance you want to blind jump, or select one of your GPS locations to jump to *from a sorted list*.
+  Displays the current maximum distance your ship can jump just below the input box for the blind jump.
+  It also displays the status of all of your jump drives along the top of the window, and tells you what percentage they are charged if not full. You can click on those buttons to turn the jump drive on or off.
+  Right clicking on any button will turn all of your jump drives on (as long as they are not broken).
+  Removes the field of view changes from the jump effect animation.
+  Supports the custom turret controller.
+  
+¬	∫I
+(3cce4663b16cf7fc0b5d32492479cfcb89fb1f3cClientPlugin2Taeleus/Lanyard
+$57F5514B-B0B8-4332-BFB9-35FB08BB76F4Lanyard*MLink your tools to one owned or faction-shared inventory port outside combat.2Taeleus:ﬂ
+    Formerly TetherSE. Lanyard connects your tools to one owned or explicitly faction-shared inventory port.
+
+    Welder: supplies build-planner components through normal conveyor access.
+    Grinder: returns ore, ingots and components.
+    Drill: returns ore.
+
+    Equip a tool, aim at an inventory access port and type /ly to connect.
+
+    Open K > Lanyard or /ly menu for status, planner availability, tool switches, HUD preferences and shortcuts.
+
+    /ly off disconnects. /ly pause and /ly resume keep your connection while stopping or restarting automatic transfers.
+
+    /ly bounds previews the targeted grid. /ly bounds linked shows your linked working area. /ly bounds off hides it. Commands also accept /lanyard.
+
+    Stay inside the linked grid's bounds. Combat or enemy overlap starts a two-minute pause. Quiet joins do not. The timer pauses while you are away.
+
+    Connection and cooldown survive rejoining when the same player, container and port identities are preserved.
+  BCLR;CoreCLR
+´∫@
+(edc27463b1e4638277aa848d16d4020e24b886722KlimeSE/LargePlanets
+KlimeSE/LargePlanetsLarge Planets*:Allows the creation of large planets up to 2500km diameter2Klime
+Œ∫G
+(4ac6fc0982b5ab58559c5c499e5420acafc46ce92austinvaness/LcdImagePlugin
+austinvaness/LcdImagePluginImage to LCD*>Adds a button to the LCD that converts an image to characters.2avanessRWindows;Proton
+Õ∫í
+(b0eae9d5f55b9da5e7bd908ee63a94030af13f18SharedClientPlugin*4
+FFmpeg.AutoGen8.1.0
+Silk.NET.OpenAL2.23.02CometWorks/linux-compat:Ω
+LinuxDependenciesbhttps://github.com/CometWorks/linux-dependencies/releases/download/v1.0.42/se1-dependencies.tar.gz"@f56e59a0f56fafb252209c99389e5c4c2463a325f4f1848edfb3eede331714aa(0:¿
+NativeWrappershhttps://github.com/CometWorks/linux-native-wrappers/releases/download/v1.0.72/se1-native-wrappers.tar.gz"@31ecc0ff2bd4901b39eef301899d7adc3215a540cf4d1a7d9877a529b5a3e84f(0
+linux-compatLinuxCompat*!Linux support for Space Engineers2Viktor:]Patches Space Engineers to run natively on Linux. The plugin loads automatically when needed.BCoreCLRRLinux
+¿∫á
+(0d7204bfe85b0397613d1e4ce128a6d184e9c61eClientPlugin*4
+FFmpeg.AutoGen8.1.0
+Silk.NET.OpenAL2.23.02CometWorks/linux-compat
+se-linux-compatLinuxCompat"se-linux-compat*Linux compatibility2Viktor:YThis is applied right after the `se-dotnet-compat`
+plugin by the Linux version of Pulsar.B
+NETCoreApp
+â∫K
+(ba7475f35b612a00cac59da9d9d386261f3438632austinvaness/MESInhibitorPlugin
+austinvaness/MESInhibitorPluginMES Inhibitor Config*BAdds a config to disable inhibitors for Modular Encouters Systems.2avaness:¥This plugin allows you to disable the inhibitors for any encounters done through Modular Encounters Systems. All inhibitors are disabled by default, so if you wish to change which inhibitors are disabled, you can use the config file in the world's "Storage" folder.
+  
+This plugin only works in singleplayer.
+‘∫I
+(7b54e3ad526352a16d6203a883a1350d7983174d2Laavenx/MESWeaponBlacklistGui
+Laavenx/MESWeaponBlacklistGuiMES Weapon Blacklist GUI*EGUI in G menu for blacklisting weapons from MES npc weapon randomizer2Laaven
+ˇ∫Q
+(2791f992ebd30d92f329cf8d988422f55f696c1dsrc/Marigold.Plugin2Taeleus/Marigold
+$7db0d53e-7572-4cbc-911e-25fa26ef182cMarigold*:See your ship's layout and spot damaged or missing blocks.2Taeleus:ñMarigold adds a ship and station display to your HUD. To track missing blocks, first save a baseline of what your ship should look like.
+
+Sit in your main cockpit and type /mg capture in chat. Or type /mg ui, open Baselines, and click Capture this ship twice to confirm. Capture saves the blocks that are present now. If parts are already missing, choose Import blueprint under Baselines to use the complete design.
+
+Choose HD Wireframe or Textured Ship, with CPU and GPU rendering options for Textured Ship. Filter by system or damage state, and add health bars for ship systems, individual blocks or terminal groups.
+
+Open Arrange HUD to drag and resize your display and bars. Save a layout for this ship, set a default or share it with another player. Supports Pulsar Legacy and Interim.BCLR;CoreCLRRWindows;Proton
+î∫P
+(138634818e71f5a8a3762257e46f7dec1aabe3ccClientPlugin2Voxar/SE-Mirror-Plugin
+$589B0A8A-DB20-4CE3-8D6A-6B6E5FF03F04Mirror Mod Renderer*@Render plugin for the Adjustable LCD Mirror and Camera Views mod2Voxar:∫Renders Mirror and Camera views for the "Adjustable LCD Mirror and Camera Views" mod.
+
+The so far required mod manages the LCD apps, configurations, toolbar actions, properties and MP sync.
+https://steamcommunity.com/sharedfiles/filedetails/?id=3733546359
+
+Mod source at https://github.com/voxar/SE-Mirror-Mod
+    
+π∫H
+(93bee07f19ea397769c88ce9647bf82fdecb1ac72ari-steas/ModNetworkProfiler
+ari-steas/ModNetworkProfilerModNetworkProfiler*(Displays and logs mod networking status.2Aristeas:ÓThis plugin creates a seperate window upon launching Space Engineers that displays information about mod networking, including packet count and size. It also generates a log file for this information, located in the game's AppData folder.BNETFramework;CLR;Mono
+ƒ¬ 
+
+2784598126"AIM-9 Seek and Lock Tone Sound Mod2Const:áA quick mod to replace the vanilla locking/lock acquisition tone to that of the AIM-9's, and a bleep from F-14 RWR tones for unlocking.
+ä¬ 
+
+2137637584(ARMCO) Starwars Rendering*AProvides Renderer Modifications, to enhance Visuals for the game.2Kreeg:íThis mod is designed to allow the Project to enhance visuals and create that Starwars Space Environment, while also improving interaction visuals.
+T¬ 
+
+2426611028Accelerometer* Adds an accelerometer to the HUD2NatomicJ	758597413
+•¬ 
+
+3815044063Chinese Rendering Fix*NFixes Monospace fonts not being rendered when game language is set to Chinese.2Sirius_L:¢This mod fixes Monospace fonts not being rendered when game language is set to Chinese.
+Also fixed Chinese characters not being rendered when English is selected.
+Ò¬ 
+
+3630278266$Advanced Block and Thruster Renaming*1An advanced renaming utility for Space Engineers.2mamba:ˇ
+    This mod enhances block renaming in Space Engineers by adding advanced controls to thrusters and other blocks, allowing you to rename multiple blocks at once with ease.
+    *Features*
+    - Directional Thruster Renaming ‚Äì Renames based on thrust direction (F, B, U, D, L, R) using "{0}" template.
+    - Sequential Numbering ‚Äì Advanced numbering with adjustable digit format (e.g., "001").
+    - Auto-Continue and Grouping ‚Äì Smart counters that remember where you left off per grid or per block type.
+    - Flexible Separators ‚Äì Full control over the character between name and number, including completely empty separators.
+  
+Ÿ¬ 
+
+1668739492Animated Jump Drives*Animated Jump Drives ingame.2Gwindalmir, SEModder4:}Do you think the jump drive is missing something? So did we. In conjunction with SEModder4, we have animated the jump drives!
+Â¬ 
+
+3280614986Arch Jump Effect*@Replaces the jump drive effect and audio with epic orthodox one.2KesterKaster:rThis mod replaces the vanilla jump effect with a giant white oblivion arch. It also adds several audio variations.
+≈¬ 
+
+3805405596"ArmorFlow ‚Äì Smart Armor Building*BHull making allowing for clicking and dragging following geometry.2RadKreuzWerfer:ªArmorFlow analyzes existing armor geometry and helps you find, preview and build matching armor shapes. Has an optional Rich HUD Master gui
+that labels the price of what you are placing, 
+You can use N ( Default Keybind ) to attempt to match the geometry of the block you are looking at or...
+You can use Shift + N to switch to hull mode placing multiple points to place a large amount of blocks while attempting to match geometry and slope
+  
+∏¬ 
+
+3684068401Auto Disassemble*6Automatically disassembles components stored in cargo.2Casper:UIntended for the Meridian:Frontiers server. /disassemble. https://discord.gg/ECSttHRT
+–¬ 
+
+1878844801AutoRun*Automatic running.2Klime:öPress Q to start running. Press any movement key (W A S D) or Q to stop.
+
+Running speed can be varied with the scroll wheel.
+The 3 speeds are: 10m/s (sprint), 6m/s (run), 2m/s (walk)
+
+/autorun rebind
+Allows the autorun key to be changed. Supports single keys only (e.g R, X, etc)
+  
+ê¬ 
+
+3529040597Better Spotlights V3*⁄ Fixes Issues with Compatibility with Draconis Expance. Also Now Includes All light blocks from the latest DLC's and base game lights. Also now has Balanced Distances Between Large Grid And small Grid Light Blocks.
+   2Uneasyarcher
+è	¬ 
+
+2581520240Better Spotlights*WThis mod makes a number of improvements on spotlights, based on what exists in reality.2Thorn Blackwell:ÄThe hazy cone effect is removed, and the light produced is cast farther than vanilla spotlights. In reality, the cone of light haze is an effect only seen in dense atmospheres, and its appearance is also a sign of why the light is limited in range. Most of the environments a space engineer will find themselves in won't do either. In space, or on the Moon, Mars, or Europa, there is little or no atmosphere to scatter or limit light. So, on half of the planets/moons, and all of space in this game there is no reason to simulate that which would not exist.
+The lines in the light cast have been removed, because experiments with light show that they would not be visible beyond a few feet in front of the spotlight. In order for a shadow to be cast by objects in front of the light, much more of the light must be obscured. The glass guard that is supposed to create the lines doesn't block the central point of the light source in any significant way, and is therefore invisible at a distance from the spotlight itself.
+  
+}¬ 
+
+3237260730Block Culling (Mod)*MMakes fatblocks with blocks on all sides invisible. Boosts FPS upwards of 3x.2Aristeas
+Ã¬ 
+
+3410451798Block Indexer*aAdds controls to IMyTerminalBlock implementing blocks that automate adding indexes to block names2SnakeInventor:πAdds controls to IMyTerminalBlock implementing blocks taht automate adding indexes to block names
+Features:
+- Text field to set starting index manually
+- Button to add incrementing indexes to all selected blocks
+- Automatically adds letter prefixes to indexes with more than 2 digits to preserve sorting order.
+  
+®¬ 
+
+1475392343Build Colors*wThis mod allows you to create customized color sets for building, which can then be easily imported into another world.2SiskJ
+1965654081
+∞¬ 
+	514062285
+Build Info*ÇDisplays more information about the block you're holding or aiming at, along with lots of other features. *Requires Text HUD API!*2DigiJ	758597413
+À¬ 
+
+2392775805Build Info (bleeding edge)*åA more frequently updated version of BuildInfo mod. Please use this one if you want to help find and report issues. *Requires Text HUD API!*2DigiJ	758597413
+¢¬ 
+
+1697184408Build Vision*kThis is a quick access context menu designed to supplement the game's terminal. *Requires Rich HUD Master.*2
+DarkHelmetJ
+1965654081
+6¬ 
+	540223802Caldari Skybox2Stone Cold Jane Austen
+÷¬ 
+
+2923698329Camera - Over The Shoulder*.Adds another camera option to Space Engineers.2Adriano:pOver-the-shoulder is a camera view point that is featured in most modern third-person shooters and action games.
+Ó¬ 
+	806331071Camera Panning*GEnables players to change the direction of the camera while viewing it.2Digi:This mod enables players to change the direction of the camera while viewing it. Works for any camera block, modded or vanilla.
+¬¬ 
+
+3299682578CastSpectatorSC*%Enhancements to the spectator camera.2Invalid:pEnhancements to the spectator camera based off of CastSpectator by Klime. Rebindable controls through TextHUDAPI
+å¬ 
+
+3810245162Chat2PB argument router*?Allows the use of programmable block arguments in the chat box.2Tel-Arin:ñChat2PB routes slash commands (/tag argument) directly to tagged Programmable Blocks [tag] on your grid without using hotbar slots. Intercepts local chat input, hides executed commands from global chat. To set the programmable block, just add a tag inside square brackets [tag].
+H¬ 
+	801185519Colorful Icons*Adds color to the ingame icons.2typekcz
+Ì¬ 
+
+2198451962Colorful Rendering (Mod)*HThis plugin will make the game rendering more colorful like other games.2Ryukki:ÔEver felt like SE visuals were a little bland? Or that putting pee shine on Earthlike isn't a visual upgrade for the game? With this mod which uses Medieval Engineers superior visuals as base now has more vibrant colors along with shadows.
+è¬ 
+
+3163821667Conveyor Diagram*WConveyor diagram- see conveyor lines, junctions, and xray views through friendly ships.2
+BDCarrillo:ÜConveyor connectivity diagram and grid xray view toggled by left shift.  Options and rebinds can be seen by typing "/cd help" in chat.
+W¬ 
+
+2538074869Deep Space 4K - Weather fix*!High Resolution Realistic Skybox!2Habibu
+’¬ 
+
+3809623950Dense Signal HUD Colored*CCompact colored HUD. First Tab: signals only. Second Tab: full HUD.2
+Squeech007:ÿA compact, colored HUD with a signals-only mode. Press Tab once for a clean screen that still shows GPS, antennas, ore and unknown signals; press again for the full colored HUD. Credits: colors inspired by Color Hud (Apex) by Javert, signals-only idea from Signal HUD by Patrick. Replaces the default HUD, so do not combine with other HUD mods.
+n¬ 
+
+3728348696Doktor'd HUDS - Bars n Things*Just a HUD.2
+HerrDoktor:#Just another HUD mod. More to come.J 
+ä¬ 
+
+2773303518Dune Jump Effect*BChanges the default jump effect to one inspired by the Dune Series2Blues Hailfire:íSpace folding (Dune), the specific portrayal of faster-than-light travel in Frank Herbert's Dune series. Space curvature due to gravity, a central aspect of the general theory of relativity. Space-time folding, a physical concept of non-flat spacetime, related to wormholes.
+ﬂ¬ 
+
+2077166496Easy Block Renaming*aAdds controls to nearly all block types that allows you to easily rename multiple blocks at once.2Meridius_IX / Lucas:¿Adds controls to nearly all block types that allows you to easily rename multiple blocks at once.
+- Multiple Block Renaming: Simply select all the blocks you want to rename, enter the new name they should receive in the "New Naming" field, and then press the "Replace Name" button.
+- Prefix and Suffix Names: The prefix and suffix options allow you to add the text in the "New Naming" field to the existing block names. "Prefix Name" will add the text to the beginning of the block name, while "Suffix Name" will add the text to the end of the block name.
+- Reset Name: The "Reset Name" button will reset the name of selected blocks back to their default names (the name they receive when you initially build the block). Please note it does not suffix the block with numbers. This can be useful if some degenerate NPC drone decides to hack your terminal control menu and scramble all the names of your blocks. I'm sure there are other uses for it as well ;)
+  
+Ë¬ 
+
+1805199276Easy Control Button Access2Meridius_IX / Lucas:•Ever find yourself in a combat situation and scrambling in the terminal to take control of either a Remote Control or Turret? The goal of this mod is to make that scramble a little less stressful. This mod takes the Control button for the Remote Control and Turret blocks and moves it to the top of the terminal. No more scrolling!
+
+This mod may have been inspired by my own frustrations with the vanilla button placement
+§¬ 
+
+2821462932Easy Programmable Block Buttons2pyro000 / Lord Pyro:‹Moves the Edit and Recompile Buttons to the Top, recommended if you are develoving an InGameScript with MDK or whatever editor you are using.
+  
+Code copied and based on Easy Control Button Access by Meridius_IX / Lucas.
+∂¬ 
+
+22125169405Emissive Colors - Red / Green Color Vision Deficiency*äChanges the emissive colors of all blocks to allow people with Red / Green Color Vision Deficiencies to better differentiate between them.2enenra:ÿThis mod changes the emissive colors of all blocks to allow people with Red / Green Color Vision Deficiencies to better differentiate between them.
+
+Features
+- Green was changed to have more blue, resulting in a teal-adjacent color.
+- Yellow status indicators were changed to orange.
+- Orange status indicators were chagned to yellow.
+
+Notes
+- This was made specifically for w4stedspace and his particular CVD but I felt it might be beneficial for other people as well.
+  
+”¬ 
+
+3685862625Enhanced Meteor Visuals*MBrighter meteor particle effects in space, in atmosphere and at impact sites.2
+IotaSphere:ÕThis mod modifies the meteor particle effects for both space, atmosphere, and impact sites.
+Atmospheric meteors now glow brightly and emit light as they travel.
+
+Visual only: particle effects, no scripts.
+
+ú¬ 
+
+3445281509Flight HUD (Mod)**Displays your Azimuth, Elevation and Roll.2Brillcrafter:≥This is a Mod that will display your current Azimuth, Elevation and Roll, with an Artificial Horizon and scrolling displays to help you keep oriented. REQUIRES TEXTHUDAPI TO WORK J	758597413
+Ó¬ 
+
+2950011596Flight Vector* 2
+BDCarrillo:¥
+When seated in a cockpit, this mod draws aids to depict the prograde, retrograde, and gravity vector for your current grid. Note these lines are a fixed length, and only indicate direction.
+
+B(lue)ow, R(ed)everse, G(reen)ravity
+
+Runs client-side only.
+
+You can cycle the line overlays by typing "/vector lines" or "/vector symbols" in chat.  Defaults and color configurations are available, please see the mod page for details https://steamcommunity.com/sharedfiles/filedetails/?id=2950011596
+
+Credits
+-DirectedEnergy for the idea
+-Jerrai for the clever mnemonic
+J	758597413
+ﬁ¬ 
+
+3798276908Window Frame Be Gone!*+Removes the frame from the edge of windows.2
+CHKNFRYRMN:¸This is Window Frame Be Gone!
+
+This mod replaces the normal vanilla windows with frameless versions while keeping their original functionality.
+
+Existing builds that use vanilla windows will automatically use the frameless models when this mod is enabled.
+
+If you want the frameless windows as separate blocks instead of replacing vanilla ones, use the Separate Blocks Version.
+  
+≥¬ 
+
+3442090596GFA - Jump to Lightspeed*Changes the Jump-Drive visual2enenra:aThis mod swaps the Jump Drive effect with the sound and visual effet of the star wars hyperdrive.
+‡¬ 
+
+2958267813GPS Extended (Mod)*8Allows adding a GPS point at a distance from the player.2VengantMjolnir:This is a simple mod designed to do one thing, add a GPS marker at a specified distance. Use it with /xgps 'distance' 'name'. Distance is in Kilometres and the name can be whatever you want. An example: /xgps 2.5 An Asteroid I want to visit
+Ì¬ 
+
+2765229451
+GPS Helper*TGPS Helper is a set of chat commands that make management of your GPS points easier.2Kaito:Ú
+Based on GPSHelper by CrazyDave137, seemingly abandoned and non-functional. I picked it up, cleaned it a bit, and fixed issues with string filtering. Commands are the same, I just fixed some internals and minor performance issuese that nobody would have noticed anyway.
+
+Code available on GitHub[github.com].
+
+Usage
+
+[string] denotes an optional parameter. You may provide it, or leave it blank.
+
+When adding a GPS, it will be used as the base name. Omitting will use the Player name instead.
+
+When filtering, providing an argument will try to do a substring match ('contains') on the GPS name, description, and hexadecimal string representation of the colour.
+
+/gpsx [string] creates a GPS point at current location, noting the local planet in the description. An auto-incrementing hexadecimal auto-ID string is appended to uniquely identify each GPS.
+/gpsx_reset resets the auto-incrementing auto-ID. Does not modify existing GPS.
+/gps_export [string] export all matching GPS to clipboard. No argument exports all GPS.
+/gps_toggle [string] toggle visibility of all matching GPS. No argument toggles all GPS.
+/gps_off [string] turn visibility of matching GPS off. No argument toggles all GPS.
+/gps_on [string] turn visibility of matching GPS on. No argument toggles all GPS.
+/gps_remove [string] remove all matching GPS. No argument removes all GPS. WARNING: Can not be undone!
+
+Props
+
+CrazyDave137 for authoring the original mod
+Digi for putting up with my endless flood of questions and being an all round nice chap
+  
+¯¬ 
+
+3082595868GV Inventory Sorter*%Pure client-side inventory management2Merii:£This mod is a lot like Isy's Inventory Manager and uses a similar config language, but is entirely client side. There is no server load except the actual item transfers, unlike with programmable blocks.
+    
+    See https://steamcommunity.com/sharedfiles/filedetails/?id=3122025230 for usage
+˛¬ 
+
+3473006210Hide Character In Seat*%Makes character invisible in cocpits.2Dogboy:öWill make your character fully invisible upon entering any cockpit /hpe to enable/disable Perfect for playing fast ships in first person and playing in VRJ	758597413
+”¬ 
+
+2819870318Hide LCD Controls (Mod)*1Adds button to show/hide LCD controls in terminal2bcmpinc:ÏDo you like using programmable blocks, do you like them displaying information on their monitor, but don't like the clutter it gives in the control panel? This mod hides the LCD configuration controls and adds yet another control that allows you to make them visible again. The control to show/hide LCD controls is added to every block that has configurable LCDs. 
+ß¬ 
+
+2979392197Hide Platform Icons*)Hides the PC, Xbox, and Playstation icons2avaness:MThis mod will hide the platform icons by making them invisible and zero width
+e¬ 
+
+1469072169HUD Compass*3Adds a compass to the HUD. *Requires Text HUD API!*2ZeliousJ	758597413
+O¬ 
+	911144486HudLcd*"Display your LCD text on your HUD!2JawastewJ	758597413
+n¬ 
+
+2626059962HUD - Modern and Fancy"	HudModern*1A modern and fancy new HUD designed for easy use.2Adriano
+v¬ 
+
+2626756831HUD - Modern and Fancy (Color)"	HudModern*1A modern and fancy new HUD designed for easy use.2Adriano
+Œ¬ 
+
+2905820756HydrogenPlusV3*CNew visual effects for thrusters(customizable), RocketFX compatible2Hailfire + dogboy:‘
+Tired of yellow thruster flames? Blue ion thrusters don't look good with your neon red spaceship? We get it.
+ That's why we made this mod for you! Now with this mod you can not only change the color of the thruster,
+ but also its effects without any problems, with just one mouse click - expand your possibilities with Hydrogen Plus today!
+„¬ 
+
+2766681016&Star Wars Imperial Lock On Sound (Mod)*EThis mod will make the lock on sound a imperial lock on sound effect.2Jay und Drang:”Basic mod to change the vanilla lock on sound effects to that of a TIE Fighter as seen in Episode IV. Start up sound, followed by looped search effect, then faster search noise and tone when lock is established.
+€¬ 
+
+2933216135Rendering Improved2	SEModder4:™A mod used to improve rendering. This item includes, improved post-processing, cool sun flares, less-saturated overall image, dark and blue skybox and a bright blue star.
+å¬ 
+
+3125206981InvalidsAlternateUISound*XVarious edits to extremely common UI sounds you've heard hundreds of thousands of times.2Invalid
+û¬ 
+
+1843839106Korean Localization Pack*EKorean fonts and translations used by the Korean Localization Plugin.2Arstraea:üSupplies the Korean font images and translations that the Korean Localization Plugin prepares at startup. It is enabled automatically together with the plugin.
+€¬ 
+
+3170315974Leak Finder*∂Shows a path leading to the exterior of the ship while respecting airtight sides.
+This helps find air leaks preventing pressurization.
+To use it, open terminal of any Air Vent block.2Digi
+Ü¬ 
+
+1169829560#Less Drill Dust and Stone Particles*AReduces the number of particles that are used for drills in game.2Nikolas March
+¬¬ 
+
+2277303535.L.U.C.1.A.N. Suit A.I. - Ghost Industries Ltd.*[Warning, the L.U.C.1.A.N. Suit A.I. can be volatile, pessimistic and extremely sarcastic...2Lucian V. Ghost:í
+Light Universal Computer, 1st Artificial Navigator
+
+Are you tired of that outdated boring Suit A.I. voice, always giving you the same warnings over and over?
+In tandem with Lucas Inc., Ghost Industries Ltd. has put together a suit A.I. you won't get bored of.
+Charming and debonair, this Suit A.I. is a perfect gentleman at all times, and will inspire you to keep those hydrogen tanks filled.
+
+This Suit A.I. Replacement has One Hundred And Seventy Individual Voice lines, with the potential for more to be added.
+
+Warning - The Suit A.I. can also be volatile, pessimistic and extremely sarcastic. Ghost Industries Ltd. is not held accountable for injury due to misunderstanding the warnings.
+
+The Suit A.I. Mod utilises various audio portions that mods like No Breathing Sounds cancels out, so be careful when using those mods in combination, as some audio may not play in those situations.
+It also adds Oxygen warnings with Taedian's Extra HUD Warnings Mod.
+
+Replaces the following Suit and Game Audio notifications:
+
+- Station, Suit and Ship Fuel Warnings
+- Hydrogen Warnings
+- Health Warnings
+- Handbrake and Antenna Alerts
+- Many Inventory Full Notifications
+- Oxygen Warnings (With Additional Mod)
+
+I thank all the people over the years who have inspired me to update this mod every so often.
+k¬ 
+	670717906Milky Way Skybox"MilkyWay*0Milky Way skybox, based on true photos of space.2Darth Biomech
+¬ 
+	670718659$Milky Way Skybox (insane resolution)"MilkyWay*0Milky Way skybox, based on true photos of space.2Darth Biomech
+å¬ 
+
+3797793543More Custom Data Actions*=Allows for copy pasting and saving/loading block custom data.2Nerd e1:ò
+Adds the following terminal/toolbar actions to every terminal block:
+- Copy Custom Data: Copies the block's custom data
+- Paste Custom Data: Pastes the last copied custom data
+- Clear Custom Data: Clears the block's custom data
+- Save Custom Data Profile w/ a text box: Saves the block's custom data into a named profile, persists between worlds.
+- Load Custom Data Profile w/ a dropdown: Loads the block's custom data from the given named profile, persists between worlds.
+- Delete Custom Data Profile: Deletes the selected named profile.
+
+Also has a terminal toggle to enable/disable showing the toolbar actions to avoid clutter (terminal controls unaffected).
+
+Ë¬ 
+
+3586741118More Grid Info*)Displays various grid information on HUD.2Nerd e1:ÜMod that displays directional acceleration, current acceleration, hydrogen fuel times, and where your grid/camera is looking as a HUD, albeit defaulted to an off state. To turn on both, do '/togglehud a' and '/togglehud r' the first time you load this mod.
+
+Acceleration values take into account and dynamically update with gravity, listed acceleration will be the acceleration provided when you press the desired key. Negative values mean that direction is not able to counter gravity.
+
+More information coming soon‚Ñ¢
+
+Commands:
+/togglehud <hud | a, r>, toggles the desired HUD on and off. Valid HUDs: 'a'/'sa'/'accel', 'r'/'rot'
+
+/setpos <hud | a, r> <x pos> <y pos>, sets desired HUD position to the specified HUD coordinates. X and Y should range from -1 to 1 each, with (0, 0) being the center and (1,1) being top right. Valid HUDs: 'a'/'sa'/'accel', 'r'/'rot'
+
+/setsize <hud | a, r> <size>, sets desired HUD text size. Should be larger than zero. Valid HUDs: 'a'/'sa'/'accel', 'r'/'rot'
+
+/showarmor <armor type = none | none, light, heavy> - Displays all light/heavy armor on the grid being looked at. Grid must be friendly.
+- Default limit of 250 blocks shown at once, modifyable in the user config.
+
+/getsubtypeid - Gets the subtypeID of the block you're looking at.
+/gettypeid - Gets the typeID of the block you're looking at.
+/getskinid - Gets the subtype ID of the skin of the block you're looking at.
+J
+1965654081
+Æ¬ 
+
+2903639290More Thruster Actions2StarCpt:}Adds 2 toolbar actions to thrusters:
+
+Max Thrust override - sets override to 100%
+Reset Thrust override - sets override to 0%
+¶¬ 
+
+3032417765MultiplayerPredictionSwitcher*mDisables client prediction. Allows you to toggle ForceDisablePrediction with the "/toggleprediction" command.2Invalid
+â¬ 
+
+3363175955Nav Markers (Mod)*/Allows creating a 3D sphere around a GPS point.2VengantMjolnir:£Space Engineers mod to add commands for showing GPS markers as large 3D spheres in the world. Client side only and originally designed for the Sigma Draconis Expanse server to aid in navigating through space and avoiding the 'slow zones'. Useful for marking gravity wells, danger exclusion zones or any other point in space with a radius.
+
+GPS markers must have the range in Kilometers in the format of (R-<range>). For example 'Danger! (R-10)' as a GPS name would allow it to be selected.
+
+Will be updated with some chat commands for convenience.
+s¬ 
+
+2697105687No HUD Tooltips*JForces the game to be in a minimal HUD state, so block tooltips don't show2Klime
+p¬ 
+
+1171575610&Particle Performance Optimization Pack*(Reduces the number of particles in game.2Nikolas March
+å	¬ 
+
+1289485324Projections To Assembler*áThis mod adds a button to the projector block that will queue the needed components for the currently projected grid in your assembler.2Meridius_IX / Lucas:¡This mod adds a button to the projector block that will queue the needed components for the currently projected grid in your assembler.
+How To Use:
+Ensure your Projector Block and Assembler Blocks are Enabled / Turned On
+Assembler cannot be set to 'Disassemble'. It can optionally be set to 'Cooperative Mode'.
+Load your grid into the Projector Block.
+At the bottom of the Projector Block options, select the assembler you want to use from the Listbox.
+At the bottom of the Projector Block options, press the button labled 'Send To Assembler'.
+Check your Assembler queue. The projection components should now be loaded!
+Add Missing Parts From Inventory:
+If you do not want to add the full queue of components to the assembler queue, you can press the 'Send Missing Parts' button to add just the parts you do not already have in inventory.
+
+Known issue: You will not be able to use button panels, scripts, or timers to assemble parts for a projection on servers.
+›¬ 
+
+2947081810Projector Highlighter*xProjector Highlighter adds color-coded wireframe around projected blocks showing their state for clearer visual feedback2
+BDCarrillo:ÆEver had trouble finding that one projected block that didn't get placed? I introduce to you the Projector Highlighter!
+
+Projected blocks that can be built have a green wireframe around their block space, while incorrect blocks will have a red outline (without "Show Only Buildable" selected), both of which are visible through other blocks.
+
+Yellow blocks are damaged or incomplete blocks connected to parts of the projection.
+
+For simplicity, this runs only on clients and they bear the brunt of a slightly inefficient grid check. Only grids within 250m are checked every minute to see if they have any projectors.
+
+Cycle the highlights by entering /highlight in chat
+
+Expect it to take up to a minute when placing a new projector to see any effect.
+Once it's picked up on a projector updates occur every second.
+Ï¬ 
+
+3023809354Projector Cross Section2StarCpt:∏View a cutaway of projected ships with this mod! Supposedly great for hand building ships layer by layer.
+
+You can select the axis of the cutaway plane, starting layer, and layers to show from the starting layer.
+
+The blocks are only hidden visually, they can still be built even if the projected block is hidden
+Å¬ 
+
+2900046920Projector Profiles2StarCpt:SThis mod adds a couple buttons and stuff to easily save and load projector profiles
+°¬ 
+
+3354754263Rationalised Build Menu*!Better block groups in the G Menu2wellington6012:√I built this mod to be able to fit more blocks in the limited toolbar slots and have the block groups make more sense. Please see the mod's Workshop page (More Info) for the detailed description.
+·¬ 
+
+2766681393#Star Wars Rebel Lock On Sound (Mod)*BThis mod will make the lock on sound a Rebel lock on sound effect.2Jay und Drang:◊Basic mod to change the vanilla lock on sound effects to that of an X-Wing Fighter as seen in Episode IV. Start up sound, followed by looped search effect, then faster search noise and tone when lock is established.
+·¬ 
+
+3063543601Remote 3rd Person (Mod)*'Gives Remote Controls 3rd person camera2
+BDCarrillo:ÅThis mod gives remote control blocks a third person camera (if it's allowed in the world settings) controlled just like a cockpit third person camera.  Once you take control of a remote control block the camera will automatically act as a third person view.
+\¬ 
+
+1965654081Rich HUD Master*.UI Framework dependency required by some mods.2
+DarkHelmet
+¯¬ 
+
+3601651390RocketFX*DVisual effects (smoke/fire) for thrusters, HydrogenPlusV3 compatible2dogboy + Klime:Ü
+- All controls are done through the Terminal and Toolbar. Experiment with different settings to find a good effect for your grid
+
+- Thruster must be enabled and outputting atleast 20% of its maximum thrust to generate effects
+
+- Settings are saved in blueprints
+ƒ¬ 
+
+2830474647Rotate skybox with the Sun*!Rotates your skybox with the sun.2Digi:ÌThis simple mod makes it seem like you are the one rotating with the planets, instead of the sun rotating around you like it actually does, by simply rotating the skybox (starfield) with the sun. At very low sun rotation speeds (1h per day or longer) it is faint enough to just be a feeling rather than be noticeable. Not really recommended with fast sun speeds as it can induce motion sickness. And of course the mod does nothing if sun rotation is turned off. Will work with any skybox mods.
+Ç¬ 
+
+3784965557SEpedia*RA searchable in-game encyclopedia for Space Engineers. *Requires Rich HUD Master.*2marnasonJ
+1965654081
+à¬ 
+
+1289657379Screen Gunk Be Gone!*PThis mod reduces screen gunk by toning down most of the post-processing effects.2Whiplash141:ÅSince Keen does not like giving us graphical options, I decided to make a mod to remove the crap that is smeared all over the screen. I have also reduced vignette and the chromatic abomination aberration. I think that the bloom looks real neat on the tracers, so I've kept it (but had to tone it down b/c it was blinding after removing the dirt).
+
+Enjoy being able to see a bit better!
+ò¬ 
+
+3027776990Larson's Sensible Scrolling*NAlters the scrolling of some block types so that they more sense when building2LarsonStole:åThis has annoyed me for nearly all of my 3600 hours of game time, but when I heard Splitsie complain about it on his RVs at War stream, I finally felt 'not alone' in my aggravation and decided to fix it.
+
+This mod simply alters the scrolling of two block types (in both light and heavy armors) in order to make them make more sense when building; The 2x1x1 corner group and the transitions group.
+º¬ 
+
+3062279989SgmHud*Experimental HUD additions.2
+Soulbinder:xProject to learn to create new client side HUD elements. This project is experimental and for now only for personal use.
+ß¬ 
+
+3039289824
+Signal HUD*IReplaces one of the HUD states with an empty HUD that only shows signals.2Patrick:µWhy is this useful? When you hide the HUD, you can't see signals. This makes finding ore, friends, enemies, Economy stations, unknown signals, etc, impossible. This mod solves that.
+„¬ 
+
+2907163289Silent Suit*Silence, finally !2Walto:©Removes all suit voice warning
+
+This mod keeps the suit voice silent.
+
+
+
+
+You can find my source code here : https://github.com/WalTho/SilentSuit/tree/main/SilentSuit
+  
+ù¬ 
+
+2788241343Snarky Sounds*XThis mod is for people who are tired of the default suit voice, and perhaps life also...2w4stedspace :îThis mod is for people who are tired of the default suit voice, and perhaps life also...
+
+Please be aware, this suit AI does NOT care for your well being - quite the opposite. While still providing all HUD voice notifications (and with FAR more variants) this mod is more about reminding you that you should already be paying attention ;)
+
+I'd intended this for April Fools, but hey... I'm sure in some multiverse someplace it's still on time.
+
+The video is a demo of a few lines only, there are MANY more.
+
+Replaces the following Suit and Game Audio notifications:
+
+- All Suit and Ship Power Notifications
+- Hydrogen Notifications
+- Health Notifications
+- Handbrake and Antenna Notifications
+- Inventory Notifications
+- More planned...
+
+There are MANY variations (91 currently) ;)
+
+This mod was made live on Twitch with the help of the wonderful SE community, you can join us here: https://www.twitch.tv/w4stedspace
+À¬ 
+
+1662953858Sneaky Sounds - Quieter Tools*ÖThis is for those people who like hearing battle sounds loud while not being deafened by their grinder, welder and most of all drill.2Splitsie:àThis mod reduces the volume of hand tools, ship tools, weather, doors, placement sounds and a few others that often feel deafening, while leaving the explosions booming, gatlings cracking and letting you hear a little bit more of the atmospheric sounds (though not the deafening rain).
+For everyone who loves a good action movie, but doesn't feel that mining is action, this one's for you!
+  
+∞¬ 
+
+3214510627Sorter Config Reader*0Configure Sorter filters from their Custom Data.2Kaito:œ
+    This mod adds a button to the terminal controls of sorters to read the filter configuration from Custom Data.
+
+    Usage
+
+    The mod code runs every 100 ticks. Any Sorter with config in Custom Data as shown below will get configured automatically. The parsing only runs if the Custom Data has changed, so there is no continued performance cost.
+
+    [SorterConfig]
+    mode = blacklist
+    filters =
+    |Ore/Stone
+    |Ore/Iron
+    |Component/SteelPlate
+  
+J¬ 
+
+1136188499Space Just Got Real*A more realistic skybox2Dr. Novikov
+Á¬ 
+
+2950431210Status Report* 2
+BDCarrillo:∏Ever wanted a concise report of things happening on your ship? Well with simple chat inputs you can inundate yourself in data!
+
+/report
+Shows a list of commands in the chat box
+
+/report inventory
+Displays all components, ores, ingots, and ammo on board
+
+/report damage
+Shows damaged functional (not armor) blocks
+
+/report twr
+Displays thrust-to-weight ratio and max lift capability for hydrogen thrusters
+
+/report cargo
+Displays cargo capacity and fill level of your ship
+
+/report power
+Displays a count and status of functional power producing blocks
+
+Runs client-side only.
+Please see the mod page for details/updates/feedback https://steamcommunity.com/sharedfiles/filedetails/?id=2950431210
+
+
+<¬ 
+	758597413Text HUD API*Required by some mods.2Draygo
+É¬ 
+
+3478835029Thicker HBAO*4Widens HBAO radius for more pronounced fake shadows.2-Data-:•Turns up a few values in the environment.sbc that pertain to horizon based ambient occlusion. These are the fake shadows you see around edges in-game.
+  
+See the screenshots on the mod page ([Data] Thicker HBAO) for examples of what this will look like.
+
+Ping me on Discord if you have issues.
+æ¬ 
+
+3630777356&Useful Suit Warnings by Wellington6012*QLess inventory full, more quality-of-life suit warnings that actually make sense.2Wellington6012:°Useful Suit Warnings improves Space Engineers‚Äô suit audio alerts by making them clearer, smarter, and less annoying ‚Äî without changing core gameplay balance.
+‘¬ 
+
+3357036851Vans Toolbar Tweaks*)This mod improves the G-menu Block groups2VanLabyrinth:uThis is a simple mod that just changes some of the block groups to be more inline with what i believe they should be.
+î¬ 
+
+2360788836Welder Eyestrain Reduction*RThis mod reduces the intense flickering of the light produced by the welding tool.2
+Vox Serico:ÜThis mod reduces the intense flickering of the light produced by the welding tool.
+The brightness and other effects remain the same, but the strobe-like flashing has been toned down significantly.
+
+You don't need to be extra photosensitive to feel discomfort from welding for any period of time. Even Xocliw has expressed this to be annoyance over six years ago - and it's still a problem!
+
+Í¬ 
+	704012607Whip's Camera Overlay*.A modification for the default camera overlay.2Whiplash141:ÖThis is my camera overlay. It has been redesigned from the ground up to be unobtrusive yet helpful for long range weapon targeting. It is cleaner than the crappy default overlay.
+Transparency of the cross lines looks different in-game due to the nature of .dds image compression. They may appear very prominent at times but they will not obstruct the view of objects behind them too badly.
+¶¬ 
+
+2098118471Whip's Turret Overlay*2This is a turret version of my Camera Overlay mod.2Whiplash141:ºThis will apply the overlay to ANY turret in the game without any additional work. That includes turrets added by other mods.
+This will NOT work with some weapon core turrets because many of them are not actually turrets and do not inherit the turret API. As such, I can't use the turret API to modify their overlay.
+ò¬ 
+
+3413495763*Korean Font (Hide Platform Icons Included)*cOverwrite font definitions for adding Korean font, and also "Hide Platform Icons" feature included.2Arstraea:ÈÍ≤åÏûÑÏùò ÏòÅÎ¨∏ Ìè∞Ìä∏ Ï†ïÏùò ÌååÏùºÏùÑ ÌïúÍ∏Ä Ìè∞Ìä∏Í∞Ä Ìè¨Ìï®Îêú Ï†ïÏùòÎ°ú ÎçÆÏñ¥ÏîÅÎãàÎã§.
+  Hide Platform Icons Î™®ÎìúÏôÄ Í∞ôÏù¥ Ïì∞Îäî Í≤ΩÏö∞ Ï†ÅÏö©Ïù¥ ÏïàÎê† Ïàò ÏûàÏúºÎØÄÎ°ú, Ïù¥ Î™®ÎìúÎßå ÏÇ¨Ïö©ÌïòÎäî Í±∏ Í∂åÏû•Ìï©ÎãàÎã§.
+  
+Ê¬ 
+
+2940288034Korean Font for RichHudMaster*?Add korean font to Rich Hud Master, specially for Build Vision.2Arstraea:Ë= ÏÑ§Ï†ï Î∞©Î≤ï =
+
+F2Î•º ÎàåÎü¨ Rich Hud Master Ïùò ÏÑ§Ï†ïÏ∞ΩÏù∏ Rich HUD TerminalÏùÑ ÏóΩÎãàÎã§.
+
+Ïó¥Î¶∞ ÏÑ§Ï†ïÏ∞ΩÏùò ÏôºÏ™Ω Mod List:ÏóêÏÑú Build VisionÏùÑ ÏÑ†ÌÉùÌï©ÎãàÎã§.
+
+Settings -> GUI Settings Ìï≠Î™© ÏïàÏóêÏÑú Font Î∂ÄÎ∂ÑÏùÑ Ï∞æÏäµÎãàÎã§.
+
+Load Fonts Î≤ÑÌäºÏùÑ ÎàÑÎ•¥Í≥† ÏúÑÏ™ΩÏùò ÎìúÎ°≠Îã§Ïö¥ [V] Î•º ÎàåÎü¨ koKR_NanumBarunGothicÏùÑ ÏÑ†ÌÉùÌï©ÎãàÎã§.
+  
+Ö¬ 
+
+2409196107Korean Font for TextHudAPI*8Add korean font to TextHudAPI, specially for Build Info.2Arstraea:ë= ÏÑ§Ï†ï Î∞©Î≤ï =
+  
+Í∏∞Î≥∏Ï†ÅÏúºÎ°† ÎπåÎìúÏù∏Ìè¨ÏóêÏÑú ÏÇ¨Ïö©ÌïòÎäî ÌÖçÏä§Ìä∏Îì§ Ï§ë ÌïúÍ∏Ä Î∂ÄÎ∂ÑÏù¥ Ï†ïÏÉÅÏ†ÅÏúºÎ°ú ÎÇòÏò¨ Í≤ÅÎãàÎã§.
+Í∑∏Îü¨ÎÇò Ìà¥Î∞î(ÌñâÎèôÎã®Ï∂ïÎ∞î) Ï™ΩÏóêÏÑúÎäî ???? Îì±ÏúºÎ°ú ÎÇòÏò¨ Ïàò ÏûàÏäµÎãàÎã§.
+
+Ï±ÑÌåÖÏ∞ΩÏùÑ Ïó¥Í≥† F2Î•º ÎàÑÎ•¥Î©¥ ÌôîÎ©¥ Ï¢åÏ∏° ÏÉÅÎã®Ïóê Mod SettingsÎùºÎäî ÌÖçÏä§Ìä∏Í∞Ä Îú∞ Í≤ÅÎãàÎã§.
+Ïù¥Í±∏ ÎßàÏö∞Ïä§Î°ú ÎàåÎü¨ Build Info -> Toolbar Î°ú Í∞ëÎãàÎã§.
+
+Ïó¥Î¶∞ ÏÑ§Ï†ïÏ∞ΩÏùÑ Î∞ëÏúºÎ°ú ÎÇ¥Î†§ Action Status Font OverrideÎ•º Ï∞æÏïÑ ÌÅ¥Î¶≠ÌïòÏó¨ Off Î°ú Î∞îÍæ∏Î©¥ Ï†ïÏÉÅ ÌëúÏãúÎê©ÎãàÎã§.
+  
+‹∫C
+(8723090aa7d87246566d865b83d7bd34bb6f0ba72Math0424/MorePPSettings
+Math0424/MorePPSettingsMore PP Settings*!Change post processings settings.2Math0424:<Adds the ability to change lots of post processing settings.
+∑∫
+(0a6987e632fda8d2b6c3c4736f7f2232c35b58f6ClientPluginSharedMultigridProjectorApi2&viktor-ferenczi/se-multigrid-projector
+&viktor-ferenczi/se-multigrid-projectorMultigrid Projector*RAllows loading blueprints of multiple sub-grids into projectors and building them.2Viktor:ôThis plugin allows to load blueprints of multiple sub-grids into projectors and welding the blocks. Head/base blocks are added automatically as needed to connect subgrids.
+
+For support join the SE Mods Discord:
+https://discord.gg/PYPFPGf3Ca
+
+Please consider supporting my work on Patreon:
+https://www.patreon.com/semods
+
+One time support via PayPal:
+https://www.paypal.com/paypalme/vferenczi/
+
+Thank you!
+    
+õ∫F
+(33243e36abfdfeef771cf6c32e0b57dcc8811fc22StarCpt/SE-NaturalNameSort
+StarCpt/SE-NaturalNameSortNatural Block Name Sort*'Sort block names by natural sort order.2StarCpt:iSort block names by natural sort order.
+Default Sort: 1, 11, 12, 2, 8, 9
+Natural Sort: 1, 2, 8, 9, 11, 12
+£∫}
+(378849c44723dbe0ac4cfcc31546f72b5877c0b8ClientPlugin2viktor-ferenczi/se-night-vision:"
+AssetFolderClientPlugin/Assets
+$CD2C21E3-AD40-4867-9F2F-C25968258B47Night Vision*9Night vision with active and through-glass passive modes.2Space; Viktor:¢
+        Night vision inspired by Elite Dangerous. Active mode brightens dark scenes, outlines nearby
+        geometry, and uses a short-range infrared fallback. Passive mode limits the effect to one-way glass.
+
+        Hold the light key (L by default) to toggle it. A short press still toggles the light. Helmet,
+        camera, and spectator modes can be changed in the plugin settings.
+
+        This is a local visual effect and does not change gameplay.
+
+        For support please join the Pulsar Discord: https://discord.gg/z8ZczP2YZY
+    
+ñ∫E
+(17841b7ae335fb1e83767744e6dd5eff866f33d62austinvaness/NoArmorEdges
+austinvaness/NoArmorEdgesNo Armor Edges*Removes all armor edges.2avaness
+ﬂ∫I
+(abcc0cc7bbb500d96c20cfcf69bd9cbba394cacb2WesternGamer/NoFeedbackOnExit
+WesternGamer/NoFeedbackOnExitNo Feedback On Game Exit*JRemoves the feedback page that shows up on beta builds of Space Engineers.2WesternGamer
+ª∫W
+(59a424460a311e1349e33c02b0e42cb7a4aa95ff
+CameraZoom2Allen-Wrench/NoForcedCameraZoom
+Allen-Wrench/NoForcedCameraZoomNo Forced Camera Zoom*3rd person camera freedom2dude:ÖRemoves the check for obstructions when using the 3rd person view while seated in a ship. 
+    This allows you to rotate the camera around freely without it being forced to zoom in or out. 
+    Great for tunnel-boring mining ships!
+    You can also offset the position that the camera rotates around to anywhere inside of your ships bounding box!
+    Hold Ctrl+Shift and use the block rotation keys to move the rotation point.
+    Hold Ctrl+Shift and press backspace to reset the cameras rotation point to default.
+  
+”∫G
+(09d97a435a05c79f633affa267094212b931c2b22WesternGamer/No-News-Plugin
+WesternGamer/No-News-PluginNo News Plugin*LThis plugin removes the News section and the DLC Section from the main menu.2WesternGamer
+‚∫R
+(819432c1b99b51a2c136e10100752775e940ac2a2&WesternGamer/OpenLinksInDefaultBrowser
+&WesternGamer/OpenLinksInDefaultBrowserOpen Links In Default Browser*RForces the game to open links in the default browser instead of the Steam overlay.2WesternGamer:RForces the game to open links in the default browser instead of the Steam overlay.RWindows;Proton
+å	∫W
+(1acfae4e16f641cb2d9303df059e057b98106991ClientPlugin2viktor-ferenczi/se-ore-pickup
+viktor-ferenczi/se-ore-pickup
+Ore Pickup*)Picks up ore extracted by the hand drill.2Viktor:—Picks up ore extracted by the hand drill.
+
+    - Works both in creative and survival
+    - Works both in offline and online multiplayer worlds
+    - Picks up ore only while collecting it (left mouse button)
+    - Separately configurable ice and stone collection
+
+    Configure the ice and stone pickup via the plugin's settings.
+
+    You may also use chat commands:
+    /pickup help    Prints this help on usage
+    /pickup info    Prints the current settings
+    /pickup on      Enables the plugin
+    /pickup off     Disables the plugin
+    /pickup ice     Toggles picking up ice
+    /pickup stone   Toggles picking up stone
+
+    The plugin disables itself if a conflicting mod is detected in the current world.
+
+    For support join the SE Mods Discord:
+    https://discord.gg/PYPFPGf3Ca
+
+    Please consider supporting my work on Patreon:
+    https://www.patreon.com/semods
+
+    One time support via PayPal:
+    https://www.paypal.com/paypalme/vferenczi/
+
+    Thank you!
+  
+∞	∫›
+(e31f251c951251fed606934e3cac5cdf92285164Projects/OreScout/Source/Shared/PluginSwitcher.csShared/Toolbox.csShared/ListSearch.csShared/Personality.csShared/PluginStorage.cs2#scotlandsyard/SpaceEngineersPlugins
+$A683CE5F-104A-496E-BB29-B4C795D70B2BOreScout*WTurns what your ore detector sees into GPS markers you can keep, sort and come back to.2scotlandsyard:¥Server-friendly ore scouting: turns what your ore detector can see into GPS markers you can keep, sort and come back to.
+
+Every scan starts at a working ore detector block and reaches only as far as that detector's own range, so it shows nothing the vanilla ore detector couldn't already reveal. Its markers carry a hidden tag, so OreScout only ever changes markers it made itself; your own GPS points are never touched.
+
+Quick start:
+1. Drag an ore detector onto a toolbar and pick Scout Ore or Scout Deposits.
+2. The detector must be intact, switched on and powered. Its range slider sets the scan radius.
+3. Type /scout in chat for the Marker Library.
+
+Guide: https://github.com/scotlandsyard/SpaceEngineersPlugins/tree/main/Projects/OreScout
+Report bugs: https://github.com/scotlandsyard/SpaceEngineersPlugins/issues
+√∫X
+(f46e816dec0ea87cfc675fb784a51b37c6a71565ClientPlugin2dawidmachon/se-ore-to-auto-gps
+$876E6E2C-2CD1-4285-B092-93D76F752D10Ore to Auto Gps*ÇMark ore your ore detector detects as GPS waypoints - but only when you press your mark key. Approximate, vanilla-level size info.2dawidmachon:úOre to Auto Gps turns ore your ore detector has already detected into GPS waypoints - created only when you press your mark key (default Alt+L, rebindable in the plugin settings). Nothing is ever marked automatically, so ore cannot be marked while AFK. Each keypress creates at most a configurable number of NEW markers (default 5, max 5; 0 = no limit) - the most recent deposits; updating markers that already exist is not limited. It is legit: it ONLY ever marks ore the detector has already found; it never reveals ore you have not detected.
+
+To give each waypoint an approximate size and proper center, it measures the already-detected deposits with a background voxel read (anything the detector did not find is discarded). Size info stays at vanilla's information level: rough estimates computed from a BASELINE yield per ore (all ice is sized as regular ice, for example), because the ore detector does not expose which voxel variant (dense ice vs ice) a deposit is.
+
+Features:
+- Player-interaction gate - press your mark key (default Alt+L, rebindable) to mark deposits detected since the last press; no keypress, no markers. Bounded per press: at most N new markers (default 5, max 5; 0 = no limit), the most recent ones - updates of existing markers are not limited.
+- Connected-component grouping: one deposit = one marker at its true center with the real total size, no matter how wide it is.
+- Size tier in the name (<mineral> <A|P> <tier> <kg>, e.g. "Ore - Gold A Titanic 22.5M"; A=asteroid, P=planet; tiers Atom/Compact/Expand/Giant/Huge/Immense/Mammoth/Titanic) plus an approximate yield in kg using the baseline yield per ore (variant-agnostic, like the detector's own information). Optional display calibration multiplier (default 1.0) scales the shown kg/tier to servers with server-side harvest multipliers - the underlying estimate stays vanilla-baseline.
+- Field markers: scattered tiny deposits within a radius share one marker to avoid clutter.
+- Per-ore toggles, distinct color per ore, smart cross-scan de-duplication.
+- Configurable GPS name prefix (default "Ore - ") so all auto-added waypoints group together in the GPS list for bulk manage/delete and GPS grouping plugins.
+- Runs on a background thread (never freezes the game). Works on dedicated servers (client-side).
+
+Report bugs via GitHub issues.
+Ú∫C
+(2063922e3298220238dabefec26ab17920b722fe2Allen-Wrench/PCUDisplay
+Allen-Wrench/PCUDisplayPCU display*#Persistent PCU display on your HUD.2dude:ÿToggleable, always on screen readout of your current ships PCU, including connected grids. 
+    Created for use on servers that utilize the 'Top Grid' mechanic to help you keep your pcu in check.
+    
+    Toggle the display on/off using 'Ctrl + NumPad0' while sitting in a ship. The display will continue to show that ships PCU, along with anything that it is connected to until you disable the display.
+    You can change the position of the display by holding down 'Shift + Alt + Mouse Right Click' and moving the mouse.
+    
+    Upon first activation a dialog will let you input a value to use as the upper limit, all this does designate when to change the color of the display from green to red.
+    Settings are saved in your %AppData%/SpaceEngineers/Storage/PCUDisplay folder, where you can also change the keybind (default NumPad0).
+    
+    Note: If you merge a ship that you are currently displaying PCU for, the counter will not update until you disable and re-enable it.
+  
+â∫i
+(7587be3dfb2752a9a005fdf71cfe3b8affb1741dSource
+Properties2)StrongBroArina2/SE.Plugin.ProjectedLights
+)StrongBroArina2/SE.Plugin.ProjectedLightsProjected Lights*/Turns point lights into fancy projected lights.2Streuwinkel+Community:ïThis plugin gives interior light class blocks a projected texture like the spotlights have.
+
+You can change their texture and make individual lights cast shadows. There are sliders added to interior light class blocks for that. Any changes from the default are stored as an INI section in the Custom Data of the light. I may change what the defaults will provide and what settings are available in the future, so don't rely too much on it as a permanent solution.
+
+There is a performance cost to these lights. Keen originally limited them to 32 with at most 4 of them casting shadows. The shadow limit is still 4, but there can be any number of spotlights now.
+
+Ÿ∫R
+(e45284a6f3e41a8fd883e0115a8ef9759ff4b13bPaintJobShared2rosudrag/se-paintjob
+rosudrag/se-paintjob
+Paint Jobs*_Paints a whole grid in one click - 134 liveries in 6 collections, live preview, undo and reroll2rosudrag:Ù
+Paint Jobs gives a grid a coherent paint scheme in one click - colour and armour skin together, symmetric, and derived from the grid's own shape, so a fighter and a mining rig in the same style still look nothing alike.
+
+134 liveries in 6 collections: Classic (the 8 original styles and 37 variants, including Custom, which builds a harmony around any hue you pick - mono, analogous, complementary, split, triad, tetrad), The Expanse, Star Wars, Star Trek, Warhammer 40,000 and Stargate. Every hull wears several armour skins rather than one flat texture, placed by geometry - corners scuff, the exhaust end scorches, the belly weathers, whole panels read as replaced plate - and how used a ship looks follows the livery. Nav lights come out port red and starboard green off the main cockpit's facing, and only skins you actually own get used.
+
+Type /paint to open the paint window: collection tabs, a scrolling scheme list, and a live rotating hologram of your ship already wearing the livery you have highlighted. Browsing sends nothing over the network - the preview is a client-only miniature. Pick a grid within 500m that you own, hit Apply. Don't like the result? Reroll for a new seed, or Undo to put it back the way it was.
+
+The window needs the Rich HUD Master mod (workshop 1965654081) enabled in the world. Without it /paint opens a plain dropdown dialog instead; every command works either way.
+
+Chat commands, if you prefer them:
+/paint <collection> <faction> [variant] [--hue 0-360] [--nonce n]
+/paint undo | reroll | list [collection] [faction] | help
+
+The collection is optional when a faction name is unambiguous, so /paint Military Stealth still works alongside /paint Expanse MCRN Donnager.
+
+Bugs and requests: https://github.com/rosudrag/se-paintjob/issues
+  
+°
+∫[
+(78e76af85439c83e57d6fe471af4e225942bfdb0ClientPlugin2!viktor-ferenczi/se-paint-replacer
+!viktor-ferenczi/se-paint-replacerPaint Replacer*%Replace paint on your ship or station2Viktor:ﬁActivate the paint replacement mode by holding down the Alt key while aiming at a block.
+
+Alt+MMB: Replace on the aimed subgrid
+Ctrl+Alt+MMB: Replace on all subgrids
+Ctrl+Shift+Alt+MMB: Replace on all connected ships
+Shift+Alt+MMB: Replace on the touching blocks of the same paint (flood fill)
+
+Demo video: https://youtu.be/8r47laAgTI8
+
+Please note, that the MMB conflicts with the "dump inventory"
+shortcut, which is frequently used in survival mode. Because
+of this the plugin is disabled by default in survival mode.
+Enable it in the configuration dialog only as long as needed,
+or change the modifier key from Alt to another key there.
+
+To access the plugin's configuration press `Ctrl-Alt-/` while
+in-game and not in the GUI. Select **Paint Replacer** from
+the list of plugin shown in the popup dialog. Any changes to
+the configuration are applied immediately.
+
+For more information please see the plugin's GitHub page:
+https://github.com/viktor-ferenczi/se-paint-replacer
+
+Please consider supporting my work:
+- Patreon: https://www.patreon.com/semods
+- PayPal: https://www.paypal.com/paypalme/vferenczi/
+
+Enjoy!
+
+Â∫A
+(4831da261b2f00402a12dd3cc63586688607abfb2THDigi/ParticleEditor
+THDigi/ParticleEditorParticle Editor 1.06*;A plugin to allow modders to develop particles much easier.2Digi:ûA plugin to allow modders to develop particles much easier.
+
+Load any offline world and press Shift+F to open the editor then follow the tooltips all over.
+  RWindows;Proton
+’∫Z
+(42ecd9e3c46b44fa8c4a72d3724d6b0c5664246cClientPlugin2 Nerd-eee/se-particle-obliterator
+$32efb957-5314-40a4-adb7-e501a1555d4cParticle Obliterator**Removes all particles from being rendered.2Nerd:ÖRemoves all particles from being rendered for lag reduction.
+Not recommended unless you have low end hardware and are getting terrible fps from particle effects even with minimum graphics settings.
+
+Enable/Disable in settings for ease of use w/o reloading.
+    
+Ω∫L
+(b52707ba08fcf5dbe1fada04c708ebd025b6634c2 austinvaness/PasswordCachePlugin
+ austinvaness/PasswordCachePluginPassword Cache*1Stores server passwords until the game is closed.2avaness
+∑∫è
+(a772844da731d736a91e8c0ce1a6a63979380727ClientPluginShared* 
+SixLabors.ImageSharp2.1.132+viktor-ferenczi/se-performance-improvements
++viktor-ferenczi/se-performance-improvementsPerformance*>Various performance improvements to let the game run smoother.2Viktor:üVarious performance improvements to let the game run smoother.
+
+See the GitHub page for the list of fixes and technical details.
+
+For support please join the Pulsar Discord: https://discord.gg/z8ZczP2YZY
+
+Please consider supporting my work on Patreon: https://www.patreon.com/semods
+    
+Á
+∫L
+(eccce26e2cceaec2c0784f04295f0ba999340610ClientPlugin2rosudrag/se-phyzix
+rosudrag/se-phyzix#Phyzix - Entity Streaming Optimizer"rosudrag/se-phyzix*RSpreads bulk entity creation across frames to remove multiplayer streaming freezes2rosudrag:ÍPhyzix kills the multi-second freezes you get when a pile of entities lands in a single frame - crossing into a new sector, an MES encounter spawning, an asteroid field streaming in.
+
+The game drains its entity-creation queue in one unbounded loop, so a whole sector's worth of work can run in a single tick. Phyzix puts a per-frame cap on that loop - a count and a millisecond budget - and finishes the rest on later frames. Nothing is dropped, and at least one entity always gets through per frame, so a backlog can never stall. Network-streamed asteroids skip that queue entirely, so their loads are captured and replayed under the same budget.
+
+Settings: adds per frame (8), frame budget (3 ms), defer asteroid loads (on), max deferred loads (64 - past that they load inline, so an extreme storm degrades to vanilla instead of eating memory), plus optional counters in the log and chat narration.
+
+Client-side, works on any server. Multiplayer only, because the loop it patches sits behind the game's own multiplayer check, and it stands down while a world is still loading.
+
+Bugs: https://github.com/rosudrag/se-phyzix/issues
+ú
+∫P
+(5e45f5d259f36ce588756137c2cd420824d50a5aPolarsADSLean2Po11arr/PolarsADSLean
+Po11arr/PolarsADSLeanPolar's ADS Lean*NRainbow Six style leaning on foot: hold Q or E to lean round corners and shoot2Polar:∆
+        Rainbow Six style leaning for on-foot PvP. Hold Q or E.
+
+        - A real side-step: the server and other players see you lean out. Hitbox and gun move with you, shots go where you aim.
+        - Camera and gun tilt with the lean. The aim point stays put.
+        - Stops at walls. Let go and you step back to where you started.
+        - Walk sideways while holding the lean to keep it. Letting go always straightens you up.
+        - Works standing, crouching, through jumps and on moving ships.
+
+        Works offline, hosted and on dedicated servers. Client-side only: it just presses strafe for you. Off in jetpack, on ladders, in seats and on remote controls, turrets and cameras.
+
+        Keys: Q and E (vanilla roll, unused on foot). Rebindable, with Ctrl, Alt or Shift.
+        Settings: hold or toggle, lean distance 0.2 to 0.8 m, camera tilt 0 to 20 degrees.
+
+        Works with Polar's ADS Improvements and head tracking.
+        Known issues: third person gets the side-step but no tilt.
+
+        Docs and bug reports:
+        https://github.com/Po11arr/PolarsADSLean
+    
+˛	∫T
+(8c0a4c1aff3fe3b43f42dc014ad5fb18e6d65bfbPolarsGridMover2Po11arr/PolarsGridMover
+$0B24D8B1-5F56-4148-AB74-3715F5903A31Polar's Grid Mover*{Nudge grids one block at a time or carry them like copy and paste, without copying, and merge them into the grid they touch2Polar:ÊMove a grid without copying it: nudge it one block at a time, or carry it in the vanilla paste preview. Same grid and block ids.
+
+Ctrl+Numpad8 / 2: forward / back
+Ctrl+Numpad4 / 6: left / right
+Ctrl+Numpad9 / 3: up / down
+Ctrl+Numpad5: lock onto the aimed grid, or unlock
+Ctrl+Numpad1: carry the grid, or put it back
+Ctrl+Numpad7: auto-merge on / off
+
+Carrying works exactly like Ctrl+C and Ctrl+V: rotate with the block rotation keys, Ctrl+wheel for distance, left click places, Esc puts it back. The original is hidden until placed, then moved there. Clears the clipboard.
+
+Nudge directions follow the camera and stay fixed for 3 seconds. Subgrids come along. Nudges into another grid are refused.
+
+Auto-merge: a moved grid lines up with a square grid of the same size and merges where block faces connect.
+
+Needs NumLock, single player, creative mode or creative tools. No settings.
+
+Known issues: terrain is not checked when nudging. No undo.
+
+Source: https://github.com/Po11arr/PolarsGridMover
+π	∫R
+(0f4fe706243710d8e8515dd13580d9e70c87264bClientPlugin2Po11arr/PolarsHoldCrouch
+$4672C1EB-783C-49D5-942F-C20F386A8665Polar's Hold Crouch*gHold the Crouch key to crouch, release it to stand up. Hybrid and vanilla toggle modes in the settings.2Polar:∂Crouch while the Crouch key is held, stand up when it is released.
+A quick tap toggles instead (Hybrid mode, the default).
+
+Usage:
+- Hold Crouch (C by default) to crouch, release it to stand up
+- Uses the game's Crouch binding, keyboard or controller
+- Pressing Crouch while crouched still stands you up
+- No headroom, falling or jetpack on when you release: you stand up as soon as you can
+
+Settings (Settings button in the Pulsar plugin list, also in game):
+- Crouch mode: Hybrid (default), Hold or Toggle (vanilla)
+- Hybrid: a tap under 0.25 s toggles, a longer press works like Hold
+- Applies immediately, saved in Storage/PolarsHoldCrouch.cfg
+
+No effect in cockpits, seats, on ladders, in spectator, in menus or while chat is open.
+
+Client-side only, no server install. No Harmony patches.
+Tested in single player and on a dedicated server.
+
+Known issues: none reported.
+
+Bugs and suggestions:
+https://github.com/Po11arr/PolarsHoldCrouch/issues
+
+Ç	∫\
+(fe13b85e7c6c56623b6f76b14cd1a6a95e57068bPolarsThrustPreview2Po11arr/PolarsThrustPreview
+$2AC94D8F-1763-4C72-B9A4-39E471F8177CPolar's Thrust Preview*tMass, TWR per direction, lift range and hover time at real, heavy and full load. Cockpit key and live while building2Polar:Â
+Will this ship lift when it is full? See it before you fly, and before you place the next block.
+
+- Weight now, heavy (full of ore) and max (densest cargo), in kg.
+- Thrust to weight ratio per direction at each load, for the air where you are, and whether each direction is space capable.
+- Lift range on a 0g to 1.5g scale per load.
+- Hover time with a heavy load at 1 g, hydrogen and batteries.
+
+Cockpit: press / to cycle full, collapsed, off.
+Building: hold a block aimed at your own or your faction's grid; its mass, thrust and symmetry copies are counted before you place it.
+
+Settings: panel key, show while building, inventory size, thrust multiplier, panel size and position.
+
+Client-side only, no Harmony patches. Rotor, piston and hinge subgrids count; connector-docked ships do not.
+
+Docs and bug reports: https://github.com/Po11arr/PolarsThrustPreview
+    
+ö∫I
+(783da2927aa7a8ebbb9632bfbcaa5179674501962bcmpinc/SE-PreventBlockResize
+bcmpinc/SE-PreventBlockResizePrevent Block Resize*TPrevents changing your building block size when looking at a differently sized grid.2bcmpinc:∑Have you ever used build planner while building a small grid ship? How often did a block change size, just before you clicked to request the necessary components from storage? This plugin disables that 'feature'. Clogging up your build planer and inventory with stuff you don't want will be a thing of the past.
+˘∫e
+(4d56eaa11db2e9c40e823f7eea804974f6fbd776ClientPluginShared2#DrummDrumm/ProtogenDockingSolutions
+$47A4C4B6-BE43-4B1D-A3C6-85069FA67F89"Protogen Systems Docking Solutions*sDock camera, Docking Assist screens and docking guidance for any connector, with an API for other plugins and mods.2
+DrummDrumm:∂	
+    Protogen Systems Docking Solutions helps you dock: a full-screen dock camera on your connector's face with guidance (crosshair, target brackets, approach corridor, range, closing speed, offset, alignment and the next step), and the "DOCK - Docking Assist" LCD script (any LCD, cockpit or seat screen) with a drawn approach view, tunnel, scope and gauges.
+
+    Optional while docking: a picture-in-picture window of the dock camera that can pop up near a dock, steering from the camera (W flies the way it looks), and a docking dampener that limits the speed your keys ask for. All of it is set up in the settings window (Pulsar plugin list).
+
+    Works with any connector block, vanilla or modded: one with [Dock] in its name is picked first, one with [NoDock] is never used. Chat: /dock on | off | next | target | offset | map | theme. Toolbar actions on every cockpit.
+
+    Other plugins and mods can read the docking figures, the dock camera's spot and the Docking Assist sprites through the mod message API (Api/DockingSolutionsApi.cs). Client-side only: nothing extra is sent to the server. Steering from the camera and the dampener only change the move and turn input your seat already sends.
+  BCLR,CoreCLR
+⁄∫H
+(eaa917a023f5cb89a7161ac5a63db9ce861600a12WesternGamer/RDR2DeathScreen
+WesternGamer/RDR2DeathScreenRDR2 Death Screen*>Shows the Red Dead Redemption 2 death screen when player dies.2WesternGamerRWindows;Proton
+≈∫d
+(d746fc45df274ec39b2ad05e65e32e1c5bcfdd42acs-client-plugin/ClientPlugin2KLoverTony/realistic-acs
+$DB0C2D17-9642-4B33-BD5E-96334E20144CRealistic ACS*GClient-side finite RCS and virtual-thruster attitude-control prototype.2
+KLoverTony:ÃClient-side Realistic ACS prototype for Space Engineers 1. It uses finite RCS, virtual ordinary-thruster geometry, persistent rotational inertia, dampener-coupled rotational arrest, and manual override torque. The optional Realistic ACS RCS Blocks content mod adds finite ion and hydrogen RCS clusters with animated gimbals: https://github.com/KLoverTony/realistic-acs/tree/main/acs-rcs-block-mod
+
+This is a local-physics prototype and is not multiplayer-safe.BCLR
+î∫K
+(ae83afa61652e9dfbcb171053058a7c2624be9652StarCpt/SE-RealisticSoundToggle
+StarCpt/SE-RealisticSoundToggleRealistic Sound Toggle*"Toggle realistic sound for servers2StarCpt:^Toggles realistic sound for servers. Plugin config can only be changed while on the main menu.
+Ù∫O
+(c9e0d1890b29bfcef9376094fc72acda96b9bb762#WesternGamer/RemoveIntroVideoPlugin
+#WesternGamer/RemoveIntroVideoPluginRemove Intro Video Plugin*RThis plugin disables the intro video that is played when you open Space Engineers.2WesternGamer
+π∫S
+(8a8bc21a7837b5cde85a424b4ae09c09d1be8bc1ClientPlugin2lolifamily/RenderQueueFix
+$ED17552B-4A6B-474C-99B9-13FB67F5CF19Render Queue Fix*aInstall ONLY if your game crashes with IndexOutOfRangeException inside MyConcurrentTwoLevelQueue.2
+lolifamily:πFixes one specific renderer crash by raising a hardcoded queue ceiling.
+
+===== INSTALL ONLY IF =====
+your game crashes to desktop AND the SpaceEngineers log contains BOTH of:
+  1) the exception System.IndexOutOfRangeException
+  2) a stack frame mentioning MyConcurrentTwoLevelQueue.Enqueue or MyUpdateFrame.Enqueue
+
+Common triggers:
+  - very large or densely built worlds
+  - long sessions in busy scenes (many lights, particles, decals, LCDs)
+  - mass-spawn / stress tests / heavy combat with lots of effects
+
+===== WHAT IT DOES =====
+VRage.Render hardcodes a per-frame render-message ceiling of 1024 x 1024 ~= 1.05M. Exceeding it throws inside the renderer and kills the game. This plugin rewrites the ceiling to 4096 x 1024 ~= 4.19M at load time via Mono.Cecil. Memory cost: ~24 KB. No API change, no gameplay change.
+    
+˘∫D
+(ec7e20151467735c4e6dd29e537038693ce8293b2StarCpt/SE-ResizableChat
+StarCpt/SE-ResizableChatResizable Chat*!Adjustable chat box and font size2StarCpt:ZConfig: Use the plugin settings button in the plugins tab or run the command "/chatconfig"
+•∫M
+(a3208d6ac46280474aadb0fbd5d69ba47e5f65212!StarCpt/Respawn-Menu-Improvements
+!StarCpt/Respawn-Menu-ImprovementsRespawn Screen Improvements**Adds useful features to the respawn screen2StarCpt:›NEW - Chat is now usable from the respawn screen!
+Features:
+- Adds a search box for spawn names
+- Adds the ability to sort list by spawn name or owner in ascending or descending order
+- Replaces the "Ready" text with owner name (Ready status is still viewable in the tooltip)
+- Shows full spawn name in the tooltip
+- Dropdown menu to filter by owner
+Ÿ∫W
+(c767270c5a7e5fb6509b390be9424f7557744a4dRespPerf2!BDCarrillo/RespawnNoPreviewPlugin
+!BDCarrillo/RespawnNoPreviewPluginRespawn Screen Performance*/Cut down on excessive streaming when respawning2
+BDCarrillo:ÄThis plugin adds a blank entry to the top of the respawn screen to avoid streaming in some random grid, and avoid purging replication.  Works with zznty's SpawnScreenFix and StarCpt's Respawn Screen Improvements
+  -Spawn points in sync will appear green
+  
+®∫Z
+(f6649a1c80b6d6c28c0decc4de1c7fc49e7f3db2ClientPlugin2 WesternGamer/RevertNewGameScreen
+ WesternGamer/RevertNewGameScreenRevert New Game Screen*>Plugin to revert the new game screen to the pre-1.204 version.2WesternGamer:APlugin to revert the new game screen to the pre-1.204 version.
+  
+¯∫B
+(8fe9b18f331849bddf311cc597c933d0c0904ef02Garbius/SEAnalogWheels
+Garbius/SEAnalogWheelsAnalog Wheel Control*PAdds controller support to wheels, allowing fine maneuvering using a controller.2Garbius:ßThis plugin allows analog control of the brakes and throttle for wheeled vehicles using a controller (e.g. Xbox controller). It works in singleplayer mode but it must be installed on the server for it to work in multiplayer. In the latter case, it's not necessary to have it on the client. In other words: If you want to use this in MP, you'll have to pester your local server admins (please don't) to make them install it.
+¡∫F
+(8e87a3a21c82256a1a57e3b82a1f1737043970de2civicwar/se-direct-connect
+civicwar/se-direct-connectSE Direct connect*Direct Connect Made Easy2Civicwar:¢
+    This plugins enables you to direct connect to SE servers without needing to
+    go through the server list.
+    Check you config file for the server list.
+  
+≈∫A
+(f30e7780bc51dbcdd817baba33f06231b01dceb62Codiiiy/SEHotasPlugin
+Codiiiy/SEHotasPluginSEHotasPlugin*@Adds Joysticks and throttles control binding to Space Engineers.2CodiiiyRWindows;Proton
+‹∫8
+(8904139c395a3dab9f4d4313d7552c07a75b7af32KlimeSE/SEVR
+KlimeSE/SEVRSE VR*"SE plugin with QoL features for VR2Klime:«SE plugin with QoL features for VR
+
+Current features:
+- Decoupled head rotation in cockpits from actual grid rotation
+- Re-added grid rotation with the arrow keys (Left, Right, Pitch Up, Pitch Down)
+BNETFramework;CLR;Mono
+Ö∫F
+(6a5583bd44a97fedbe37fcc54cdfd0de000c15282thorwin99/SEWorldGenPlugin
+thorwin99/SEWorldGenPluginSEWorldGenPlugin V22	thorwin99
+£∫à
+(67de434108cb4cdbe6f1fe0ec3dc8909ef8f4496
+Prism.SMAAPrism.MathsPrism.Common2StarCpt/Prism.SMAA:!
+AssetFolderPrism.SMAA/Assets/
+StarCpt/Prism.SMAA+Subpixel Morphological Anti-aliasing (SMAA)*9Adds SMAA as an anti-aliasing option in graphics options.2StarCpt: RWindows;Proton
+›
+∫å
+(f9bc2f1bbc00ca815ab9862d18cafcfe1b6ae632.Projects/Sacrificial Stockpile Manager/Source/Shared/PluginSwitcher.csShared/Toolbox.csShared/ListSearch.csShared/AssemblerModes.csShared/Personality.csShared/PluginStorage.cs2#scotlandsyard/SpaceEngineersPlugins
+$17843B40-D5CB-4DBB-9C7A-1F246F842E87Sacrificial Stockpile Manager*TInventory sorting, block restocking and autocraft quotas, set up in an in-game menu.2scotlandsyard:†Inventory management and auto-restocking, set up in an in-game menu instead of block names or Custom Data.
+
+- Shows the inventory of every ship and station you own.
+- Sorts items into the storage blocks you choose.
+- Keeps blocks between a minimum and a maximum of an item: lockers, reactors, generators, turrets, refineries.
+- Keeps grid-wide quotas by queuing the shortfall in assemblers.
+- Fills a crate with the materials to build a list of blocks.
+- Shows status pages on LCD screens.
+
+Quick start:
+1. Type /ssm in chat and pick your grid.
+2. In Overview, turn Automation on (off on every new grid, nothing moves until then).
+3. For autocraft: set an assembler to Main in Production, set quotas in Items & quotas, turn Autocraft on.
+
+Guide: https://github.com/scotlandsyard/SpaceEngineersPlugins/tree/main/Projects/Sacrificial%20Stockpile%20Manager
+Report bugs: https://github.com/scotlandsyard/SpaceEngineersPlugins/issues
+Ö∫ç
+(dde86b941f06c16fc92d6f9ad18ad81b0ce57b6cPrism.RenderPrism.MathsPrism.Common2StarCpt/Prism.SSGI:$
+AssetFolderPrism.Render/Shaders/
+StarCpt/Prism.SSGI'Screen Space Global Illumination (SSGI)*<Adds single-bounce screen space diffuse global illumination.2StarCpt:›Adds single-bounce screen space diffuse global illumination.
+
+This is a gpu-heavy plugin, and you will experience a significant drop in fps when it is enabled. Various parameters can be changed in the plugin settings, including quality presets and GI intensity.
+
+Sampling is based on the SSILVB algorithm with a modified SVGF denoiser for denoising.RWindows;Proton
+å∫H
+(1df11441c781863a74232296c5ac0a2245863d6d2StarCpt/CopyScreenTextPlugin
+StarCpt/CopyScreenTextPluginScreen Text Editor Plugin* 2StarCpt:{Adds a button in text boxes (the one often used to display results from chat commands, aka the MOTD box) to enable editing.
+Ï∫_
+(f9e8f9505babee9215dd4b28a171524f4ffb5a51SharedClientPlugin2viktor-ferenczi/se-script-dev
+viktor-ferenczi/se-script-dev	ScriptDev*mUpdates programmable blocks from your local script files and publishes your scripts and mods to the Workshop.2Viktor:Ê	Tools for programmable block script and mod developers.
+
+Live script updates: put the script's name in square brackets into the name of a programmable block, for example "Programmable Block [My Script]". Whenever you save that script's Script.cs, the block gets the new code within a second. Works in offline and locally hosted games.
+
+Publishing: the Publish button next to Load Game in the main menu (next to Load Game in the in-game menu with In Game World Loading, or next to Options otherwise) lists your local scripts and mods. It shows their Workshop ID and visibility, and which ones changed since their last upload. Select one and publish it through the game's own publish screens, without digging through the Load Game screen. New items are private by default, so you can check them before making them public. Updates keep the item's visibility.
+
+More information:
+https://github.com/viktor-ferenczi/se-script-dev
+
+Companion script merger and minifier tool:
+https://github.com/viktor-ferenczi/se-script-merge
+
+For support join the SE Mods Discord:
+https://discord.gg/PYPFPGf3Ca
+
+Please consider supporting my work on Patreon:
+https://www.patreon.com/semods
+
+One time support via PayPal:
+https://www.paypal.com/paypalme/vferenczi/
+
+Thank you!
+  
+Á
+∫œ
+(e31f251c951251fed606934e3cac5cdf92285164!Projects/Script to Plugin/Source/Shared/PluginSwitcher.csShared/Toolbox.csShared/Personality.csShared/PluginStorage.cs2#scotlandsyard/SpaceEngineersPlugins
+$DF3841DD-0357-45BC-868E-9A725CC6C2B0Script to Plugin*bTest programmable block scripts in offline worlds, without building a programmable block for each.2scotlandsyard:ÊA tool for testing programmable block scripts in offline worlds, without building a programmable block for each one. Every script in its menu works like its own programmable block.
+
+It only works in offline worlds (single player, not hosted). In an online world or on a server it compiles and runs nothing.
+
+- Paste a script, or load one from the game's Browse Scripts (local and workshop).
+- Scripts compile with the game's own script compiler, whitelist and instruction limit.
+- Me, GridTerminalSystem, Runtime, Storage, Echo, Save(), UpdateFrequency and run arguments work as in a programmable block.
+
+Quick start:
+1. In an offline world, type /stp in chat and press New script.
+2. Pick a host block, then paste the code or use Browse Scripts in the code editor.
+3. Use Argument + Run, or the block's toolbar actions.
+
+Guide: https://github.com/scotlandsyard/SpaceEngineersPlugins/tree/main/Projects/Script%20to%20Plugin
+Report bugs: https://github.com/scotlandsyard/SpaceEngineersPlugins/issues
+ó∫M
+(b148b183e9d88dae884181c284ce4fd06fd29ddc2!austinvaness/ScrollRotationPlugin
+!austinvaness/ScrollRotationPluginScroll Rotation*4Enables scrolling between different block rotations.2avaness:—Allows the use of Shift, Alt, or Shift+Alt combined with scroll wheel to rotate blocks.
+
+If desired, the controls can be changed so that Shift scroll rotates the block and Alt scroll changes the rotation axis.
+Æ∫B
+(55b631b64adf6bb58361cf8aec519231185aa57f2Math0424/ScrollableFOV
+Math0424/ScrollableFOVScrollable FOV*5Scroll FOV with your mousewheel (while holding caps).2Math0424
+ÿ	∫é
+(74d93120d8b91cedf3214ba84cc0cc3e8e0e99dbClientPluginShared/Core
+Shared/Se1*(&
+Microsoft.CodeAnalysis.CSharp5.3.02lolifamily/se-mcp
+$566F463B-D7E8-4FE5-9AD2-314BD85425CDSeMcp*?MCP server for LLM-driven code execution inside Space Engineers2
+lolifamily:…*** WARNING ‚Äî REMOTE CODE EXECUTION ***
+The bearer token = root password. Any client with it can run arbitrary C# on your machine (file I/O, processes, native [DllImport]). Never share or screenshot it; never port-forward the listener. Serves localhost only; multiplayer requires Admin or Owner promote level.
+
+Turns your Space Engineers game into an MCP (Model Context Protocol) server. An LLM like Claude can connect over HTTP and execute C# directly in the running game engine with full .NET and game API access.
+
+Features:
+- REPL-style: no boilerplate, Roslyn 5.3, [DllImport] supported
+- All assemblies referenced (.NET + game + plugins) incl. internal members
+- Lanes: main + render (multi-frame coroutines), parallel (long/blocking work)
+- Console.WriteLine() piped back to the LLM
+- Per-field errors with corrected line numbers
+- Configurable port, auto-generated bearer token
+
+Transport: MCP Streamable HTTP (not SSE). POST JSON-RPC to http://localhost:9876/
+Õ∫W
+(e3e9b29731e6d0c0791620acaa414b0d2a72c29eClientPlugin2WesternSpace/SeNoDlcUpselling
+$3CCD7003-8959-4787-8960-2BCA481A9758No DLC Upselling*+Removes the DLC upselling UI in the G menu.2WesternSpace
+Á∫C
+(8b2cfd605f0af743d6dfb1cb1394f5a789d5b44a2SE-Nexus/SeamlessClient
+SE-Nexus/SeamlessClientNexus Seamless Switcher*<Allows transferring between Nexus-enabled servers seamlessly2Casimir:•This plugin allows seamless transfers between Nexus-enabled servers. Some mods or plugins may not play nicely with switching between servers. Be cautious when using!
+Œ∫}
+(8b1cfa049cc76f6f118fd5aa951995eff7c9640a2"Brillcrafter/Second-Screen-Display:-
+AssetFolderSecondScreenDisplay/resources/
+"Brillcrafter/Second-Screen-DisplaySecond Screen Display*:Allows you to display HudLcd readouts on a separate window2Brillcrafter:ØThis plugin allows you to move all the HudLcd items into a separate window that you can do whatever with.
+      To Activate the screen, use the command "/ssd open" and you can close it whenever. 
+      Please send the logs of any crashes caused by this plugin to me on Discord. Username: Brillcrafter
+  BNETFramework;CLR;Mono
+Ú∫]
+(2e5759159426dc6f156fae9405c3d1da7637e261ClientPluginShared2viktor-ferenczi/se-sections
+viktor-ferenczi/se-sectionsSections*%Copy, cut and blueprint grid sections2Viktor:πAllows for selecting a section of a grid, then copying, cutting, deleting or blueprinting the blocks inside it.
+
+This is an implementation of a publicly announced Space Engineers 2 feature.
+
+Demo video: https://youtu.be/watch?v=W0S-wIaIZ80
+
+For more information please see the plugin's GitHub page:
+https://github.com/viktor-ferenczi/se-sections
+
+Please consider supporting my work:
+- Patreon: https://www.patreon.com/semods
+- PayPal: https://www.paypal.com/paypalme/vferenczi/
+
+Bug reporting channel: #bug-reports
+SE Mods Discord https://discord.gg/PYPFPGf3Ca
+
+Enjoy!
+
+ã∫F
+(f32dd065c3d5c576565208fde67f6d20eec1ab472StarCpt/SE-ServerShortcuts
+StarCpt/SE-ServerShortcutsServer Shortcuts/Quick Join* Adds a fast way to join servers.2StarCpt:\Adds a fast way to join servers. The "Quick Join" button brings up the server shortcut menu.
+Ò∫J
+(bbd994c70e9c67b8de586d4f2f89c0b290e7d35b2zznty/ServerSideScriptChecking
+zznty/ServerSideScriptCheckingServer-Side Script Checking*^Moves Programmable block script checking process to be handled by the server (in multiplayer).2zznty
+ó∫Ñ
+(c364e361273ae5ca230f960f53854f414dcd175f*¨
+Octokit13.0.1
+LibGit2Sharp0.30.0
+	SkiaSharp4.150.1.
+#Microsoft.AspNetCore.DataProtection10.0.109
+.Microsoft.AspNetCore.DataProtection.Extensions10.0.102arsnekfcn/Shipyard:
+AssetFolderassets
+arsnekfcn/ShipyardShipyard*1In-game, GitHub-backed blueprint version control.2arsnek:≥In-game blueprint version control for Space Engineers, backed by GitHub.
+
+Sign in with GitHub from inside the game, then publish, check out, review, and diff ships as pull requests ‚Äî no website needed. Shipyard can even create a private repo for you. Or work fully offline with a local git repo (no account or network).
+
+Features: shared ship library browsing; check-out locks; publish/update as PRs with in-game review, approve, and merge; visual wireframe diffs of what changed between versions; one-click Steam Workshop publishing; per-user GitHub token stored locally. Blueprints are scrubbed of owner/SteamID/GPS on commit.
+
+MIT licensed. Source: https://github.com/arsnekfcn/Shipyard
+≈∫K
+(8e9fa5c42f0a857a06032ca3ff3d173c817f68ac2Allen-Wrench/ServerFilterPlugin
+Allen-Wrench/ServerFilterPluginShow Nexus Servers*:Join Game screen will show all sectors of a Nexus cluster.2dude:˝Adjusts the server filters for the Join Game screen to allow all servers in a Nexus cluster to appear, allowing you to easily direct connect to a specific sector. This also shows them in the History tab, and allows you add them to your Favorite servers.
+¥∫W
+(4628e637730d45df513d975313a7011bb3bdd1caClientPlugin2viktor-ferenczi/se-simple-log
+$6e951c9a-0214-4389-b134-cd686d456150
+Simple Log"viktor-ferenczi/se-simple-log*-Removes the timestamp from the log file names2Viktor:œRemoves the timestamp from the log file names. 
+The game will use only two log files and overwrite them:
+
+%AppData%\SpaceEngineers.log
+%AppData%\VRageRender-DirectX11.log
+
+As a nice side effect, you don't have to clean the log files anymore.
+
+This is mostly useful for developers who have to restart the
+game frequently and reload the log file after each error.
+
+The plugin also adds optional JSONL logging, which is useful for
+analyzing or storing the logs.
+    
+í∫M
+(83a4556bc4a5f13a04d93479e23216b588b058fbClientPlugin2mkaito/SkyboxPlugin
+austinvaness/SkyboxPluginSkybox Mod Loader*#Allows any skybox mod to be loaded.2mkaito; avaness:\Allows any skybox mod to be loaded. 
+Plugin config can also be opened using /skybox in chat.
+ß
+∫M
+(5c72c1073cc2414f35a41f17714b4c1911de20e6ClientPlugin2xSyphyx/SkylarkBelt
+$11907A1E-7888-4CC3-916F-82CE64E27E3FSkylark Belt*LDraws a wireframe torus nav marker around the Belt (asteroid ring) instance.2Chip Skylark:ƒRenders a true wireframe torus as a navigation marker around a ring-shaped
+        region ‚Äî built for the Sigma Draconis Expanse "Belt" instance (an 8,500 km asteroid
+        ring around Sol), but the ring center, radius, tube radius and plane are all
+        configurable, so it works for any toroidal zone.
+
+        Client-side and render-only: it draws with the same transparent-line primitive the
+        NavMarkers mod uses for its spherical zone markers, so it sits visually alongside them
+        and sends nothing to the server. Line thickness scales with distance and fades out as
+        you fly inside the ring so it never fills the screen.
+
+        Chat commands (all persisted): /belt toggles it, /belt info reports your distance from
+        the ring centerline, /belt here opts the current world in or out, /belt scale and
+        /belt alpha tune the look, /belt reload re-reads the config file. Config lives at
+        Storage/SkylarkBelt.cfg in the game's user data folder.
+
+        By default the torus only draws in worlds named "Expanse"; use /belt here elsewhere.
+    
+Ä∫:
+(da9a27d5f172f2596c1461d3c284ad05ed22ebb22KlimeSE/SlowMo
+KlimeSE/SlowMoSlow Mo*!Slow motion effect for cinematics2Klime
+ì∫L
+(34fbd41dca71313fb90bef79d1fd885be29ca52bPlugin2WhiteFang34/SmoothFrames
+WhiteFang34/SmoothFramesSmooth Frames - Max FPS*"Smooth motion at any refresh rate.2	WhiteFang:ﬂSpace Engineers updates its sim at 60 Hz, so motion looks like 60 FPS even on a 144 Hz, 240 Hz, or 360 Hz monitor ‚Äî each render frame is a copy of the last sim tick. Smooth Frames interpolates the camera and nearby entities between sim ticks, so each render frame shows a distinct moment of motion. The engine's 120 FPS cap is also lifted, for users above that.
+
+Toggle with Ctrl+F11. Configure the frame-rate cap in the plugin's settings cog (default: your monitor's refresh).
+Í∫]
+(3352179875b6c06780af0db479679b82b73687e8ClientPlugin2#dawidmachon/se-sort-available-cargo
+$4F1BC801-9D1B-4ABC-BC30-2B425DBC2990Sort by Available Cargo*JSort inventory containers by remaining free cargo space (most empty first)2dawidmachon:ÔAdds a Sort checkbox to the ship/station inventory terminal that reorders containers by remaining free cargo space (most-empty first).
+
+Features:
+- One-click Sort checkbox right in the inventory UI, next to Hide Empty
+- Most-empty cargo containers rise to the top so you can find a place to drop items fast
+- Hides itself on the character/suit filter (mirrors Hide Empty behavior)
+- State remembered across sessions, enabled by default
+- Optional setting to also sort the left (production) panel
+Û∫Å
+(f70259d131edbc0bc0f15337a0b07cc01b8ff3c1ClientPlugin2PhoenixTheSage/SE-DLSS:Æ
+	NvngxDlss]https://github.com/PhoenixTheSage/SE-DLSS/releases/download/nvngx-dlss-310.7.0/nvngx_dlss.dll"@be6e434a94ca32499515eb62ca0e6c274526055d568d0426e4c652dcdfb6ee6e(
+$B6469FEE-83BF-44A9-93F9-B4A252527C35NVIDIA DLSS* Enables NVIDIA DLSS and DLAA 4.52PhoenixTheSage:˝
+Adds NVIDIA DLSS and DLAA 4.5 in Space Engineers. NVIDIA RTX required.
+
+Optional Anomaly Shader Framework supplies object motion to prevent ghosting. 
+Rich HUD is supported.
+
+Compat: Certain rendering mods may not play nice until they use Anomaly.
+    RWindows
+∫
+∫ø
+(be6792d254b7f1cbc80ad2431ee5573eed2280cesrc2gronkh68-rgb/space-engineers-vr:m
+openxr_loaderassets/openxr_loader.dll"@66946ea6e9cc2649e299ec412521c5eafe56c635d05055097fe4db81e11932df(
+$e3f462c3-2469-4326-95e0-a0fa2148cd3eSpace VR*[Play Space Engineers in VR with OpenXR (SteamVR, Meta, Virtual Desktop, WMR). Early access.2Fuchs:…Play Space Engineers in virtual reality through OpenXR. Early access, tested with a Steam Frame over SteamVR and a Quest 2.
+
+Head-tracked stereo view, head steers like the mouse, the character's hands follow the controllers, tools and weapons aim where the controller points, building with the hand (freeze and rotate blocks with the wrist), a hand menu on the left hand with buttons on the back of both hands, floating menus with a laser pointer, world-space GPS markers, an own VR HUD drawn from the game's data, body zones for controllers without a D-pad (Quest), in-game settings and key bindings, and a cockpit HUD with a layout per cockpit type.
+
+Single-player view only, no multiplayer features of its own. Put the headset on first and make your headset's OpenXR runtime the active one (SteamVR: Settings, OpenXR, Set SteamVR as OpenXR runtime). Without a headset the game starts normally.
+
+Source and controls: https://github.com/gronkh68-rgb/space-engineers-vrBNETFramework;CLR;Mono
+∫ø
+(dbf1ed0a7768ac03567bb91c6e05bd8e9682c3a3SpaceEngineersVR/*3
+OVRSharp1.2.0
+System.Drawing.Common6.0.02ColbyJack1134/SpaceEngineersVR:'
+AssetFolderSpaceEngineersVR/Assets/:…
+	NvngxDlssmhttps://github.com/ColbyJack1134/SpaceEngineersVR/releases/download/nvngx-dlss-310.7.0/nvngx-dlss-310.7.0.zip"@cd95a7246002aaf8a0bfb0af6ed0f41a0d8c671fe2667596ab30f348a6935255(0JWindows:µ
+LinuxOpenVR[https://raw.githubusercontent.com/ValveSoftware/openvr/v1.16.8/bin/linux64/libopenvr_api.so"@b5027afdc44d3ec3152e405e0af07a079c9ed167b5dce39833549d73dcb7aba5(JLinux
+ColbyJack1134/SpaceEngineersVRSpace Engineers VR*/Play in a SteamVR headset with motion controls.2	ColbyJack:íA native-feeling VR experience for Space Engineers via SteamVR.
+
+- Interactive vanilla and DLC cockpits: grab the joysticks, throttles, steering wheels and buttons
+- Motion-controlled tools and weapons, with two-handed and left-handed holds
+- VR building with painting, symmetry, blueprints and voxel tools
+- 3rd person, spectator, camera, turret and remote-grid views
+- Wrist HUD and tablet, radial menus, a VR keyboard and all game menus in VR
+- Interactive LCDs, including Arthur and TouchScreenAPI
+- Multiplayer
+- NVIDIA DLAA and DLSS upscaling on RTX GPUs (Windows)
+- Pulsar Legacy and Interim, with experimental native Linux support
+
+Start SteamVR before launching. DLSS is off by default; Windows installs download NVIDIA's nvngx_dlss.dll runtime (31 MB download); when enabled, DLSS loads it with the NVIDIA driver's NGX library, and it stays off while the NVIDIA DLSS plugin is loaded. On Linux, install your distribution's libgdiplus package. Full feature list, controls and issues: https://github.com/ColbyJack1134/SpaceEngineersVRBCLR;CoreCLR;MonoRWindows;Proton;Linux
+Ê∫P
+(c665e4bd89430c0eeebec79f72384a2d10c65743SpawnScreenFix2zznty/SpawnScreenFix
+zznty/SpawnScreenFixSpawn Screen Fix*0Moves Spawn In Suit to the top of respawn points2zznty:0Moves Spawn In Suit to the top of respawn points
+≥∫u
+(7fe5210811379dbf55b84668ad1df6a6444b2c4aClientPlugin2!viktor-ferenczi/se-speech-to-text:
+AssetFolderScripts(
+$BDFC3B70-41F1-4C50-9F5B-08A931863EAFSpeech To Text*UConnects the Handy speech to text application to the game, plugins, mods and scripts.2Viktor:£1. Setup Handy and test it in a text editor:
+   https://github.com/cjpais/Handy
+
+2. In Handy's Settings, under Advanced / Output change the
+   Paste Method to External Script or Webhook (if available),
+   then copy the script path or the URL over from the
+   plugin's configuration.
+
+3. By default, the transcribed text goes to the mod
+   communication channels and to the programmable blocks
+   whose name matches, while pasting into the chat is off.
+   Turn "Paste into chat" on in the configuration to get
+   the text into the game's chat.
+    
+ú∫Ü
+(d17492abb397822e39d16137c93c146924425186ClientPlugin2STContinuum3/stc-launcher:∞
+AssetFolder]https://github.com/STContinuum3/stc-launcher/releases/download/media-v1/stc-menu-video-v1.zip"@66f6b93082667e4a46052cbb95539501e03b122b50092f1b87a5ffd7322d99730
+$CC2344F5-02BB-409E-ADE4-2B800DF06D36%Star Trek Continuum 4.1 - Menu System*2Adds STC specific menu items and background video.2	Sargonnas:É
+        Main menu integration for the Star Trek Continuum (STC) servers.
+
+        - Adds an STC Servers button next to New Game. Picking a server opens the game's Direct Connect screen with its address filled in. With Dev mode on, an STC Dev Servers button lists the development servers.
+        - Replaces the main menu background with an STC video whose soundtrack replaces the stock menu music and follows the music volume slider. Turn off Enable custom video in the settings to keep the stock background and music.
+        - Hides the Keen news panel, DLC banners and Newsletter button. Turn off Hide menu news in the settings to show them, for example to subscribe to the newsletter for its reward blocks.
+
+        Network: downloads the background video (about 12 MB) from this repository's GitHub releases, and the server list (servers.json) from raw.githubusercontent.com once per launch.
+
+        Video footage by Star Trek Continuum members, soundtrack by siege3581. The media is not covered by the MIT licence.
+    
+Ø∫N
+(a5da5297ab84df1ca3aa28b7c53e6ffb50ef9c8eClientPlugin2dj8552/Store-GUI-Fix
+dj8552/Store-GUI-FixStore GUI Fix*-Fixes the rounding errors in the total price.2DJ8552: 
+˘∫]
+(01241c31b805c5fcc9efa4a408fc9f5e5541fd06ClientPlugin2#Oxnard27/Survival-Symmetry-Renderer
+$9C787A5F-F67B-4EC2-AC9E-F258AD637536Survival Symmetry Renderer*WOptional native mirrored block preview renderer for the Survival Symmetry Workshop mod.2Oxnard27:ÒAdds Keen's native rendered mirrored block preview to Survival Symmetry https://steamcommunity.com/sharedfiles/filedetails/?id=3775914515. The Workshop mod remains fully functional without this plugin and continues to own placement, outlines, drag preview, networking, and gameplay behavior. This plugin is client-side and render-only; dedicated servers do not need it.
+“∫^
+(10be5eb8bb4d5433032d1ce38cec98031032434eClientPlugin2$InvalidArgument3/TacticalFactionPing
+$B64AC6ED-A9FD-4CF7-B577-5CBAA2398913Tactical Faction Ping*8Private faction tactical GPS pings (look-dir / distance)2Invalid:ÓClient-only Pulsar plugin for private faction tactical pings.
+
+Enter place mode with Shift+R (configurable): scroll distance (10m / Shift 100m / Ctrl 1km, max 100km), LMB confirm, RMB cancel. Or /fping <km> <name>.
+Pings ride vanilla faction GPS chat, appear as local GPS markers (one per player),
+with username-seeded or custom colors and a 5s cooldown.
+
+Requires faction membership. All faction mates need the plugin to see pings.
+Repo: https://github.com/InvalidArgument3/TacticalFactionPing
+ò∫A
+(cc47a7222be2edcf5ca34fe5ed524c8791f8f24a2StarCpt/SE-TargetView
+StarCpt/SE-TargetViewTarget View*KShows a zoomed in view of the locked target in a picture-in-picture window.2StarCpt:XShows a zoomed in view of the locked target in a configurable picture-in-picture window.
+Ó∫N
+(5b6345f77512277334abd883363aeb422f5f8a622"StalkR/Space-Engineers-Timeout-Fix
+"StalkR/Space-Engineers-Timeout-FixTimeout Fix*)Fix the "server is not responding" error.2rexxar:7This plugin fixes the "server is not responding" error.
+‹∫>
+(b0f5e461862ec4e03d0457a7680a1a39a992421d2Pas2704/ToolHelper
+Pas2704/ToolHelperTool Helper*8Adds terminal controls to show the radius of ship tools.2Pas2704:¥Adds terminal controls to show the radius of ship tools.
+The radius color changes based on whether the tool is idle, active, or incomplete.
+The keybind 'Alt + =' will toggle between showing normal and right-click drill radius.
+You can use '/th clear' to quickly disable the visuals without going through the terminal.
+There is also '/th toggle drills' as an alternative way to switch between showing normal and right-click drill radius.
+‘∫I
+(cc38a43d038cee969f36654c140d98f3beebafec2Squeech007/ToolSwitcherPlugin
+austinvaness/ToolSwitcherPluginTool Switcher*4Allows scrolling between welder, grinder, and drill.2avaness:ñThis plugin is a simplified version of the Tool Switcher mod. It allows you to scroll between the welder, grinder, and drill. There is no configuration yet, so these tools will always be grouped together while the plugin is enabled. The benefits of this plugin over the mod are that you can use any toolbar page, and it will work on any multiplayer server. Built from a fork with a small compatibility fix.
+†∫\
+(1a28427904f0a7967d54d6647c1171db67ffa44fClientPlugin2"viktor-ferenczi/se-toolbar-manager
+"viktor-ferenczi/se-toolbar-managerToolbar Manager*:Allows saving and loading of character and block toolbars.2Viktor:≈Allows saving, loading and efficiently editing of character and block toolbars.
+Speed up your build by using a familiar toolbar layout, copy cockpits into remote control blocks and more. Allows copying toolbars between ships and games, identifies blocks by name (like named groups). Stores your toolbars locally, works with online multiplayer.
+
+For support join the SE Mods Discord:
+https://discord.gg/PYPFPGf3Ca
+
+Please consider supporting my work on Patreon:
+https://www.patreon.com/semods
+
+One time support via PayPal:
+https://www.paypal.com/paypalme/vferenczi/
+
+Thank you!
+    
+ÿ∫Y
+(e3d257540cb1130f75996342daf4bd2ec83d4eb7ClientPluginShared2viktor-ferenczi/se-undo
+$AC284074-A676-4930-B47A-F30450988608Undo*nCtrl-Z / Ctrl-Y undo and redo for building, painting, grid paste and delete, terminal changes and text fields.2Viktor:’
+        Undo and redo with Ctrl-Z / Ctrl-Y
+        
+        - Placing and removing blocks, grid splits included
+        - Removed blocks come back with their settings, inventory and toolbar slots
+        - Rotors, hinges, pistons and connectors come back with what they held
+        - Painting and skins
+        - Pasting and deleting grids
+        - Terminal property changes, block and grid names
+        - Custom Data and block toolbars
+        - Programmable block programs
+        - Single line text fields
+        - Grid history (Ctrl-H): put a deleted grid back on the clipboard
+
+        The history is saved with the world and follows its backups.
+
+        Where it works, always in creative or with creative tools enabled:
+        - Offline games
+        - Friends multiplayer as the host. Joined players who run Undo get it too.
+        - Joining a friend's game, if the host runs Undo
+        - On a dedicated server running the Undo companion, a Magnetar plugin from MagnetarHub. The server keeps the history and checks every step.
+
+        Where it is off, it records nothing and all keys stay as in the game.
+
+        Relative dampeners and toggle all reactors move to Ctrl-Shift-Z and Ctrl-Shift-Y. With nothing to undo, Ctrl-Z is still relative dampeners. All keys can be changed in the plugin settings.
+
+        Video: Ship editing
+        https://youtu.be/fS_KpBiItiU
+
+        Video: Terminal fields
+        https://www.youtube.com/watch?v=xcvybKVaNjA
+
+        Please see the full documentation on GitHub:
+        https://github.com/viktor-ferenczi/se-undo
+
+        For support please join the Pulsar Discord: https://discord.gg/z8ZczP2YZY
+        Please consider supporting my work on Patreon: https://www.patreon.com/semods
+    
+Û∫e
+(0626801a968b3314661153a928016ffc04800dd9ClientPluginSharedRuntime2OwendB1/se-unified-storage
+$4BD38E0B-20BC-4797-A011-44B59E928DA4Unified Storage*`One projected ship-wide inventory with definition-driven distribution and a vanilla UI fallback.2Owen de Bree:·Replaces the grid-side terminal inventory with a unified view while keeping every item in its real container. Includes configurable inventory groups, vanilla and modded inventory support, placement policies, refinery ore priorities, crafting targets, loadouts, and transfers between distinct mechanical ship groups when conveyors permit them. Works with unmodified servers; no programmable block or server companion is required. The Unified toggle restores the vanilla inventory UI. An optional Magnetar companion adds shared ship settings. Original idea and UI testing by SpaceGT: https://github.com/SpaceGT/
+Î∫M
+(5a33f455d9e42bce37e643dd469bbc824a1ec8f82!StarCpt/UnlimitedWithdrawalAmount
+!StarCpt/UnlimitedWithdrawalAmount(Unlimited Deposit And Withdrawal Amounts*CUnlimited* deposit and withdrawal amounts for ATMs and Store Blocks2StarCpt:~Unlimited* deposit and withdrawal amount for ATMs and Store Blocks
+
+*CAPPED to ~2.14 billion, otherwise it causes an overflow!
+∞∫N
+(c8d74ba77112a76d468b4d03f60ac44342868b482"austinvaness/UnlimitedScriptLength
+"austinvaness/UnlimitedScriptLengthUnlimited Script Length*3Removes the programmable block script length limit.2avaness:bThis plugin removes the programmable block script length limit. This does not work in multiplayer.
+»∫`
+(18727307cdeac53b7d4d2bb71bf644e880227b8eClientPluginShared2blazeblue32/VoxelMaterialLimit
+$203fd2ad-02ed-4edd-936f-64769974aadcVoxel Material Limit Fix*|Lets worlds with more than 128 voxel materials (many planet or material mods) draw them correctly instead of as plain stone.2BlazeBlue32:óSpace Engineers can only draw the first 128 voxel materials; with many planet or voxel material mods installed, everything past that (planet surfaces, ores, ice) turns into plain stone. This plugin lifts the limit to 254 materials by adjusting how the renderer's shader source is read, so no game files are changed. Every player who sees the planets needs it. On Linux it works with the LinuxCompat plugin, using a local copy of the shader folder made from your own install. The game log shows lines starting with [VoxelMaterialLimit].
+Ó∫Z
+(cbfbad002e661815b2865ec12ece4956d0cfb5b1ClientPluginShared2blazeblue32/WaterShading
+$b90210a0-0138-415c-8af6-5ce1cede7350Water Shading*ZMakes the Water Mod's sea take sun shadows and the planet's atmospheric haze into account.2BlazeBlue32:Companion to the Water Mod (Steam Workshop 2200451495). The mod draws the sea as particles, which the game neither shadows nor covers with the planet's atmosphere: mountain and ship shadows never fall on the water, and the sea looks pasted over the haze. This plugin tags the sea's particles by material, makes the particle shader read the sun shadow map for each of their pixels, and adds the planet's atmospheric haze to them as the game does for terrain. The first ten to fifteen seconds in a world may stutter for the first launch or two while the graphics layer builds the changed shaders; it settles on later launches.
+Ã∫G
+(a50c8ada5151ad85aef89be6e844bb8899dc634f2dawidmachon/se-welder-paint
+dawidmachon/se-welder-paintWelder Paint*FPaint blocks by aiming a welder at them instead of using a ghost block2dawidmachon:ˇRepaint blocks by aiming your welder at them and pressing the left mouse button - no need to hold a block in hand and touch its sides with the ghost, which is tedious for small or decorative blocks.
+
+Pick a color or skin in the normal color picker (P) as usual, toggle paint mode with a configurable keybind (default O), aim, click. Hold the left mouse button to paint continuously.
+
+Targeting mirrors the welder's own highlight, so visually small blocks that own a whole cube cell (corner floor lamps, wall pictures) can be painted directly or aimed past to paint the floor/wall behind them.
+
+Uses the exact same server-validated paint request as vanilla block painting, so multiplayer ownership rules apply unchanged. Optional debug network logging for diagnostics.
+Ù	∫€
+(e31f251c951251fed606934e3cac5cdf92285164Projects/Wilson/Source/Shared/PluginSwitcher.csShared/Toolbox.csShared/ListSearch.csShared/Personality.csShared/PluginStorage.cs2#scotlandsyard/SpaceEngineersPlugins
+$974C2D6B-52D9-4B3A-A387-F2D41C9FEACDWilson*iDirects the chat personalities of BaR Maid, Fat Albert, Stockpile Manager, Script to Plugin and OreScout.2scotlandsyard:ÍThe neighbour over the fence. Wilson directs the chat personalities of our other plugins (BaR Maid, Fat Albert, Sacrificial Stockpile Manager, OreScout and the rest), and has a few words of his own.
+
+With Wilson loaded, the plugins tell him when something happens and he decides who speaks, now and then with a short exchange between several characters. Chat lines only show on your own screen, so it's fine on any server.
+
+Quick start:
+1. Load Wilson with any of our other plugins and he directs their chat. About ten seconds after the world loads, he calls the roll.
+2. Type /wilson in chat to rename characters or set their chat on the Crew page.
+3. /wilson off|quiet|normal|chatty sets how much he directs.
+
+Guide: https://github.com/scotlandsyard/SpaceEngineersPlugins/tree/main/Projects/Wilson
+Report bugs: https://github.com/scotlandsyard/SpaceEngineersPlugins/issues
+°	∫~
+(3fd0b66acc962cf0053c24c174619c64c5840dd9*;
+WootingAnalogSDK.NET0.5.0
+System.ValueTuple4.5.02Garbius/WootingPlugin
+Garbius/WootingPluginWooting Plugin*0Native support for the Wooting analog keyboards.2Garbius:§Adds support for analog control of the character, space ships, and rovers in singleplayer and multiplayer games. It also affects programmable blocks, where the values can be accessed through IMyShipController.MoveIndicator as normal but the values are much more analog. The controls can be set as usual in the game options.
+
+There is an issue in the Wooting SDK that affects the arrow keys. When testing with a Wooting Two (the one with Flaretech switches), binding any movement action to the arrow keys would look right in the settings menu but it would be bound to the numpad in game. It will hopefully be fixed in a future version of the Wooting SDK.
+
+There is also an issue with wheels and analog controls. The brakes and throttle are treated as digital (on/off), affecting the Wooting and other controllers alike. I have made another plugin, Analog Wheel Control (SEAnalogWheels), that addresses this issue until Keen fixes it.BNETFramework;CLR;Mono
+∂	∫a
+(49197bb31efc8ccc43ea262f5f47dbf6459c5157BlueprintCollections2maxpowa/SE_BlueprintCollections
+$95F61973-8531-4C4A-BA6A-C138511DC65BWorkshop Collection Filter*fFilter the blueprints screen to the contents of a Steam Workshop collection, with on-demand downloads.2maxpowa:úAdds a "Workshop collection" dropdown to the Space Engineers blueprints screen.
+
+Selecting a collection shows only the blueprints that belong to it. The list contains every collection owned by the player, every collection the player is subscribed to, and every collection the player has favorited.
+
+Blueprints in the collection that the player is not subscribed to are listed too and are downloaded on demand when they are opened or copied. Their primary Steam Workshop image is shown until they are downloaded.
+
+Preview images are resized to fit the game's 242x128 preview slot with their original aspect ratio and cached; the cache limit is configurable in the plugin settings (default 10 MB). The plugin never subscribes, unsubscribes or publishes anything.
+
+Selecting "All Subscribed Items" turns the filter off. The selection is remembered between game sessions, and the screen's Refresh button reloads the collections.
+≤∫J
+(46b65b49128a48f422ef2edb246344d3faf5b24eClientPlugin2raylavaldez/Zoom
+raylavaldez/ZoomZoom*Zoom plugin, for zooming2Rayla Valdez:¢
+Plugin that allows for dynamic zooming for getting a peek at that pesky ship closing in.
+    
+Credits go to Github user 'Math0424' for creating ScrollableFOV.
+  
+ ¬ 
+
+2211605465Tool Switcher (Mod)*4Allows scrolling between welder, grinder, and drill.2avaness:ŸThis mod swaps the current tool with the next tool using the scroll wheel. It will also equip the best available tool in the inventory. Holding Alt or Ctrl will temporarily prevent tool switching. Modded tools and character weapons are supported. You may setup upgrade and downgrade keybinds to temporarily change the level of the equipped tool.J	758597413
+ö∫O
+TODO Git commit hashClientPlugin2)viktor-ferenczi/se-client-plugin-template
+$00000000-0000-0000-0000-000000000000TODO Your Plugin Name*TODO Short description2TODO Author Name:‹TODO Long description, multiple lines.
+
+        This text is shown on the plugin details panel in a scrollable text box.
+
+        You can use links here, players can click on them. For example, add a Discord invite.
+    

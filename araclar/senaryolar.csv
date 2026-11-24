@@ -1,0 +1,32 @@
+﻿cumle;beklenen
+selam;CEVAP.*Merhaba
+teşekkürler;CEVAP.*Rica ederim
+sistem durumu;CEVAP.*Batarya %88
+hasarlı parçaları söyler misin;CEVAP.*Hasarlı 3 blok.*Hangar Kapisi %35
+ön ışığı kapat;\[KOMUT\] \S+ KAPAT 81148140 && CEVAP.*Doğrulandı
+ön ışığı aç;\[KOMUT\] \S+ AC 81148140 && CEVAP.*Doğrulandı
+jiroskopu kapat;\[KOMUT\] \S+ KAPAT 5152898 && CEVAP.*Doğrulandı
+jiroskopu aç;\[KOMUT\] \S+ AC 5152898 && CEVAP.*Doğrulandı
+hangar kapısını aç;\[KOMUT\] \S+ AC 64996460 && CEVAP.*Doğrulandı
+hangar kapısını kapat;\[KOMUT\] \S+ KAPAT 64996460 && CEVAP.*Doğrulandı
+tüm bataryaları şarj et;\[KOMUT\] \S+ BATARYA_MOD 0:Recharge && CEVAP.*Doğrulandı
+bataryaları deşarj et;\[KOMUT\] \S+ BATARYA_MOD 0:Discharge && CEVAP.*Doğrulandı
+bataryaları otomatik moda al;\[KOMUT\] \S+ BATARYA_MOD 0:Auto && CEVAP.*Doğrulandı
+ana bataryayı şarj moduna al;\[KOMUT\] \S+ BATARYA_MOD 22546901:Recharge
+yedek bataryayı otomatik moda al;\[KOMUT\] \S+ BATARYA_MOD 27702543:Auto
+bataryayı deşarj moduna al;\[KOMUT\] \S+ BATARYA_MOD 0:Discharge
+reaktörü kapat;CEVAP.*Riskli işlem && !\[KOMUT\] \S+ KAPAT 20563486
+iptal;CEVAP.*iptal
+oksijen tankını kapat;CEVAP.*Riskli işlem && !\[KOMUT\] \S+ KAPAT 9046204
+iptal;CEVAP.*iptal
+bağlantıyı kes;CEVAP.*Riskli işlem && !\[KOMUT\] \S+ BAGLANTI_KES
+evet;\[KOMUT\] \S+ BAGLANTI_KES
+rafineriyi kapat;CEVAP.*bulamadım && !KOMUT
+maç kaç kaç biter;!KOMUT && !CEVAP.*Batarya %
+bu gemi çok güzel görünüyor;!KOMUT && !CEVAP.*Batarya %
+batarya şarj seviyesi kaç;!\[KOMUT\] \S+ BATARYA_MOD
+şarj moduna al;CEVAP.*mı demek istedin
+evet;\[KOMUT\] \S+ BATARYA_MOD 0:Recharge && OGREN
+şarj moduna al;\[KOMUT\] \S+ BATARYA_MOD 0:Recharge && !CEVAP.*demek istedin
+neler öğrendin;CEVAP.*şarj moduna al
+şarj moduna al ifadesini unut;CEVAP.*unuttum

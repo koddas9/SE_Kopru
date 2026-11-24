@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Current</Name>
+  <GitHub />
+  <DevFolder>
+    <LocalFolderConfig>
+      <Id>6b1a6e7d-55bb-478c-bda0-e5fac46617bb</Id>
+      <DebugBuild>true</DebugBuild>
+    </LocalFolderConfig>
+  </DevFolder>
+  <Local>
+    <string>SEAsistanKopru.dll</string>
+  </Local>
+  <Mods />
+</Profile>

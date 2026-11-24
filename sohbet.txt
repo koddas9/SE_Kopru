@@ -1,0 +1,731 @@
+1795372767326-204|1795372767332|<#
+1795372767355-510|1795372767355|.SYNOPSIS
+1795372767424-157|1795372767424|    Farkli Ollama modellerini sorular.csv uzerinden test eder ve CSV raporu uretir.
+1795372767432-288|1795372767432|.EXAMPLE
+1795372767463-983|1795372767463|    .\atlas_model_testi.ps1 -Model "gemma3:4b"
+1795372767465-892|1795372767465|#>
+1795372767472-756|1795372767472|param(
+1795372767492-566|1795372767492|    [Parameter(Mandatory = $true)]
+1795372767507-632|1795372767507|    [string]$Model
+1795372767513-910|1795372767513|)
+1795372767528-731|1795372767528|$BaseDir = "C:\SE_Kopru"
+1795372767555-835|1795372767555|$AraclarDir = Join-Path$BaseDir "araclar"
+1795372767589-732|1795372767589|$SorularPath = Join-Path$AraclarDir "sorular.csv"
+1795372767621-783|1795372767621|$SohbetPath = Join-Path$BaseDir "sohbet.txt"
+1795372767647-338|1795372767647|$CevapPath = Join-Path$BaseDir "cevap.txt"
+1795372767680-590|1795372767680|if (-not (Test-Path -LiteralPath $SorularPath)) {
+1795372767717-927|1795372767717|    Write-Error "sorular.csv bulunamadi: $SorularPath"
+1795372767725-547|1795372767727|    exit 1
+1795372767729-476|1795372767729|}
+1795372767765-470|1795372767765|$Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+1795372767799-979|1795372767799|$Utf8Bom = New-Object System.Text.UTF8Encoding($true)
+1795372767833-375|1795372767833|if (-not (Test-Path -LiteralPath $SohbetPath)) {
+1795372767874-329|1795372767874|    [System.IO.File]::WriteAllText($SohbetPath, "", $Utf8NoBom)
+1795372767876-945|1795372767876|}
+1795372767909-164|1795372767909|if (-not (Test-Path -LiteralPath $CevapPath)) {
+1795372767949-228|1795372767949|    [System.IO.File]::WriteAllText($CevapPath, "", $Utf8NoBom)
+1795372767951-973|1795372767951|}
+1795372767967-291|1795372767967|function Get-UnixMs {
+1795372768013-487|1795372768013|    $epoch = [DateTime]::new(1970, 1, 1, 0, 0, 0, [DateTimeKind]::Utc)
+1795372768055-165|1795372768055|    return [long]([DateTime]::UtcNow - $epoch).TotalMilliseconds
+1795372768057-491|1795372768057|}
+1795372768124-491|1795372768124|$guvenliModel = ($Model -replace '[^a-zA-Z0-9_-]', '_')$tarihDamgasi = Get-Date -Format "yyyyMMdd_HHmmss"
+1795372768173-158|1795372768173|$CiktiCsv = Join-Path$AraclarDir "model_sonuc_${guvenliModel}_${tarihDamgasi}.csv"
+1795372768221-195|1795372768221|$sorular = Import-Csv -LiteralPath$SorularPath -Delimiter ";" -Encoding UTF8
+1795372768265-472|1795372768265|$sonuclar = New-Object System.Collections.Generic.List[PSObject]
+1795372768332-342|1795372768332|Write-Host "Model testi basliyor -> Model: $Model | Soru sayisi: $($sorular.Count)" -ForegroundColor Cyan
+1795372768341-380|1795372768341|$sira = 0
+1795372768364-554|1795372768364|foreach ($row in $sorular) {$sira++
+1795372768383-612|1795372768383|    $soruMetni =$row.soru.Trim()
+1795372768402-274|1795372768402|    $turMetni =$row.tur.Trim()
+1795372768457-612|1795372768457|    $oncekiSatirlar = @([System.IO.File]::ReadAllLines($CevapPath,$Utf8NoBom))
+1795372768486-853|1795372768486|    $baslangicSatirSayisi =$oncekiSatirlar.Count
+1795372768539-916|1795372768539|    $msgId = (Get-UnixMs).ToString() + "-" + $sira.ToString()$nowMs = Get-UnixMs
+1795372768564-551|1795372768564|    $gonderilen = "atlas $soruMetni"
+1795372772812-104|1795372772812|    $satir = "$msgId\vert{}$nowMs|$gonderilen`n"  $fs = New-Object System.IO.FileStream($SohbetPath, [System.IO.FileMode]::Append, [System.IO.FileAccess]::Write, [System.IO.FileShare]::ReadWrite) try { $bytes = $Utf8NoBom.GetBytes($satir) $fs.Write($bytes, 0, $bytes.Length) } finally { $fs.Close() }  $t0 = Get-Date $bulunanCevap = "" $zamanAsimi = $true  while (((Get-Date) - $t0).TotalSeconds -lt 40) { $guncelSatirlar = @([System.IO.File]::ReadAllLines($CevapPath, $Utf8NoBom)) if ($guncelSatirlar.Count -gt $baslangicSatirSayisi) { for ($i = $baslangicSatirSayisi; $i -lt $guncelSatirlar.Count; $i++) { $cand = $guncelSatirlar[$i] if ($cand -like "*[ATLAS]*") { $bulunanCevap = $cand $zamanAsimi = $false break } } if (-not $zamanAsimi) { break } } Start-Sleep -Milliseconds 200 }  $gecenSn = [Math]::Round(((Get-Date) - $t0).TotalSeconds, 2) if ($zamanAsimi) { $bulunanCevap = "[ZAMAN_ASIMI_40SN]" }  $obj = [PSCustomObject]@{ soru     = $soruMetni tur      = $turMetni cevap    = $bulunanCevap sure_sn  = $gecenSn } $sonuclar.Add($obj)  $renk = if ($zamanAsimi) { "Red" } else { "Green" } Write-Host "[$sira/$($sorular.Count)] (${gecenSn}s) $soruMetni" -ForegroundColor $renk }  $sonuclar \vert{} Export-Csv -LiteralPath $CiktiCsv -Delimiter ";" -NoTypeInformation -Encoding UTF8  $toplamSure = 0.0 $asanSayisi = 0 foreach ($s in $sonuclar) { $toplamSure += [double]$s.sure_sn if ([double]$s.sure_sn -ge 40.0 -or $s.cevap -eq "[ZAMAN_ASIMI_40SN]") { $asanSayisi++ } } $ortSure = if ($sonuclar.Count -gt 0) { [Math]::Round($toplamSure / $sonuclar.Count, 2) } else { 0 }  Write-Host "" Write-Host "=== OZET ($Model) ===" -ForegroundColor Yellow Write-Host "Ortalama sure : $ortSure sn" Write-Host "40 sn asan    : $asanSayisi / $($sonuclar.Count)" Write-Host "Cikti dosyasi : $CiktiCsv" ```  ---  ## G3: `C:\SE_Kopru\araclar\atlas_kur.ps1`  ```powershell <# .SYNOPSIS Atlas kurulumunu adim adim dogrular, eksikleri tamamlar ve baslat.bat uretir. .EXAMPLE .\atlas_kur.ps1 #>  $BaseDir = "C:\SE_Kopru" $AraclarDir = Join-Path $BaseDir "araclar" $PluginDir = Join-Path $BaseDir "AtlasPlugin"  $tumAdimlarOk = $true  function Write-Step { param( [bool]$Ok, [string]$Mesaj ) if ($Ok) { Write-Host "[✓] $Mesaj" -ForegroundColor Green } else { Write-Host "[✗] $Mesaj" -ForegroundColor Red $script:tumAdimlarOk = $false } }  # 1. Klasor kontrolu ve olusturma $klasorOk = $true foreach ($d in @($BaseDir, $AraclarDir, $PluginDir)) { if (-not (Test-Path -LiteralPath $d)) { try { New-Item -ItemType Directory -Path $d -Force \vert{} Out-Null Write-Host "    Klasor olusturuldu: $d" -ForegroundColor DarkGray } catch { $klasorOk = $false } } } Write-Step -Ok $klasorOk -Mesaj "Klasor yapisi kontrol edildi ($BaseDir, araclar, AtlasPlugin)"  # 2. Gerekli dosyalarin kontrolu $gerekliDosyalar = @( "atlas_ortak.ps1", "atlas_izleyici.ps1", "atlas_dogrulama.ps1", "atlas_rutin.ps1", "AtlasPlugin\Atlas.cs" ) $eksikDosyalar = New-Object System.Collections.Generic.List[string] foreach ($rel in $gerekliDosyalar) { $full = Join-Path $BaseDir $rel if (-not (Test-Path -LiteralPath $full)) { $eksikDosyalar.Add($rel) } }  if ($eksikDosyalar.Count -eq 0) { Write-Step -Ok $true -Mesaj "Tum gerekli temel dosyalar mevcut" } else { Write-Step -Ok $false -Mesaj ("Eksik dosyalar: " + ($eksikDosyalar -join ", ")) }  # 3. .ps1 dosyalarinda UTF-8 BOM kontrolu ve ekleme $bomOk = $true $psDosyalari = New-Object System.Collections.Generic.List[string] if (Test-Path -LiteralPath $BaseDir) { foreach ($f in Get-ChildItem -LiteralPath $BaseDir -Filter "*.ps1" -Recurse -ErrorAction SilentlyContinue) { $psDosyalari.Add($f.FullName) } }  foreach ($psPath in $psDosyalari) { $bytes = [System.IO.File]::ReadAllBytes($psPath) $hasBom = ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF) if (-not $hasBom) { try { $text = [System.Text.Encoding]::UTF8.GetString($bytes) $utf8Bom = New-Object System.Text.UTF8Encoding($true) [System.IO.File]::WriteAllText($psPath, $text, $utf8Bom) Write-Host "    BOM eklendi: $psPath" -ForegroundColor Yellow } catch { $bomOk = $false } } } Write-Step -Ok $bomOk -Mesaj "PowerShell (.ps1) dosyalarinin UTF-8 BOM durumu kontrol edildi"  # 4. Zone.Identifier engellerini kaldirma $unblockOk = $true foreach ($psPath in $psDosyalari) { try { Unblock-File -LiteralPath $psPath -ErrorAction Stop } catch { $unblockOk = $false } } Write-Step -Ok $unblockOk -Mesaj "Zone.Identifier engelleri kaldirildi (Unblock-File)"  # 5. Ollama kontrolu ve model eslesmesi $ollamaOk = $false $kuruluModeller = New-Object System.Collections.Generic.List[string] try { $resp = Invoke-RestMethod -Uri "http://127.0.0.1:11434/api/tags" -TimeoutSec 5 -ErrorAction Stop if ($null -ne $resp -and $null -ne $resp.models) { foreach ($m in $resp.models) { if ($m.name) { $kuruluModeller.Add($m.name.ToString()) } } } $ollamaOk = $true Write-Host "    Ollama aktif. Kurulu modeller: " + ($(if ($kuruluModeller.Count -gt 0) { $kuruluModeller -join ", " } else { "yok" })) -ForegroundColor DarkGray } catch { $ollamaOk = $false Write-Host "    Ollama (127.0.0.1:11434) erisilemedi." -ForegroundColor DarkGray }  $ortakPath = Join-Path $BaseDir "atlas_ortak.ps1" $modelEslesmeOk = $false if ($ollamaOk -and (Test-Path -LiteralPath $ortakPath)) { $ortakIcerik = [System.IO.File]::ReadAllText($ortakPath) if ($ortakIcerik -match "Model\s*=\s*'([^']+)'") { $ayarliModel = $matches[1].Trim() $eslesti = $false foreach ($km in $kuruluModeller) { if ($km.ToLowerInvariant() -eq $ayarliModel.ToLowerInvariant()) { $eslesti = $true break } } if ($eslesti) { $modelEslesmeOk = $true Write-Host "    Ayarli model kurulu modeller arasinda: $ayarliModel" -ForegroundColor DarkGray } else { Write-Host "    Ayarli model ('$ayarliModel') kurulu modellerde bulunamadi." -ForegroundColor Yellow } } else { Write-Host "    atlas_ortak.ps1 icinde Model = '...' satiri bulunamadi." -ForegroundColor Yellow } } Write-Step -Ok ($ollamaOk -and $modelEslesmeOk) -Mesaj "Ollama servisi ve model yapilandirmasi kontrol edildi"  # 6. baslat.bat olusturma $batPath = Join-Path $BaseDir "baslat.bat" $batOk = $true try { $batIcerik = "@echo off`r`npowershell -NoProfile -ExecutionPolicy Bypass -File `"C:\SE_Kopru\atlas_izleyici.ps1`"`r`npause`r`n" [System.IO.File]::WriteAllText($batPath, $batIcerik, [System.Text.Encoding]::ASCII) } catch { $batOk = $false } Write-Step -Ok $batOk -Mesaj "baslat.bat olusturuldu ($batPath)"  # 7. Yonetici kontrolu ve Defender istisna onerisi $kimlik = [Security.Principal.WindowsIdentity]::GetCurrent() $rol = New-Object Security.Principal.WindowsPrincipal($kimlik) $yoneticiMi = $rol.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator) if ($yoneticiMi) { Write-Host "[!] Yonetici olarak calisiyorsunuz. Onerilen Defender istisna komutu:" -ForegroundColor Cyan Write-Host "    Add-MpPreference -ExclusionPath `"$BaseDir`"" -ForegroundColor White
+1795372772816-208|1795372772816|}
+1795372772868-436|1795372772868|Write-Step -Ok $true -Mesaj "Yonetici durumu ve Defender onerisi degerlendirildi"
+1795372772875-782|1795372772875|# 8. Ozet
+1795372772887-410|1795372772887|Write-Host ""
+1795372772902-376|1795372772902|if ($tumAdimlarOk) {
+1795372772944-589|1795372772944|    Write-Host "SONUC: Tum adimlar basarili (✓)." -ForegroundColor Green
+1795372772955-718|1795372772955|} else {
+1795372773034-355|1795372773034|    Write-Host "SONUC: Bazi adimlarda eksiklik veya hata var (✗). Yukaridaki maddeleri kontrol edin." -ForegroundColor Red
+1795372774617-955|1795372774617|}
+1795373133841-1|1795373133854|atlas selam atlas
+1795373174050-2|1795373174050|atlas merhaba nasilsin
+1795373214225-3|1795373214225|atlas neler yapiyorsun dostum
+1795373254233-4|1795373254233|atlas sen kimsin
+1795373294270-5|1795373294270|atlas adin ne senin
+1795373334362-6|1795373334362|atlas kim tarafindan yapildin
+1795373374541-7|1795373374541|atlas space engineers hakkinda ne biliyorsun
+1795373414570-8|1795373414570|atlas uzayda hayatta kalmak zor mu
+1795373454662-9|1795373454662|atlas bana bir uzay sakasi yap
+1795373494837-10|1795373494837|atlas bugun hava nasil sence
+1795373535023-11|1795373535025|atlas canim sikildi biraz sohbet edelim
+1795373575095-12|1795373575095|atlas sence en iyi yakit hangisi
+1795373615297-13|1795373615297|atlas geminin ismi sence yakismis mi
+1795373655472-14|1795373655472|atlas biraz dertleselim mi
+1795373695556-15|1795373695556|atlas korsanlar gelir mi buralara
+1795373735702-16|1795373735702|atlas meteor yagmuru baslarsa ne yapariz
+1795373775843-17|1795373775843|atlas senin bir bedenin var mi
+1795373815934-18|1795373815934|atlas yapay zeka olmak nasil bir sey
+1795373856076-19|1795373856076|atlas bugun sansli miyiz sence
+1795373896178-20|1795373896178|atlas uzayda ses duyulur mu
+1795373936352-21|1795373936352|atlas en sevdigin gezegen hangisi
+1795373976548-22|1795373976548|atlas kahve icer misin
+1795374016746-23|1795374016746|atlas mac kac kac biter sence
+1795374056917-24|1795374056917|atlas biraz muzik acalim mi kafadan
+1795374097101-25|1795374097101|atlas bu gemi cok guzel gorunuyor
+1795374137108-26|1795374137108|atlas neyse bosver simdi
+1795374177312-27|1795374177312|atlas anladim seni sag ol
+1795374217512-28|1795374217512|atlas belki yarin bakariz
+1795374257569-29|1795374257569|atlas pek emin degilim acikcasi
+1795374297773-30|1795374297773|atlas garip bir sessizlik var
+1795374337917-31|1795374337917|atlas sen ne dersin bu ise
+1795374378073-32|1795374378073|atlas acaba dogru yolda miyiz
+1795374418260-33|1795374418260|atlas keyifler nasil gemide
+1795374458425-34|1795374458425|atlas biraz dinlenelim
+1795374498485-35|1795374498485|atlas eyvallah atlas
+1795374538637-36|1795374538637|atlas gemi durumu ne alemde
+1795374578847-37|1795374578847|atlas genel durumu soyler misin
+1795374618918-38|1795374618918|atlas batarya kac yuzde
+1795374659023-39|1795374659023|atlas guc durumu nedir
+1795374699211-40|1795374699211|atlas hidrojen ne kadar kaldi
+1795374739271-41|1795374739271|atlas oksijen kac
+1795374779358-42|1795374779358|atlas hasar var mi
+1795374819514-43|1795374819514|atlas gemide hasarli blok var mi bak
+1795374859610-44|1795374859610|atlas calismayan blok var mi
+1795374899799-45|1795374899799|atlas ana bataryayi kapat
+1795374939882-46|1795374939882|atlas ana bataryayi kapatsana
+1795374980045-47|1795374980045|atlas ana bataryayi kapatir misin
+1795375020167-48|1795375020168|atlas yedek bataryayi kapat
+1795375060293-49|1795375060293|atlas on isigi kapat
+1795375100364-50|1795375100364|atlas on isigi ac
+1795375119137-1|1795375119153|atlas selam atlas
+1795375140444-51|1795375140444|atlas on isigi acsaniza
+1795375159253-2|1795375159253|atlas merhaba nasilsin
+1795375180472-52|1795375180472|atlas on isigi acar misin
+1795375199288-3|1795375199288|atlas neler yapiyorsun dostum
+1795375220569-53|1795375220569|atlas hangar kapisini ac
+1795375239414-4|1795375239415|atlas sen kimsin
+1795375260663-54|1795375260663|atlas hangar kapisini kapat
+1795375279605-5|1795375279605|atlas adin ne senin
+1795375300799-55|1795375300799|atlas rektoru kapat
+1795375319786-6|1795375319786|atlas kim tarafindan yapildin
+1795375340947-56|1795375340947|atlas rektoru ac
+1795375359842-7|1795375359843|atlas space engineers hakkinda ne biliyorsun
+1795375381114-57|1795375381114|atlas hidrojen tankini kapat
+1795375399966-8|1795375399967|atlas uzayda hayatta kalmak zor mu
+1795375421198-58|1795375421198|atlas oksijen tankini ac
+1795375440057-9|1795375440057|atlas bana bir uzay sakasi yap
+1795375461261-59|1795375461261|atlas ana konnektoru kapat
+1795375480233-10|1795375480233|atlas bugun hava nasil sence
+1795375707220-448|1795375707222|powershell -NoProfile -ExecutionPolicy Bypass -File "C:\SE_Kopru\araclar\atlas_sahte_oyun.ps1" -Hasar -BataryaDusur
+1795375844499-633|1795375844501|tamam
+1795377086784-1|1795377086794|atlas selam atlas
+1795377092407-2|1795377092407|atlas merhaba nasilsin
+1795377095704-3|1795377095704|atlas neler yapiyorsun dostum
+1795377099413-4|1795377099413|atlas sen kimsin
+1795377102712-5|1795377102712|atlas adin ne senin
+1795377110146-6|1795377110146|atlas kim tarafindan yapildin
+1795377117938-7|1795377117938|atlas space engineers hakkinda ne biliyorsun
+1795377129795-8|1795377129795|atlas uzayda hayatta kalmak zor mu
+1795377138476-9|1795377138476|atlas bana bir uzay sakasi yap
+1795377146108-10|1795377146108|atlas bugun hava nasil sence
+1795377153074-11|1795377153074|atlas canim sikildi biraz sohbet edelim
+1795377161363-12|1795377161363|atlas sence en iyi yakit hangisi
+1795377169598-13|1795377169599|atlas geminin ismi sence yakismis mi
+1795377182354-14|1795377182354|atlas biraz dertleselim mi
+1795377189369-15|1795377189369|atlas korsanlar gelir mi buralara
+1795377198181-16|1795377198181|atlas meteor yagmuru baslarsa ne yapariz
+1795377206842-17|1795377206843|atlas senin bir bedenin var mi
+1795377214249-18|1795377214249|atlas yapay zeka olmak nasil bir sey
+1795377225001-19|1795377225001|atlas bugun sansli miyiz sence
+1795377233874-20|1795377233874|atlas uzayda ses duyulur mu
+1795377242558-21|1795377242558|atlas en sevdigin gezegen hangisi
+1795377249090-22|1795377249090|atlas kahve icer misin
+1795377256318-23|1795377256318|atlas mac kac kac biter sence
+1795377264967-24|1795377264967|atlas biraz muzik acalim mi kafadan
+1795377271148-25|1795377271148|atlas bu gemi cok guzel gorunuyor
+1795377282693-26|1795377282693|atlas neyse bosver simdi
+1795377288254-27|1795377288254|atlas anladim seni sag ol
+1795377293628-28|1795377293628|atlas belki yarin bakariz
+1795377299392-29|1795377299392|atlas pek emin degilim acikcasi
+1795377309921-30|1795377309921|atlas garip bir sessizlik var
+1795377317141-31|1795377317141|atlas sen ne dersin bu ise
+1795377323121-32|1795377323121|atlas acaba dogru yolda miyiz
+1795377331779-33|1795377331779|atlas keyifler nasil gemide
+1795377357075-34|1795377357075|atlas biraz dinlenelim
+1795377363886-35|1795377363886|atlas eyvallah atlas
+1795377369474-36|1795377369474|atlas gemi durumu ne alemde
+1795377393968-37|1795377393968|atlas genel durumu soyler misin
+1795377419698-38|1795377419698|atlas batarya kac yuzde
+1795377443402-39|1795377443405|atlas guc durumu nedir
+1795377468539-40|1795377468539|atlas hidrojen ne kadar kaldi
+1795377491585-41|1795377491588|atlas oksijen kac
+1795377514458-42|1795377514458|atlas hasar var mi
+1795377539191-43|1795377539191|atlas gemide hasarli blok var mi bak
+1795377562093-44|1795377562093|atlas calismayan blok var mi
+1795377570327-45|1795377570327|atlas ana bataryayi kapat
+1795377580633-46|1795377580633|atlas ana bataryayi kapatsana
+1795377590737-47|1795377590737|atlas ana bataryayi kapatir misin
+1795377600854-48|1795377600854|atlas yedek bataryayi kapat
+1795377611770-49|1795377611770|atlas on isigi kapat
+1795377622685-50|1795377622685|atlas on isigi ac
+1795377633818-51|1795377633818|atlas on isigi acsaniza
+1795377639798-52|1795377639798|atlas on isigi acar misin
+1795377650311-53|1795377650311|atlas hangar kapisini ac
+1795377661450-54|1795377661450|atlas hangar kapisini kapat
+1795377671342-55|1795377671342|atlas rektoru kapat
+1795377681449-56|1795377681449|atlas rektoru ac
+1795377692573-57|1795377692573|atlas hidrojen tankini kapat
+1795377702895-58|1795377702895|atlas oksijen tankini ac
+1795377712789-59|1795377712789|atlas ana konnektoru kapat
+1795377723091-60|1795377723091|atlas ana konnektoru ac
+1795377733189-61|1795377733189|atlas jiroskobu kapat
+1795377743493-62|1795377743493|atlas baglantiyi kes
+1795377754419-63|1795377754419|atlas baglantiyi kessene
+1795377754837-64|1795377754837|atlas kopruyu kapat baglantiyi kes
+1795377764931-65|1795377764931|atlas batarya durumunu goster
+1795377789456-66|1795377789456|atlas tum durumu raporla
+1795377815630-67|1795377815630|atlas enerji seviyesi nedir
+1795377838711-68|1795377838711|atlas gaz tanklari ne durumda
+1795377849851-69|1795377849851|atlas hasar raporu ver
+1795377873973-70|1795377873973|atlas en hasarli parca hangisi
+1795377885112-71|1795377885112|atlas on isik kapali mi acik mi
+1795377896243-72|1795377896243|atlas ana bataryayi ac
+1795377906146-73|1795377906146|atlas yedek bataryayi ac
+1795377916438-74|1795377916438|atlas konnektor baglantisini kes
+1795377927359-75|1795377927359|atlas kapiyi ac
+1795377927567-76|1795377927567|atlas kapiyi kapat
+1795377938924-77|1795377938924|atlas isigi kapat
+1795377952093-78|1795377952093|atlas isigi ac
+1795378201623-570|1795378201627|atlas gemi durumu ne alemde
+1795378254974-369|1795378254974|atlas ana bataryayı kapat
+1795378285718-1|1795378285729|atlas selam atlas
+1795378292766-2|1795378292766|atlas merhaba nasilsin
+1795378300191-3|1795378300191|atlas neler yapiyorsun dostum
+1795378308671-4|1795378308671|atlas sen kimsin
+1795378316073-5|1795378316073|atlas adin ne senin
+1795378323052-6|1795378323052|atlas kim tarafindan yapildin
+1795378330431-7|1795378330431|atlas space engineers hakkinda ne biliyorsun
+1795378341602-8|1795378341602|atlas uzayda hayatta kalmak zor mu
+1795378349829-9|1795378349829|atlas bana bir uzay sakasi yap
+1795378358092-10|1795378358093|atlas bugun hava nasil sence
+1795378367984-11|1795378367984|atlas canim sikildi biraz sohbet edelim
+1795378377213-12|1795378377213|atlas sence en iyi yakit hangisi
+1795378386054-13|1795378386054|atlas geminin ismi sence yakismis mi
+1795378398341-14|1795378398342|atlas biraz dertleselim mi
+1795378406381-15|1795378406381|atlas korsanlar gelir mi buralara
+1795378415223-16|1795378415223|atlas meteor yagmuru baslarsa ne yapariz
+1795378425297-17|1795378425297|atlas senin bir bedenin var mi
+1795378433728-18|1795378433728|atlas yapay zeka olmak nasil bir sey
+1795378443006-19|1795378443006|atlas bugun sansli miyiz sence
+1795378452055-20|1795378452055|atlas uzayda ses duyulur mu
+1795378460507-21|1795378460507|atlas en sevdigin gezegen hangisi
+1795378469158-22|1795378469158|atlas kahve icer misin
+1795378479434-23|1795378479434|atlas mac kac kac biter sence
+1795378487822-24|1795378487822|atlas biraz muzik acalim mi kafadan
+1795378497994-25|1795378497994|atlas bu gemi cok guzel gorunuyor
+1795378510765-26|1795378510765|atlas neyse bosver simdi
+1795378517551-27|1795378517551|atlas anladim seni sag ol
+1795378523932-28|1795378523932|atlas belki yarin bakariz
+1795378530316-29|1795378530316|atlas pek emin degilim acikcasi
+1795378542745-30|1795378542745|atlas garip bir sessizlik var
+1795378550578-31|1795378550578|atlas sen ne dersin bu ise
+1795378558625-32|1795378558626|atlas acaba dogru yolda miyiz
+1795378566448-33|1795378566448|atlas keyifler nasil gemide
+1795378583017-34|1795378583017|atlas biraz dinlenelim
+1795378590191-35|1795378590191|atlas eyvallah atlas
+1795378596143-36|1795378596143|atlas gemi durumu ne alemde
+1795378613713-37|1795378613713|atlas genel durumu soyler misin
+1795378632063-38|1795378632063|atlas batarya kac yuzde
+1795378642421-39|1795378642421|atlas guc durumu nedir
+1795378655573-40|1795378655573|atlas hidrojen ne kadar kaldi
+1795378666365-41|1795378666365|atlas oksijen kac
+1795378676682-42|1795378676682|atlas hasar var mi
+1795378689921-43|1795378689921|atlas gemide hasarli blok var mi bak
+1795378703318-44|1795378703318|atlas calismayan blok var mi
+1795378711145-45|1795378711145|atlas ana bataryayi kapat
+1795378722277-46|1795378722277|atlas ana bataryayi kapatsana
+1795378733433-47|1795378733434|atlas ana bataryayi kapatir misin
+1795378744341-48|1795378744341|atlas yedek bataryayi kapat
+1795378755258-49|1795378755258|atlas on isigi kapat
+1795378767430-50|1795378767430|atlas on isigi ac
+1795378779590-51|1795378779590|atlas on isigi acsaniza
+1795378786315-52|1795378786315|atlas on isigi acar misin
+1795378798876-53|1795378798876|atlas hangar kapisini ac
+1795378808757-54|1795378808757|atlas hangar kapisini kapat
+1795378818876-55|1795378818876|atlas rektoru kapat
+1795378829009-56|1795378829009|atlas rektoru ac
+1795378829213-57|1795378829213|atlas hidrojen tankini kapat
+1795378839696-58|1795378839696|atlas oksijen tankini ac
+1795378839898-59|1795378839898|atlas ana konnektoru kapat
+1795378851259-60|1795378851259|atlas ana konnektoru ac
+1795378861976-61|1795378861976|atlas jiroskobu kapat
+1795378872922-62|1795378872922|atlas baglantiyi kes
+1795378885412-63|1795378885412|atlas baglantiyi kessene
+1795378885629-64|1795378885629|atlas kopruyu kapat baglantiyi kes
+1795378899440-65|1795378899440|atlas batarya durumunu goster
+1795378909963-66|1795378909963|atlas tum durumu raporla
+1795378930264-67|1795378930264|atlas enerji seviyesi nedir
+1795378946165-68|1795378946165|atlas gaz tanklari ne durumda
+1795378962470-69|1795378962470|atlas hasar raporu ver
+1795378979623-70|1795378979623|atlas en hasarli parca hangisi
+1795378992158-71|1795378992158|atlas on isik kapali mi acik mi
+1795379004922-72|1795379004922|atlas ana bataryayi ac
+1795379016040-73|1795379016040|atlas yedek bataryayi ac
+1795379026534-74|1795379026534|atlas konnektor baglantisini kes
+1795379037309-75|1795379037310|atlas kapiyi ac
+1795379037715-76|1795379037715|atlas kapiyi kapat
+1795379050487-77|1795379050488|atlas isigi kapat
+1795379063230-78|1795379063230|atlas isigi ac
+1795381201263-247|1795381201268|atlas isigi ac
+1795381219117-464|1795381219117|atlas on isigi acsaniza
+1795381233819-457|1795381233819|atlas batarya durumunu goster
+1795381254507-861|1795381254507|atlas kopruyu kapat baglantiyi kes
+1795381271694-951|1795381271694|atlas evet
+1795381293209-196|1795381293209|atlas batarya kapat
+1795381306530-529|1795381306530|atlas ana batarya
+1795381367255-132|1795381367255|Get-Content -LiteralPath "C:\SE_Kopru\atlas.log" -Encoding UTF8 -Tail 40
+1795381367904-404|1795381367904|Select-String -Path "C:\SE_Kopru\atlas.log" -Encoding UTF8 -Pattern "\[(RED|KURAL|DOGRULA)\]" | Select-Object -Last 30
+1795381629277-1|1795381629285|atlas selam atlas
+1795381635015-2|1795381635015|atlas merhaba nasilsin
+1795381637495-3|1795381637495|atlas neler yapiyorsun dostum
+1795381640376-4|1795381640376|atlas sen kimsin
+1795381643487-5|1795381643487|atlas adin ne senin
+1795381650038-6|1795381650038|atlas kim tarafindan yapildin
+1795381656140-7|1795381656140|atlas space engineers hakkinda ne biliyorsun
+1795381664321-8|1795381664321|atlas uzayda hayatta kalmak zor mu
+1795381671696-9|1795381671696|atlas bana bir uzay sakasi yap
+1795381678620-10|1795381678620|atlas bugun hava nasil sence
+1795381685178-11|1795381685178|atlas canim sikildi biraz sohbet edelim
+1795381691933-12|1795381691933|atlas sence en iyi yakit hangisi
+1795381699739-13|1795381699739|atlas geminin ismi sence yakismis mi
+1795381714830-14|1795381714830|atlas biraz dertleselim mi
+1795381721990-15|1795381721990|atlas korsanlar gelir mi buralara
+1795381731080-16|1795381731080|atlas meteor yagmuru baslarsa ne yapariz
+1795381740490-17|1795381740490|atlas senin bir bedenin var mi
+1795381753740-18|1795381753740|atlas yapay zeka olmak nasil bir sey
+1795381766526-19|1795381766526|atlas bugun sansli miyiz sence
+1795381775962-20|1795381775962|atlas uzayda ses duyulur mu
+1795381787331-21|1795381787331|atlas en sevdigin gezegen hangisi
+1795381797407-22|1795381797407|atlas kahve icer misin
+1795381806449-23|1795381806449|atlas mac kac kac biter sence
+1795381807271-24|1795381807271|atlas biraz muzik acalim mi kafadan
+1795381815068-25|1795381815068|atlas bu gemi cok guzel gorunuyor
+1795381828097-26|1795381828097|atlas neyse bosver simdi
+1795381834713-27|1795381834713|atlas anladim seni sag ol
+1795381841304-28|1795381841304|atlas belki yarin bakariz
+1795381847930-29|1795381847930|atlas pek emin degilim acikcasi
+1795381860937-30|1795381860937|atlas garip bir sessizlik var
+1795381869417-31|1795381869417|atlas sen ne dersin bu ise
+1795381876840-32|1795381876840|atlas acaba dogru yolda miyiz
+1795381885041-33|1795381885041|atlas keyifler nasil gemide
+1795381901842-34|1795381901842|atlas biraz dinlenelim
+1795381909701-35|1795381909701|atlas eyvallah atlas
+1795381915903-36|1795381915903|atlas gemi durumu ne alemde
+1795381916512-37|1795381916512|atlas genel durumu soyler misin
+1795381956538-38|1795381956538|atlas batarya kac yuzde
+1795381957379-39|1795381957379|atlas guc durumu nedir
+1795381997511-40|1795381997511|atlas hidrojen ne kadar kaldi
+1795381997924-41|1795381997924|atlas oksijen kac
+1795382038104-42|1795382038104|atlas hasar var mi
+1795382038722-43|1795382038722|atlas gemide hasarli blok var mi bak
+1795382065331-417|1795382065337|ne oluyor
+1795382078812-44|1795382078812|atlas calismayan blok var mi
+1795382088087-45|1795382088087|atlas ana bataryayi kapat
+1795382088715-46|1795382088715|atlas ana bataryayi kapatsana
+1795382128919-47|1795382128919|atlas ana bataryayi kapatir misin
+1795382129331-48|1795382129334|atlas yedek bataryayi kapat
+1795382129964-49|1795382129964|atlas on isigi kapat
+1795382130785-50|1795382130785|atlas on isigi ac
+1795382131402-51|1795382131402|atlas on isigi acsaniza
+1795382171488-52|1795382171488|atlas on isigi acar misin
+1795382172111-53|1795382172111|atlas hangar kapisini ac
+1795382172722-54|1795382172722|atlas hangar kapisini kapat
+1795382173333-55|1795382173333|atlas rektoru kapat
+1795382173743-56|1795382173743|atlas rektoru ac
+1795382173946-57|1795382173946|atlas hidrojen tankini kapat
+1795382174368-58|1795382174368|atlas oksijen tankini ac
+1795382174778-59|1795382174778|atlas ana konnektoru kapat
+1795382175389-60|1795382175389|atlas ana konnektoru ac
+1795382175992-61|1795382175992|atlas jiroskobu kapat
+1795382176613-62|1795382176613|atlas baglantiyi kes
+1795382177034-63|1795382177034|atlas baglantiyi kessene
+1795382177237-64|1795382177241|atlas kopruyu kapat baglantiyi kes
+1795382177646-65|1795382177646|atlas batarya durumunu goster
+1795382177861-66|1795382177861|atlas tum durumu raporla
+1795382178472-67|1795382178472|atlas enerji seviyesi nedir
+1795382192494-841|1795382192494|atlas evet
+1795382198250-68|1795382198250|atlas gaz tanklari ne durumda
+1795382198855-69|1795382198855|atlas hasar raporu ver
+1795382238953-70|1795382238953|atlas en hasarli parca hangisi
+1795382239580-71|1795382239580|atlas on isik kapali mi acik mi
+1795382248862-72|1795382248862|atlas ana bataryayi ac
+1795382249669-73|1795382249669|atlas yedek bataryayi ac
+1795382250273-74|1795382250273|atlas konnektor baglantisini kes
+1795382250489-75|1795382250489|atlas kapiyi ac
+1795382250898-76|1795382250898|atlas kapiyi kapat
+1795382251528-77|1795382251528|atlas isigi kapat
+1795382252134-78|1795382252134|atlas isigi ac
+1795382745792-12039|1795382745792|atlas ordamısın
+1795382770326-36571|1795382770326|atlas durum raporu ver
+1795382799793-503|1795382799793|atlas hava durumu hakkında bilgin var mı fırtına çıkacak gibi geldi
+1795382896744-31921|1795382896744|atlas bataryayı kapat
+1795382930019-65186|1795382930019|atlas battery
+1795382992560-62197|1795382992560|atlas Small Cargo Container 3 kapat
+1795383017811-21911|1795383017811|atlas speed module 3
+1795383068393-6953|1795383068393|atlas speed Lab SmallHydrogen Tank
+1795383073728-12297|1795383073728|atlas speed Lab Small Hydrogen Tank
+1795383086087-24656|1795383086087|atlas speed Lab Small Hydrogen Tank
+1795383109738-48297|1795383109738|atlas kapatman lazımdı
+1795383120136-58703|1795383120136|atlas kapat
+1795383149004-22027|1795383149004|atlas kapat
+1795383172948-45980|1795383172948|atlas geri aç
+1795383204492-11991|1795383204492|atlas açmak ile kapatmak arasındaki farkı öğrenmelisin
+1795383244947-52444|1795383244947|atlas sağol
+1795383267462-9423|1795383267462|atlas Battery
+1795383292650-34611|1795383292650|atlas kapat
+1795383322601-64564|1795383322601|atlas Battery
+1795383374434-50856|1795383374434|atlas Battery
+1795383398851-9742|1795383398851|atlas gemide gördüün tüm blokları yaz
+1795384168985-58971|1795384168985|atlas ordamısın
+1795384243624-2540|1795384243624|atlas hava durumu ne gösteriyor
+1795384276241-35165|1795384276241|atlas arızalı parçalarımız neler
+1795384292658-51571|1795384292658|atlas durum
+1795384307607-988|1795384307607|atlas hasar
+1795384449641-11947|1795384449641|atlas durum
+1795384495325-57635|1795384495325|atlas hasar
+1795384530707-27474|1795384530707|atlas arızalı parçalarımız neler
+1795384574141-5375|1795384574141|atlas blok isimlerinide söylersen düzeltebilirim
+1795384673992-39699|1795384673992|atlas arıza durumu
+1795384988809-26831|1795384988809|atlas ordamsın
+1795385014075-52097|1795385014075|atlas benim adım yuşa bunu unutma
+1795385040393-12873|1795385040393|atlas burası bizim ana üsssümüz
+1795385058643-31123|1795385058643|atlas benim adım neydi
+1795385080760-53248|1795385080760|atlas anıların nne
+1795385104943-11900|1795385104943|atlas sağol
+1795385167676-9082|1795385167676|atlas şimdi önemli şeyler var gemimizin parça isimleri mesala batarya bataryanın ne olduğunu biliyormusun
+1795385241727-17609|1795385241727|atlas hayır bataryayı sorduğumda durumu gösterme
+1795385296827-7167|1795385296827|atlas şuan kapalı olan sistemler neler
+1795385761684-13274|1795385761684|atlas sistemlerde kapalı olan birşey var mı
+1795385817792-3847|1795385817792|atlas açmalısın onu
+1795385865475-51535|1795385865475|atlas tekrar kontrol et
+1795385907692-28202|1795385907692|atlas batarya kapalı gibi
+1795385951708-6697|1795385951708|atlas Battery
+1795386133476-57391|1795386133476|atlas tekrar kontrol et
+1795386168810-27183|1795386168810|atlas kapalı sistemler hangisi
+1795386209643-2475|1795386209643|atlas havalandırma sistemi bizim gemimizde yok ama
+1795386265809-58647|1795386265809|atlas tekrar kontrol et kapalı sistemlerimiz neler sana ipucu iki tane var
+1795386377493-39263|1795386377493|atlas tekrar kontrol et kapalı sistemlerimiz neler sana ipucu iki tane var
+1795386496460-27159|1795386496460|atlas bir daha kontrol et
+1795386537826-2983|1795386537826|atlas arızalı parçalar hangileri
+1795386651810-51431|1795386651810|atlas verilere erişimin yoksa yok de anlıyorumki verilere erişemediğin için banada birşey sunmak için yalan söylüyorsun gerek yok söyle ben düzeltmek için elimden geleni yapayım
+1795386707777-41864|1795386707777|atlas bundan sonra  kesin ol bana karşı bunu unutma
+1795386755763-24312|1795386755763|atlas helal sana
+1795386801331-4339|1795386801331|atlas bugünlük bu kadar yeter galiba yarın tekrar görüşelim
+1795386819464-22479|1795386819464|atlas son soru benim adım neydi
+1795386842364-45386|1795386842364|atlas görüşürüz
+1795388165705-887|1795388165705|atlas ordamısın
+1795388194895-369|1795388194895|atlas benim adım semih bunu asla unutma
+1795388225005-682|1795388225005|atlas benim adım neydi
+1795388252646-467|1795388252646|atlas gemimizdeki blokları görebiliyormusun
+1795388305959-269|1795388305959|atlas medical room kapalı mı
+1795388364007-231|1795388364007|atlas şuan gemide medical room yok ama
+1795388392561-750|1795388392561|atlas yalan yanlış bilgi vermek yasak bunu sakın unutma 
+1795388407076-235|1795388407076|atlas sana bu konuda güvenebilirmiyim
+1795388855359-518|1795388855359|atlas gemi durumu hakkında verilere erişebiliyormusun
+1795388926753-204|1795388926753|atlas bataryayı kapatırmısn
+1795388933831-171|1795388933831|atlas ana batarya
+1795388976038-659|1795388976038|atlas kapatmanı istemiştim sen açtın şimdi tam tersi kapatman lazım
+1795389016226-427|1795389016226|atlas sağol istediğim gibi oldu
+1795389043484-183|1795389043484|atlas benim adımı hatırlıyormusun
+1795389343525-599|1795389343525|hafızayı derle
+1795389379343-632|1795389379343|hafızayı derle
+1795389428229-803|1795389428229|hafızayı derle
+1795389507517-223|1795389507517|atlas hafızayı derle
+1795389583038-506|1795389583038|atlas beni hatırlıyormusun
+1795389626040-246|1795389626040|direk sen semihsin diyebilirsin
+1795389888346-509|1795389888346|senin adın ne
+1795389991988-340|1795389991988|senin asdın ne
+1795390099180-694|1795390099180|adın ne diye sordum
+1795390157182-533|1795390157182|tamam kafan karışmasın şimdi dinlen gene konuşuruz
+1795390173586-272|1795390173586|atlas hafızayı derle
+1795450897433-499|1795450897433|ordamısn
+1795450910371-681|1795450910373|niye
+1795450983780-840|1795450983780|atlas nasıl gidiyor
+1795451117554-258|1795451117554|şuan konuşabilirmiyiz
+1795451294108-153|1795451294108|ordamısn
+1795451453733-842|1795451453733|nasılsın
+1795451477746-613|1795451477746|çok iyi böyle devam
+1795451893116-212|1795451893116|sistem raporu verirmisin
+1795451938366-617|1795451938366|çalışma hatası nedir
+1795451996209-103|1795451996209|önemsiz gibi şuan için uğraşmaya değmez
+1795452019133-393|1795452019133|bana adımla hitap edebilirsin
+1795452046257-255|1795452046257|o senin adın benim adım ne
+1795452097918-753|1795452097918|evet sen atlassın 
+1795452116277-516|1795452116279|peki ben kimim sana daha önce söylemiştim
+1795452172287-643|1795452172287|1795389507837-6466 anı kütüphanende bunu arat
+1795452198326-806|1795452198326|o zman benim adım neymiş
+1795452254091-533|1795452254091|senin adın değil seninle konuşan kişi(yani ben) semih. anladın mı?
+1795452284515-265|1795452284515|güzel bir daha sorucağım ona göre
+1795452297115-676|1795452297117|adım neydi
+1795452800886-196|1795452800886|yine ben
+1795452841194-862|1795452841194|evet o malum soru gelsin sen şuan kiminle konuşuyorsun
+1795452904278-867|1795452904278|ben kimim peki
+1795452944306-361|1795452944306|bana semih diye hitap edebilirsin
+1795452971294-780|1795452971294|verileri tekrar kontrol edelim
+1795453011272-171|1795453011272|hangar kapısını aç
+1795453037831-987|1795453037833|geri kapatabilirsin
+1795453086732-678|1795453086732|hidrojen tankını doldurma aşamasına ayarla
+1795453160908-965|1795453160908|seni denedim sana verdiğim yetkilerde bunu ayarlayamıyorsun yalan ve yanluş bilgi verme konusunda anlaştığımızı sanıyordum
+1795453192537-746|1795453192537|yani yalan ve yanlış bilgi vermen yasak anladın mı
+1795453232105-837|1795453232106|güzel kendin hakkında bana ne anlatabilirsin
+1795453296773-516|1795453296773|gemimizin adı neydi
+1795453318058-142|1795453318058|peki şuan ne düşünüyorsun
+1795453355351-606|1795453355351|gemi için iyi bir önerin var mı
+1795453372116-333|1795453372116|nasıl
+1795453428387-850|1795453428387|tam anlamdın hidrojen tankının kullanımını nasıl azaltacağız
+1795453499368-785|1795453499368|hmm bilmediğinden kaynaklı galiba oyunda ikisi arasında bir bağlantı yok farklı çalışma prensipleri var
+1795453546257-476|1795453546258|bana bir fıkra anlatabilirmisin
+1795453621461-354|1795453621461|çok komik hahah
+1795453657461-957|1795453657461|eee 
+1795453696990-652|1795453696990|sistem ne diyor
+1795453718914-308|1795453718915|bataryayı kapat
+1795453726976-955|1795453726976|yedek batarya
+1795453756449-361|1795453756449|kapat dedim ama
+1795453805042-582|1795453805042|vazgeçtim yedek bataryaı kapat ana bataryayıda kapat
+1795453814131-974|1795453814131|ikiside
+1795453847821-282|1795453847821|kapattın mı
+1795453875585-479|1795453875585|evet
+1795453887593-980|1795453887593|benim adım ne
+1795453906509-217|1795453906509|tamam
+1795454550704-549|1795454550704|şimdi tekrar soruyorum benim adım ne
+1795454693991-938|1795454693991|aordamısın
+1795454711626-596|1795454711626|benim adım ne
+1795454719277-400|1795454719277|semih
+1795454733133-720|1795454733133|atlas kaydet
+1795454916240-824|1795454916240|hafızayı derle
+1795454972353-785|1795454972353|kaydet oyuncu adı semih
+1795454982117-523|1795454982117|şimdi adım ne
+1795454998193-336|1795454998193|benim adım peki
+1795455133981-396|1795455133981|sistem raporu
+1795455222234-550|1795455222234|benim adım ne
+1795455245305-276|1795455245305|hayır kaydettin sen bu bilgiyi biliyorsun
+1795456940395-402|1795456940395|selam
+1795456965241-350|1795456965241|benim adımı biliyormusun
+1795456992652-629|1795456992652|benim adım semih kaydet
+1795457003003-329|1795457003003|benim adım ne
+1795457008993-893|1795457008993|semih
+1795457017263-293|1795457017263|adın ne
+1795457025176-959|1795457025176|benim adım
+1795457097092-780|1795457097092|bana yeteneklerinden bahset
+1795457317832-478|1795457317832|en son ne konuşuyorduk
+1795457369037-749|1795457369037|bana adımla hitap edebilirsin
+1795457407946-528|1795457407946|adım kaptan değil kaptan bir hitap biçimi
+1795457427071-813|1795457427071|haşmetlim 
+1795457455918-295|1795457455918|tüm konuşmalarında bana bu hitabı kullan
+1795457481143-817|1795457481143|sistem raporu ver
+1795457621109-842|1795457621109|sistem raporu ver
+1795457762667-949|1795457762667|sistem raporu
+1795457863099-478|1795457863099|hafızayı derle
+1795457872225-281|1795457872225|benim adım ne
+1795457889225-205|1795457889225|güzel bataryayı kapatalım
+1795457901226-685|1795457901226|ikisinide 
+1795457928427-963|1795457928427|vazgeçtim
+1795457967751-552|1795457967751|son yaptığın komutları geri al 
+1795459028789-756|1795459028789|gemini
+1795459614162-166|1795459614162|gemini
+1795459965869-221|1795459965869|gemini
+1795460123300-742|1795460123302|selam
+1795461239768-713|1795461239768|ordamısın
+1795461513079-657|1795461513079|selam atlas ordamısın
+1795461557676-933|1795461557676|benim adım ne atlas
+1795461574187-943|1795461574187|hafıza derle
+1795461615384-323|1795461615384|bana hangi hitabı kullanacaktın
+1795461786712-414|1795461786712|derle
+1795461814625-929|1795461814625|tüm blok isimlerini söyle
+1795461860867-592|1795461860867|kapalı bloklar ne
+1795461877384-435|1795461877384|aç
+1795462000074-372|1795462000074|hangar kapısını açık duruma getir
+1795462205199-243|1795462205199|kapalı bloklar ne
+1795462239852-534|1795462239852|aç
+1795462324213-726|1795462324213|kapalı blolar ne
+1795462355362-473|1795462355362|aç
+1795462744730-391|1795462744730|hangi bloklar kapalı
+1795462774906-598|1795462774906|açarmısın onu
+1795462780326-778|1795462780326|işte bu be
+1795462838246-710|1795462838246|sistem özeti ver
+1795462890431-832|1795462890431|adımı tekrar söylermisin
+1795462900282-850|1795462900282|güzel atlas
+1795462927332-739|1795462927332|tüm sistemleri kapat
+1795462933252-590|1795462933252|hepsini
+1795462942518-302|1795462942518|evet
+1795462945415-396|1795462945415|evet
+1795463440700-465|1795463440700|selam ordamısn
+1795463476166-563|1795463476166|tüm sistemleri aç
+1795463483796-525|1795463483796|hepsini
+1795463501652-796|1795463501652|şimdi ise kapat
+1795463516116-533|1795463516116|aç
+1795463675260-498|1795463675260|tüm sistemleri kapat
+1795463681324-781|1795463681324|hepsi
+1795463693399-537|1795463693399|evet
+1795463698213-504|1795463698213|evet
+1795463700713-283|1795463700713|evet
+1795463729013-465|1795463729013|geri aç
+1795463994366-530|1795463994366|tüm sisteleri aç
+1795464002928-783|1795464002928|hepsi
+1795464012650-822|1795464012652|geri kapat
+1795464128929-448|1795464128929|tüm sistemleri kapat
+1795464132575-809|1795464132575|hepsi
+1795464137819-960|1795464137819|evet
+1795464140255-164|1795464140255|evet
+1795464142568-624|1795464142568|evet
+1795464150887-497|1795464150889|hepsini geri aç
+1795464276828-447|1795464276828|tüm sistemleri aç
+1795464280400-873|1795464280400|hepsi
+1795464294463-713|1795464294463|geri kapat
+1795464299585-361|1795464299587|evet
+1795464301977-752|1795464301977|evet
+1795464303997-122|1795464303997|evet
+1795464316197-333|1795464316197|geriaç
+1795464360103-880|1795464360103|tüm sistemleri
+1795464398692-136|1795464398692|tüm sistemleri aç
+1795464402201-147|1795464402201|hepsi
+1795464425590-316|1795464425590|geri aç
+1795464432936-226|1795464432936|geri kapat
+1795464437977-310|1795464437977|evet
+1795464441252-801|1795464441252|evet
+1795464445825-687|1795464445825|geri kapat
+1795464456403-564|1795464456403|geri aç
+1795464463624-225|1795464463624|geri kapat
+1795464470944-101|1795464470944|geri aç
+1795464476717-672|1795464476717|evet
+1795464480293-339|1795464480293|evet
+1795464627842-875|1795464627842|tüm sistemleri kapat
+1795464632436-278|1795464632436|hepsi
+1795464640367-509|1795464640367|geri al
+1795464652607-500|1795464652607|tüm sistemleri kapat
+1795464670247-637|1795464670247|tüm sistemleri aç
+1795464682836-701|1795464682836|tüm sistemleri aç
+1795464701621-704|1795464701621|tüm sistemleri kapat
+1795464839088-723|1795464839090|tüm sistemleri aç
+1795464843356-164|1795464843356|hepsini
+1795464855341-891|1795464855341|geri kapat
+1795464860279-424|1795464860279|geri aç
+1795464950862-294|1795464950862|bana yeni birşey öğret
+1795464983190-718|1795464983190|sen seç
+1795465022495-493|1795465022495|mesela
+1795465418995-724|1795465418995|araştır space enginners 
+1795465620563-314|1795465620563|araştır space engineers
+1795465822787-837|1795465822787|araştır space engineers
+1795466602027-2616|1795466602027|selam
+1795466630311-3238|1795466630313|/komut
+1795466676009-4005|1795466676009|/yardim
+1795466842298-7444|1795466842298|/komut
+1795466908324-382|1795466908324|derin düşün space engineers bloklar
+1795466946165-7213|1795466946165|öğren space engineers bloklar
+1795467136052-3035|1795467136053|öğren space engineers bloklar
+1795467292890-791|1795467292891|öğren space engineers blokların ne iş yaptıklarını, nasıl çalıştıklarını ,nasıl düzenlenebildiklerini öğren
+1795467753783-2847|1795467753783|öğren space engineers blokların ne iş yaptıklarını, nasıl çalıştıklarını ,nasıl düzenlenebildiklerini
+1795467880155-1451|1795467880159|öğren space engineers blokların ne iş yaptıklarını, nasıl çalıştıklarını ,nasıl düzenlenebildiklerini öğren
+1795510403450-721|1795510403450|selam
+1795510406845-9390|1795510406845|teşekkürler
+1795510410176-4913|1795510410176|sistem durumu
+1795510413496-1276|1795510413496|hasarlı parçaları söyler misin
+1795510416797-1099|1795510416797|ön ışığı kapat
+1795510421211-9451|1795510421211|ön ışığı aç
+1795510425642-5524|1795510425642|jiroskopu kapat
+1795510430042-9191|1795510430042|jiroskopu aç
+1795510434995-8254|1795510434995|hangar kapısını aç
+1795510439395-2094|1795510439395|hangar kapısını kapat
+1795510443824-9183|1795510443824|tüm bataryaları şarj et
+1795510447698-8219|1795510447698|bataryaları deşarj et
+1795510451573-6063|1795510451573|bataryaları otomatik moda al
+1795510455450-4109|1795510455450|ana bataryayı şarj moduna al
+1795510459864-4932|1795510459864|yedek bataryayı otomatik moda al
+1795510464299-2539|1795510464299|bataryayı deşarj moduna al
+1795510468722-2832|1795510468722|reaktörü kapat
+1795510472040-8715|1795510472040|iptal
+1795510475351-8136|1795510475351|oksijen tankını kapat
+1795510478636-1373|1795510478636|iptal
+1795510481972-4523|1795510481972|bağlantıyı kes
+1795510485289-3794|1795510485289|evet
+1795510489717-1734|1795510489717|rafineriyi kapat
+1795510493030-1029|1795510493030|maç kaç kaç biter
+1795510534253-8233|1795510534253|bu gemi çok güzel görünüyor
+1795510545022-5341|1795510545022|batarya şarj seviyesi kaç
+1795510554036-4167|1795510554036|şarj moduna al
+1795510557336-3107|1795510557336|evet
+1795510561757-4641|1795510561757|şarj moduna al
+1795510566172-2986|1795510566172|neler öğrendin
+1795510569477-9024|1795510569477|şarj moduna al ifadesini unut
+1795510726190-651|1795510726197|bataryaları auto moda al
+1795510749894-650|1795510749894|bataryaları deşarş et
+1795510768434-8781|1795510768434|1
+1795510791624-9011|1795510791624|bataryaları şarja al
+1795510945489-5538|1795510945490|bataryaları şarj et
+1795511640899-4552|1795511640899|selam
+1795511644280-4426|1795511644280|teşekkürler
+1795511647583-2474|1795511647583|sistem durumu
+1795511650916-5547|1795511650916|hasarlı parçaları söyler misin
+1795511654211-1533|1795511654211|ön ışığı kapat
+1795511658650-2722|1795511658650|ön ışığı aç
+1795511662501-9833|1795511662501|jiroskopu kapat
+1795511666906-4212|1795511666906|jiroskopu aç
+1795511670789-8216|1795511670789|hangar kapısını aç
+1795511675215-5956|1795511675215|hangar kapısını kapat
+1795511679061-1248|1795511679061|tüm bataryaları şarj et
+1795511683493-4705|1795511683493|bataryaları deşarj et
+1795511687929-8761|1795511687929|bataryaları otomatik moda al
+1795511692329-7974|1795511692329|ana bataryayı şarj moduna al
+1795511696213-4825|1795511696213|yedek bataryayı otomatik moda al
+1795511700620-6000|1795511700620|bataryayı deşarj moduna al
+1795511705062-2477|1795511705062|reaktörü kapat
+1795511708393-8878|1795511708393|iptal
+1795511711707-9573|1795511711707|oksijen tankını kapat
+1795511715031-8311|1795511715031|iptal
+1795511718345-8669|1795511718345|bağlantıyı kes
+1795511721661-5856|1795511721661|evet
+1795511726089-4469|1795511726089|rafineriyi kapat
+1795511729416-7899|1795511729416|maç kaç kaç biter
+1795511739043-332|1795511739043|bu gemi çok güzel görünüyor
+1795511749273-5897|1795511749273|batarya şarj seviyesi kaç
+1795511758389-4026|1795511758389|şarj moduna al
+1795511761706-9439|1795511761706|evet
+1795511766109-2834|1795511766109|şarj moduna al
+1795511769452-2545|1795511769452|neler öğrendin
+1795511772771-4656|1795511772771|şarj moduna al ifadesini unut
+1795512042254-8162|1795512042254|selam
+1795512045584-8098|1795512045584|teşekkürler
+1795512048867-8470|1795512048867|sistem durumu
+1795512052165-4797|1795512052165|hasarlı parçaları söyler misin
+1795512055451-8378|1795512055451|ön ışığı kapat
+1795512059319-3433|1795512059319|ön ışığı aç
+1795512063690-3182|1795512063690|jiroskopu kapat
+1795512068090-7947|1795512068090|jiroskopu aç
+1795512072460-3578|1795512072460|hangar kapısını aç
+1795512076907-8557|1795512076907|hangar kapısını kapat
+1795512081352-5959|1795512081352|tüm bataryaları şarj et
+1795512085747-4065|1795512085747|bataryaları deşarj et
+1795512089634-5706|1795512089634|bataryaları otomatik moda al
+1795512093511-7017|1795512093511|ana bataryayı şarj moduna al
+1795512097367-3551|1795512097367|yedek bataryayı otomatik moda al
+1795512101252-6432|1795512101252|bataryayı deşarj moduna al
+1795512105689-8761|1795512105689|reaktörü kapat
+1795512109006-8985|1795512109006|iptal
+1795512112344-670|1795512112344|oksijen tankını kapat
+1795512115661-9941|1795512115661|iptal
+1795512118983-1604|1795512118983|bağlantıyı kes
+1795512122314-8350|1795512122314|evet
+1795512126746-9599|1795512126746|rafineriyi kapat
+1795512130067-8423|1795512130067|maç kaç kaç biter
+1795512149229-6358|1795512149229|bu gemi çok güzel görünüyor
+1795512158901-7689|1795512158901|batarya şarj seviyesi kaç
+1795512167997-1175|1795512167997|şarj moduna al
+1795512171317-3600|1795512171317|evet
+1795512175743-1121|1795512175743|şarj moduna al
+1795512179081-5016|1795512179081|neler öğrendin
+1795512182415-7863|1795512182415|şarj moduna al ifadesini unut

@@ -1,0 +1,270 @@
+{"ts":1795467624947,"zaman":"2026-11-24 00:00:24","tur":"HATA","metin":"[UYARI] Oyundan telemetri gelmiyor (duraklatma ya da eklenti sorunu olabilir)."}
+{"ts":1795467867633,"zaman":"2026-11-24 00:04:27","tur":"HATA","metin":"[UYARI] Oyundan telemetri gelmiyor (duraklatma ya da eklenti sorunu olabilir)."}
+{"ts":1795467880529,"zaman":"2026-11-24 00:04:40","tur":"GIRDI","metin":"öğren space engineers blokların ne iş yaptıklarını, nasıl çalıştıklarını ,nasıl düzenlenebildiklerini öğren"}
+{"ts":1795467906724,"zaman":"2026-11-24 00:05:06","tur":"BILGI","metin":"[space engineers blokların ne iş yaptıklarını, nasıl çalıştıklarını ,nasıl düzenlenebildiklerini öğren] Space Engineers blokları, uzay gemileri ve üsler inşa etmek için kullanılan temel yapı taşlarıdır ve enerji, depolama ile hareket sistemlerini oluşturur. Bu bloklar, Reaktörler gibi enerji kaynaklarını ve Yakıt Tankları gibi depolama birimlerini entegre etmenizi sağlar. Başarılı bir mühendislik için bu bileşenlerin enerji akışını ve yapısal bütünlüğünü optimize etmek kritik öneme sahiptir."}
+{"ts":1795467906734,"zaman":"2026-11-24 00:05:06","tur":"CEVAP","metin":"Space Engineers blokları, uzay gemileri ve üsler inşa etmek için kullanılan temel yapı taşlarıdır ve enerji, depolama ile hareket sistemlerini oluşturur. Bu bloklar, Reaktörler gibi enerji kaynaklarını ve Yakıt Tankları gibi depolama birimlerini entegre etmenizi sağlar."}
+{"ts":1795510273107,"zaman":"2026-11-24 11:51:13","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795510403678,"zaman":"2026-11-24 11:53:23","tur":"GIRDI","metin":"selam"}
+{"ts":1795510403692,"zaman":"2026-11-24 11:53:23","tur":"CEVAP","metin":"Merhaba kaptan, dinliyorum."}
+{"ts":1795510406873,"zaman":"2026-11-24 11:53:26","tur":"GIRDI","metin":"teşekkürler"}
+{"ts":1795510406877,"zaman":"2026-11-24 11:53:26","tur":"CEVAP","metin":"Rica ederim."}
+{"ts":1795510410353,"zaman":"2026-11-24 11:53:30","tur":"GIRDI","metin":"sistem durumu"}
+{"ts":1795510410442,"zaman":"2026-11-24 11:53:30","tur":"CEVAP","metin":"Batarya %88, güç 142.5 MW, hidrojen %76, oksijen %94, hasarlı blok 3 (en kötü: Hangar Kapisi %35)."}
+{"ts":1795510413609,"zaman":"2026-11-24 11:53:33","tur":"GIRDI","metin":"hasarlı parçaları söyler misin"}
+{"ts":1795510413627,"zaman":"2026-11-24 11:53:33","tur":"CEVAP","metin":"Hasarlı 3 blok: Hangar Kapisi %35, Jiroskop 1 %12, On Isik %4."}
+{"ts":1795510416872,"zaman":"2026-11-24 11:53:36","tur":"GIRDI","metin":"ön ışığı kapat"}
+{"ts":1795510416985,"zaman":"2026-11-24 11:53:36","tur":"KOMUT","metin":"KAPAT 81148140","komut_id":"1795510416979-299"}
+{"ts":1795510418280,"zaman":"2026-11-24 11:53:38","tur":"CEVAP","metin":"Doğrulandı: On Isik kapatıldı."}
+{"ts":1795510421326,"zaman":"2026-11-24 11:53:41","tur":"GIRDI","metin":"ön ışığı aç"}
+{"ts":1795510421350,"zaman":"2026-11-24 11:53:41","tur":"KOMUT","metin":"AC 81148140","komut_id":"1795510421345-5087"}
+{"ts":1795510422324,"zaman":"2026-11-24 11:53:42","tur":"CEVAP","metin":"Doğrulandı: On Isik açıldı."}
+{"ts":1795510425832,"zaman":"2026-11-24 11:53:45","tur":"GIRDI","metin":"jiroskopu kapat"}
+{"ts":1795510425876,"zaman":"2026-11-24 11:53:45","tur":"KOMUT","metin":"KAPAT 5152898","komut_id":"1795510425871-5683"}
+{"ts":1795510426813,"zaman":"2026-11-24 11:53:46","tur":"CEVAP","metin":"Doğrulandı: Jiroskop 1 kapatıldı."}
+{"ts":1795510430341,"zaman":"2026-11-24 11:53:50","tur":"GIRDI","metin":"jiroskopu aç"}
+{"ts":1795510430367,"zaman":"2026-11-24 11:53:50","tur":"KOMUT","metin":"AC 5152898","komut_id":"1795510430358-8700"}
+{"ts":1795510431653,"zaman":"2026-11-24 11:53:51","tur":"CEVAP","metin":"Doğrulandı: Jiroskop 1 açıldı."}
+{"ts":1795510435190,"zaman":"2026-11-24 11:53:55","tur":"GIRDI","metin":"hangar kapısını aç"}
+{"ts":1795510435213,"zaman":"2026-11-24 11:53:55","tur":"KOMUT","metin":"AC 64996460","komut_id":"1795510435207-1221"}
+{"ts":1795510436182,"zaman":"2026-11-24 11:53:56","tur":"CEVAP","metin":"Doğrulandı: Hangar Kapisi açıldı."}
+{"ts":1795510439714,"zaman":"2026-11-24 11:53:59","tur":"GIRDI","metin":"hangar kapısını kapat"}
+{"ts":1795510439737,"zaman":"2026-11-24 11:53:59","tur":"KOMUT","metin":"KAPAT 64996460","komut_id":"1795510439730-4602"}
+{"ts":1795510440690,"zaman":"2026-11-24 11:54:00","tur":"CEVAP","metin":"Doğrulandı: Hangar Kapisi kapatıldı."}
+{"ts":1795510443880,"zaman":"2026-11-24 11:54:03","tur":"GIRDI","metin":"tüm bataryaları şarj et"}
+{"ts":1795510443897,"zaman":"2026-11-24 11:54:03","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795510443892-9594"}
+{"ts":1795510444845,"zaman":"2026-11-24 11:54:04","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510447744,"zaman":"2026-11-24 11:54:07","tur":"GIRDI","metin":"bataryaları deşarj et"}
+{"ts":1795510447760,"zaman":"2026-11-24 11:54:07","tur":"KOMUT","metin":"BATARYA_MOD 0:Discharge","komut_id":"1795510447755-4619"}
+{"ts":1795510448394,"zaman":"2026-11-24 11:54:08","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510451605,"zaman":"2026-11-24 11:54:11","tur":"GIRDI","metin":"bataryaları otomatik moda al"}
+{"ts":1795510451622,"zaman":"2026-11-24 11:54:11","tur":"KOMUT","metin":"BATARYA_MOD 0:Auto","komut_id":"1795510451617-7077"}
+{"ts":1795510452563,"zaman":"2026-11-24 11:54:12","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510455779,"zaman":"2026-11-24 11:54:15","tur":"GIRDI","metin":"ana bataryayı şarj moduna al"}
+{"ts":1795510455816,"zaman":"2026-11-24 11:54:15","tur":"KOMUT","metin":"BATARYA_MOD 22546901:Recharge","komut_id":"1795510455812-8638"}
+{"ts":1795510456774,"zaman":"2026-11-24 11:54:16","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510460042,"zaman":"2026-11-24 11:54:20","tur":"GIRDI","metin":"yedek bataryayı otomatik moda al"}
+{"ts":1795510460064,"zaman":"2026-11-24 11:54:20","tur":"KOMUT","metin":"BATARYA_MOD 27702543:Auto","komut_id":"1795510460058-5450"}
+{"ts":1795510461004,"zaman":"2026-11-24 11:54:21","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510464508,"zaman":"2026-11-24 11:54:24","tur":"GIRDI","metin":"bataryayı deşarj moduna al"}
+{"ts":1795510464529,"zaman":"2026-11-24 11:54:24","tur":"KOMUT","metin":"BATARYA_MOD 0:Discharge","komut_id":"1795510464523-7583"}
+{"ts":1795510465475,"zaman":"2026-11-24 11:54:25","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510469033,"zaman":"2026-11-24 11:54:29","tur":"GIRDI","metin":"reaktörü kapat"}
+{"ts":1795510469058,"zaman":"2026-11-24 11:54:29","tur":"CEVAP","metin":"Riskli işlem (1 sırada): KAPAT Ana Reaktor Reactor acik. Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795510472218,"zaman":"2026-11-24 11:54:32","tur":"GIRDI","metin":"iptal"}
+{"ts":1795510472225,"zaman":"2026-11-24 11:54:32","tur":"CEVAP","metin":"Bekleyen riskli işlemler iptal edildi."}
+{"ts":1795510475374,"zaman":"2026-11-24 11:54:35","tur":"GIRDI","metin":"oksijen tankını kapat"}
+{"ts":1795510475393,"zaman":"2026-11-24 11:54:35","tur":"CEVAP","metin":"Riskli işlem (1 sırada): KAPAT Oksijen Tanki GasTank acik. Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795510478878,"zaman":"2026-11-24 11:54:38","tur":"GIRDI","metin":"iptal"}
+{"ts":1795510478885,"zaman":"2026-11-24 11:54:38","tur":"CEVAP","metin":"Bekleyen riskli işlemler iptal edildi."}
+{"ts":1795510482024,"zaman":"2026-11-24 11:54:42","tur":"GIRDI","metin":"bağlantıyı kes"}
+{"ts":1795510482038,"zaman":"2026-11-24 11:54:42","tur":"CEVAP","metin":"Riskli işlem (1 sırada): BAGLANTI_KES . Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795510485533,"zaman":"2026-11-24 11:54:45","tur":"GIRDI","metin":"evet"}
+{"ts":1795510485541,"zaman":"2026-11-24 11:54:45","tur":"ONAY","metin":"BAGLANTI_KES  (0)"}
+{"ts":1795510485549,"zaman":"2026-11-24 11:54:45","tur":"KOMUT","metin":"BAGLANTI_KES 0","komut_id":"1795510485544-4826"}
+{"ts":1795510486833,"zaman":"2026-11-24 11:54:46","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510489977,"zaman":"2026-11-24 11:54:49","tur":"GIRDI","metin":"rafineriyi kapat"}
+{"ts":1795510490013,"zaman":"2026-11-24 11:54:50","tur":"HATA","metin":"\u0027rafineriyi\u0027 adında bir blok bulamadım. Blok adını telemetrideki gibi yaz."}
+{"ts":1795510493148,"zaman":"2026-11-24 11:54:53","tur":"GIRDI","metin":"maç kaç kaç biter"}
+{"ts":1795510530981,"zaman":"2026-11-24 11:55:30","tur":"CEVAP","metin":"Bu bir oyun değil, bir mühendislik simülasyonudur. Mevcut verilerle maçın sonucunu tahmin edemem."}
+{"ts":1795510534433,"zaman":"2026-11-24 11:55:34","tur":"GIRDI","metin":"bu gemi çok güzel görünüyor"}
+{"ts":1795510542142,"zaman":"2026-11-24 11:55:42","tur":"CEVAP","metin":"Görsel algı kişiseldir, ancak geminin mevcut yapısal bütünlüğü ve sistem verileri stabil görünüyor."}
+{"ts":1795510545289,"zaman":"2026-11-24 11:55:45","tur":"GIRDI","metin":"batarya şarj seviyesi kaç"}
+{"ts":1795510550857,"zaman":"2026-11-24 11:55:50","tur":"CEVAP","metin":"Ana batarya şu anda %88 şarj seviyesindedir."}
+{"ts":1795510554301,"zaman":"2026-11-24 11:55:54","tur":"GIRDI","metin":"şarj moduna al"}
+{"ts":1795510554319,"zaman":"2026-11-24 11:55:54","tur":"CEVAP","metin":"\u0027bataryaları şarj moduna almak\u0027 mı demek istedin? (evet / hayır)"}
+{"ts":1795510557497,"zaman":"2026-11-24 11:55:57","tur":"GIRDI","metin":"evet"}
+{"ts":1795510557508,"zaman":"2026-11-24 11:55:57","tur":"ANI_NOT","metin":"Ogrenilen ifade: \u0027sarj moduna al\u0027 = BATARYA_SARJ"}
+{"ts":1795510557537,"zaman":"2026-11-24 11:55:57","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795510557532-1922"}
+{"ts":1795510558492,"zaman":"2026-11-24 11:55:58","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510562058,"zaman":"2026-11-24 11:56:02","tur":"GIRDI","metin":"şarj moduna al"}
+{"ts":1795510562089,"zaman":"2026-11-24 11:56:02","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795510562084-1532"}
+{"ts":1795510563032,"zaman":"2026-11-24 11:56:03","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510566225,"zaman":"2026-11-24 11:56:06","tur":"GIRDI","metin":"neler öğrendin"}
+{"ts":1795510566252,"zaman":"2026-11-24 11:56:06","tur":"CEVAP","metin":"Öğrendiklerim (1): \u0027sarj moduna al\u0027 = bataryaları şarj moduna almak"}
+{"ts":1795510569734,"zaman":"2026-11-24 11:56:09","tur":"GIRDI","metin":"şarj moduna al ifadesini unut"}
+{"ts":1795510569761,"zaman":"2026-11-24 11:56:09","tur":"CEVAP","metin":"1 ifadeyi unuttum."}
+{"ts":1795510574195,"zaman":"2026-11-24 11:56:14","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795510726480,"zaman":"2026-11-24 11:58:46","tur":"GIRDI","metin":"bataryaları auto moda al"}
+{"ts":1795510726498,"zaman":"2026-11-24 11:58:46","tur":"KOMUT","metin":"BATARYA_MOD 0:Auto","komut_id":"1795510726491-7411"}
+{"ts":1795510727444,"zaman":"2026-11-24 11:58:47","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510750210,"zaman":"2026-11-24 11:59:10","tur":"GIRDI","metin":"bataryaları deşarş et"}
+{"ts":1795510750240,"zaman":"2026-11-24 11:59:10","tur":"CEVAP","metin":"Hangisini kastettin? 1) bataryaları deşarj moduna almak  2) bataryaları otomatik moda almak  (1 / 2 / hayır)"}
+{"ts":1795510768515,"zaman":"2026-11-24 11:59:28","tur":"GIRDI","metin":"1"}
+{"ts":1795510768536,"zaman":"2026-11-24 11:59:28","tur":"ANI_NOT","metin":"Ogrenilen ifade: \u0027bataryalari desars et\u0027 = BATARYA_DESARJ"}
+{"ts":1795510768544,"zaman":"2026-11-24 11:59:28","tur":"KOMUT","metin":"BATARYA_MOD 0:Discharge","komut_id":"1795510768539-4489"}
+{"ts":1795510769525,"zaman":"2026-11-24 11:59:29","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510791649,"zaman":"2026-11-24 11:59:51","tur":"GIRDI","metin":"bataryaları şarja al"}
+{"ts":1795510791668,"zaman":"2026-11-24 11:59:51","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795510791663-3838"}
+{"ts":1795510792966,"zaman":"2026-11-24 11:59:52","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795510874873,"zaman":"2026-11-24 12:01:14","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795510945711,"zaman":"2026-11-24 12:02:25","tur":"GIRDI","metin":"bataryaları şarj et"}
+{"ts":1795510945729,"zaman":"2026-11-24 12:02:25","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795510945724-1703"}
+{"ts":1795510946673,"zaman":"2026-11-24 12:02:26","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511175215,"zaman":"2026-11-24 12:06:15","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795511475574,"zaman":"2026-11-24 12:11:15","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795511641066,"zaman":"2026-11-24 12:14:01","tur":"GIRDI","metin":"selam"}
+{"ts":1795511641070,"zaman":"2026-11-24 12:14:01","tur":"CEVAP","metin":"Merhaba kaptan, dinliyorum."}
+{"ts":1795511644536,"zaman":"2026-11-24 12:14:04","tur":"GIRDI","metin":"teşekkürler"}
+{"ts":1795511644541,"zaman":"2026-11-24 12:14:04","tur":"CEVAP","metin":"Rica ederim."}
+{"ts":1795511647765,"zaman":"2026-11-24 12:14:07","tur":"GIRDI","metin":"sistem durumu"}
+{"ts":1795511647775,"zaman":"2026-11-24 12:14:07","tur":"CEVAP","metin":"Batarya %88, güç 142.5 MW, hidrojen %76, oksijen %94, hasarlı blok 3 (en kötü: Hangar Kapisi %35)."}
+{"ts":1795511650942,"zaman":"2026-11-24 12:14:10","tur":"GIRDI","metin":"hasarlı parçaları söyler misin"}
+{"ts":1795511650955,"zaman":"2026-11-24 12:14:10","tur":"CEVAP","metin":"Hasarlı 3 blok: Hangar Kapisi %35, Jiroskop 1 %12, On Isik %4."}
+{"ts":1795511654404,"zaman":"2026-11-24 12:14:14","tur":"GIRDI","metin":"ön ışığı kapat"}
+{"ts":1795511654426,"zaman":"2026-11-24 12:14:14","tur":"KOMUT","metin":"KAPAT 81148140","komut_id":"1795511654420-9166"}
+{"ts":1795511655392,"zaman":"2026-11-24 12:14:15","tur":"CEVAP","metin":"Doğrulandı: On Isik kapatıldı."}
+{"ts":1795511658926,"zaman":"2026-11-24 12:14:18","tur":"GIRDI","metin":"ön ışığı aç"}
+{"ts":1795511658945,"zaman":"2026-11-24 12:14:18","tur":"KOMUT","metin":"AC 81148140","komut_id":"1795511658940-8055"}
+{"ts":1795511659582,"zaman":"2026-11-24 12:14:19","tur":"CEVAP","metin":"Doğrulandı: On Isik açıldı."}
+{"ts":1795511662772,"zaman":"2026-11-24 12:14:22","tur":"GIRDI","metin":"jiroskopu kapat"}
+{"ts":1795511662792,"zaman":"2026-11-24 12:14:22","tur":"KOMUT","metin":"KAPAT 5152898","komut_id":"1795511662788-8161"}
+{"ts":1795511663740,"zaman":"2026-11-24 12:14:23","tur":"CEVAP","metin":"Doğrulandı: Jiroskop 1 kapatıldı."}
+{"ts":1795511666975,"zaman":"2026-11-24 12:14:26","tur":"GIRDI","metin":"jiroskopu aç"}
+{"ts":1795511667008,"zaman":"2026-11-24 12:14:27","tur":"KOMUT","metin":"AC 5152898","komut_id":"1795511667000-8867"}
+{"ts":1795511667959,"zaman":"2026-11-24 12:14:27","tur":"CEVAP","metin":"Doğrulandı: Jiroskop 1 açıldı."}
+{"ts":1795511670949,"zaman":"2026-11-24 12:14:30","tur":"GIRDI","metin":"hangar kapısını aç"}
+{"ts":1795511670967,"zaman":"2026-11-24 12:14:30","tur":"KOMUT","metin":"AC 64996460","komut_id":"1795511670962-7206"}
+{"ts":1795511671910,"zaman":"2026-11-24 12:14:31","tur":"CEVAP","metin":"Doğrulandı: Hangar Kapisi açıldı."}
+{"ts":1795511675440,"zaman":"2026-11-24 12:14:35","tur":"GIRDI","metin":"hangar kapısını kapat"}
+{"ts":1795511675459,"zaman":"2026-11-24 12:14:35","tur":"KOMUT","metin":"KAPAT 64996460","komut_id":"1795511675454-1172"}
+{"ts":1795511676092,"zaman":"2026-11-24 12:14:36","tur":"CEVAP","metin":"Doğrulandı: Hangar Kapisi kapatıldı."}
+{"ts":1795511679283,"zaman":"2026-11-24 12:14:39","tur":"GIRDI","metin":"tüm bataryaları şarj et"}
+{"ts":1795511679299,"zaman":"2026-11-24 12:14:39","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795511679294-6184"}
+{"ts":1795511680235,"zaman":"2026-11-24 12:14:40","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511683815,"zaman":"2026-11-24 12:14:43","tur":"GIRDI","metin":"bataryaları deşarj et"}
+{"ts":1795511683831,"zaman":"2026-11-24 12:14:43","tur":"KOMUT","metin":"BATARYA_MOD 0:Discharge","komut_id":"1795511683827-1100"}
+{"ts":1795511685100,"zaman":"2026-11-24 12:14:45","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511687982,"zaman":"2026-11-24 12:14:47","tur":"GIRDI","metin":"bataryaları otomatik moda al"}
+{"ts":1795511687997,"zaman":"2026-11-24 12:14:47","tur":"KOMUT","metin":"BATARYA_MOD 0:Auto","komut_id":"1795511687993-8609"}
+{"ts":1795511689256,"zaman":"2026-11-24 12:14:49","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511692488,"zaman":"2026-11-24 12:14:52","tur":"GIRDI","metin":"ana bataryayı şarj moduna al"}
+{"ts":1795511692507,"zaman":"2026-11-24 12:14:52","tur":"KOMUT","metin":"BATARYA_MOD 22546901:Recharge","komut_id":"1795511692503-6557"}
+{"ts":1795511693136,"zaman":"2026-11-24 12:14:53","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511696338,"zaman":"2026-11-24 12:14:56","tur":"GIRDI","metin":"yedek bataryayı otomatik moda al"}
+{"ts":1795511696358,"zaman":"2026-11-24 12:14:56","tur":"KOMUT","metin":"BATARYA_MOD 27702543:Auto","komut_id":"1795511696353-1255"}
+{"ts":1795511697300,"zaman":"2026-11-24 12:14:57","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511700831,"zaman":"2026-11-24 12:15:00","tur":"GIRDI","metin":"bataryayı deşarj moduna al"}
+{"ts":1795511700852,"zaman":"2026-11-24 12:15:00","tur":"KOMUT","metin":"BATARYA_MOD 0:Discharge","komut_id":"1795511700847-6889"}
+{"ts":1795511702111,"zaman":"2026-11-24 12:15:02","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511705341,"zaman":"2026-11-24 12:15:05","tur":"GIRDI","metin":"reaktörü kapat"}
+{"ts":1795511705358,"zaman":"2026-11-24 12:15:05","tur":"CEVAP","metin":"Riskli işlem (1 sırada): KAPAT Ana Reaktor Reactor acik. Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795511708504,"zaman":"2026-11-24 12:15:08","tur":"GIRDI","metin":"iptal"}
+{"ts":1795511708507,"zaman":"2026-11-24 12:15:08","tur":"CEVAP","metin":"Bekleyen riskli işlemler iptal edildi."}
+{"ts":1795511711955,"zaman":"2026-11-24 12:15:11","tur":"GIRDI","metin":"oksijen tankını kapat"}
+{"ts":1795511711974,"zaman":"2026-11-24 12:15:11","tur":"CEVAP","metin":"Riskli işlem (1 sırada): KAPAT Oksijen Tanki GasTank acik. Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795511715217,"zaman":"2026-11-24 12:15:15","tur":"GIRDI","metin":"iptal"}
+{"ts":1795511715220,"zaman":"2026-11-24 12:15:15","tur":"CEVAP","metin":"Bekleyen riskli işlemler iptal edildi."}
+{"ts":1795511718391,"zaman":"2026-11-24 12:15:18","tur":"GIRDI","metin":"bağlantıyı kes"}
+{"ts":1795511718405,"zaman":"2026-11-24 12:15:18","tur":"CEVAP","metin":"Riskli işlem (1 sırada): BAGLANTI_KES . Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795511721852,"zaman":"2026-11-24 12:15:21","tur":"GIRDI","metin":"evet"}
+{"ts":1795511721854,"zaman":"2026-11-24 12:15:21","tur":"ONAY","metin":"BAGLANTI_KES  (0)"}
+{"ts":1795511721860,"zaman":"2026-11-24 12:15:21","tur":"KOMUT","metin":"BAGLANTI_KES 0","komut_id":"1795511721855-9892"}
+{"ts":1795511722804,"zaman":"2026-11-24 12:15:22","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511726280,"zaman":"2026-11-24 12:15:26","tur":"GIRDI","metin":"rafineriyi kapat"}
+{"ts":1795511726295,"zaman":"2026-11-24 12:15:26","tur":"HATA","metin":"\u0027rafineriyi\u0027 adında bir blok bulamadım. Blok adını telemetrideki gibi yaz."}
+{"ts":1795511729471,"zaman":"2026-11-24 12:15:29","tur":"GIRDI","metin":"maç kaç kaç biter"}
+{"ts":1795511735952,"zaman":"2026-11-24 12:15:35","tur":"CEVAP","metin":"Bu bir oyun değil, bir mühendislik simülasyonudur. Mevcut verilerde maç bilgisi bulunmamaktadır."}
+{"ts":1795511739098,"zaman":"2026-11-24 12:15:39","tur":"GIRDI","metin":"bu gemi çok güzel görünüyor"}
+{"ts":1795511746303,"zaman":"2026-11-24 12:15:46","tur":"CEVAP","metin":"Görsel algınız için teşekkür ederim. Geminizin yapısı ve sistem entegrasyonu oldukça karmaşık görünüyor."}
+{"ts":1795511749464,"zaman":"2026-11-24 12:15:49","tur":"GIRDI","metin":"batarya şarj seviyesi kaç"}
+{"ts":1795511755470,"zaman":"2026-11-24 12:15:55","tur":"CEVAP","metin":"Batarya şarj seviyesi şu anda %88 düzeyindedir."}
+{"ts":1795511758719,"zaman":"2026-11-24 12:15:58","tur":"GIRDI","metin":"şarj moduna al"}
+{"ts":1795511758734,"zaman":"2026-11-24 12:15:58","tur":"CEVAP","metin":"\u0027bataryaları şarj moduna almak\u0027 mı demek istedin? (evet / hayır)"}
+{"ts":1795511761865,"zaman":"2026-11-24 12:16:01","tur":"GIRDI","metin":"evet"}
+{"ts":1795511761877,"zaman":"2026-11-24 12:16:01","tur":"ANI_NOT","metin":"Ogrenilen ifade: \u0027sarj moduna al\u0027 = BATARYA_SARJ"}
+{"ts":1795511761887,"zaman":"2026-11-24 12:16:01","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795511761882-148"}
+{"ts":1795511763144,"zaman":"2026-11-24 12:16:03","tur":"CEVAP","metin":"Tamamlandı."}
+{"ts":1795511766344,"zaman":"2026-11-24 12:16:06","tur":"GIRDI","metin":"şarj moduna al"}
+{"ts":1795511766366,"zaman":"2026-11-24 12:16:06","tur":"CEVAP","metin":"Bu işlemi henüz yapamıyorum."}
+{"ts":1795511769537,"zaman":"2026-11-24 12:16:09","tur":"GIRDI","metin":"neler öğrendin"}
+{"ts":1795511769553,"zaman":"2026-11-24 12:16:09","tur":"CEVAP","metin":"Öğrendiklerim (1): \u0027 sarj moduna al\u0027 = bataryaları şarj moduna almak"}
+{"ts":1795511773010,"zaman":"2026-11-24 12:16:13","tur":"GIRDI","metin":"şarj moduna al ifadesini unut"}
+{"ts":1795511773019,"zaman":"2026-11-24 12:16:13","tur":"CEVAP","metin":"1 ifadeyi unuttum."}
+{"ts":1795511776546,"zaman":"2026-11-24 12:16:16","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795512032966,"zaman":"2026-11-24 12:20:32","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795512042566,"zaman":"2026-11-24 12:20:42","tur":"GIRDI","metin":"selam"}
+{"ts":1795512042578,"zaman":"2026-11-24 12:20:42","tur":"CEVAP","metin":"Merhaba kaptan, dinliyorum."}
+{"ts":1795512045745,"zaman":"2026-11-24 12:20:45","tur":"GIRDI","metin":"teşekkürler"}
+{"ts":1795512045749,"zaman":"2026-11-24 12:20:45","tur":"CEVAP","metin":"Rica ederim."}
+{"ts":1795512048906,"zaman":"2026-11-24 12:20:48","tur":"GIRDI","metin":"sistem durumu"}
+{"ts":1795512048964,"zaman":"2026-11-24 12:20:48","tur":"CEVAP","metin":"Batarya %88, güç 142.5 MW, hidrojen %76, oksijen %94, hasarlı blok 3 (en kötü: Hangar Kapisi %35)."}
+{"ts":1795512052454,"zaman":"2026-11-24 12:20:52","tur":"GIRDI","metin":"hasarlı parçaları söyler misin"}
+{"ts":1795512052470,"zaman":"2026-11-24 12:20:52","tur":"CEVAP","metin":"Hasarlı 3 blok: Hangar Kapisi %35, Jiroskop 1 %12, On Isik %4."}
+{"ts":1795512055613,"zaman":"2026-11-24 12:20:55","tur":"GIRDI","metin":"ön ışığı kapat"}
+{"ts":1795512055687,"zaman":"2026-11-24 12:20:55","tur":"KOMUT","metin":"KAPAT 81148140","komut_id":"1795512055682-6050"}
+{"ts":1795512056336,"zaman":"2026-11-24 12:20:56","tur":"CEVAP","metin":"Doğrulandı: On Isik kapatıldı."}
+{"ts":1795512059622,"zaman":"2026-11-24 12:20:59","tur":"GIRDI","metin":"ön ışığı aç"}
+{"ts":1795512059644,"zaman":"2026-11-24 12:20:59","tur":"KOMUT","metin":"AC 81148140","komut_id":"1795512059640-4864"}
+{"ts":1795512060615,"zaman":"2026-11-24 12:21:00","tur":"CEVAP","metin":"Doğrulandı: On Isik açıldı."}
+{"ts":1795512063837,"zaman":"2026-11-24 12:21:03","tur":"GIRDI","metin":"jiroskopu kapat"}
+{"ts":1795512063859,"zaman":"2026-11-24 12:21:03","tur":"KOMUT","metin":"KAPAT 5152898","komut_id":"1795512063854-5622"}
+{"ts":1795512064806,"zaman":"2026-11-24 12:21:04","tur":"CEVAP","metin":"Doğrulandı: Jiroskop 1 kapatıldı."}
+{"ts":1795512068355,"zaman":"2026-11-24 12:21:08","tur":"GIRDI","metin":"jiroskopu aç"}
+{"ts":1795512068375,"zaman":"2026-11-24 12:21:08","tur":"KOMUT","metin":"AC 5152898","komut_id":"1795512068369-9037"}
+{"ts":1795512069321,"zaman":"2026-11-24 12:21:09","tur":"CEVAP","metin":"Doğrulandı: Jiroskop 1 açıldı."}
+{"ts":1795512072545,"zaman":"2026-11-24 12:21:12","tur":"GIRDI","metin":"hangar kapısını aç"}
+{"ts":1795512072564,"zaman":"2026-11-24 12:21:12","tur":"KOMUT","metin":"AC 64996460","komut_id":"1795512072560-3831"}
+{"ts":1795512073503,"zaman":"2026-11-24 12:21:13","tur":"CEVAP","metin":"Doğrulandı: Hangar Kapisi açıldı."}
+{"ts":1795512077082,"zaman":"2026-11-24 12:21:17","tur":"GIRDI","metin":"hangar kapısını kapat"}
+{"ts":1795512077102,"zaman":"2026-11-24 12:21:17","tur":"KOMUT","metin":"KAPAT 64996460","komut_id":"1795512077097-4927"}
+{"ts":1795512078051,"zaman":"2026-11-24 12:21:18","tur":"CEVAP","metin":"Doğrulandı: Hangar Kapisi kapatıldı."}
+{"ts":1795512081614,"zaman":"2026-11-24 12:21:21","tur":"GIRDI","metin":"tüm bataryaları şarj et"}
+{"ts":1795512081633,"zaman":"2026-11-24 12:21:21","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795512081628-9143"}
+{"ts":1795512082891,"zaman":"2026-11-24 12:21:22","tur":"CEVAP","metin":"Doğrulandı: 2 batarya şarj moduna alındı."}
+{"ts":1795512085784,"zaman":"2026-11-24 12:21:25","tur":"GIRDI","metin":"bataryaları deşarj et"}
+{"ts":1795512085801,"zaman":"2026-11-24 12:21:25","tur":"KOMUT","metin":"BATARYA_MOD 0:Discharge","komut_id":"1795512085796-9847"}
+{"ts":1795512086773,"zaman":"2026-11-24 12:21:26","tur":"CEVAP","metin":"Doğrulandı: 2 batarya deşarj moduna alındı."}
+{"ts":1795512089682,"zaman":"2026-11-24 12:21:29","tur":"GIRDI","metin":"bataryaları otomatik moda al"}
+{"ts":1795512089697,"zaman":"2026-11-24 12:21:29","tur":"KOMUT","metin":"BATARYA_MOD 0:Auto","komut_id":"1795512089693-5674"}
+{"ts":1795512090644,"zaman":"2026-11-24 12:21:30","tur":"CEVAP","metin":"Doğrulandı: 2 batarya otomatik moduna alındı."}
+{"ts":1795512093542,"zaman":"2026-11-24 12:21:33","tur":"GIRDI","metin":"ana bataryayı şarj moduna al"}
+{"ts":1795512093566,"zaman":"2026-11-24 12:21:33","tur":"KOMUT","metin":"BATARYA_MOD 22546901:Recharge","komut_id":"1795512093562-8426"}
+{"ts":1795512094520,"zaman":"2026-11-24 12:21:34","tur":"CEVAP","metin":"Doğrulandı: 1 batarya şarj moduna alındı."}
+{"ts":1795512097432,"zaman":"2026-11-24 12:21:37","tur":"GIRDI","metin":"yedek bataryayı otomatik moda al"}
+{"ts":1795512097452,"zaman":"2026-11-24 12:21:37","tur":"KOMUT","metin":"BATARYA_MOD 27702543:Auto","komut_id":"1795512097447-7129"}
+{"ts":1795512098104,"zaman":"2026-11-24 12:21:38","tur":"CEVAP","metin":"Doğrulandı: 1 batarya otomatik moduna alındı."}
+{"ts":1795512101378,"zaman":"2026-11-24 12:21:41","tur":"GIRDI","metin":"bataryayı deşarj moduna al"}
+{"ts":1795512101399,"zaman":"2026-11-24 12:21:41","tur":"KOMUT","metin":"BATARYA_MOD 0:Discharge","komut_id":"1795512101393-6487"}
+{"ts":1795512102342,"zaman":"2026-11-24 12:21:42","tur":"CEVAP","metin":"Doğrulandı: 2 batarya deşarj moduna alındı."}
+{"ts":1795512105865,"zaman":"2026-11-24 12:21:45","tur":"GIRDI","metin":"reaktörü kapat"}
+{"ts":1795512105893,"zaman":"2026-11-24 12:21:45","tur":"CEVAP","metin":"Riskli işlem (1 sırada): KAPAT Ana Reaktor Reactor acik. Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795512109039,"zaman":"2026-11-24 12:21:49","tur":"GIRDI","metin":"iptal"}
+{"ts":1795512109046,"zaman":"2026-11-24 12:21:49","tur":"CEVAP","metin":"Bekleyen riskli işlemler iptal edildi."}
+{"ts":1795512112561,"zaman":"2026-11-24 12:21:52","tur":"GIRDI","metin":"oksijen tankını kapat"}
+{"ts":1795512112580,"zaman":"2026-11-24 12:21:52","tur":"CEVAP","metin":"Riskli işlem (1 sırada): KAPAT Oksijen Tanki GasTank acik. Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795512115739,"zaman":"2026-11-24 12:21:55","tur":"GIRDI","metin":"iptal"}
+{"ts":1795512115744,"zaman":"2026-11-24 12:21:55","tur":"CEVAP","metin":"Bekleyen riskli işlemler iptal edildi."}
+{"ts":1795512119209,"zaman":"2026-11-24 12:21:59","tur":"GIRDI","metin":"bağlantıyı kes"}
+{"ts":1795512119226,"zaman":"2026-11-24 12:21:59","tur":"CEVAP","metin":"Riskli işlem (1 sırada): BAGLANTI_KES . Onaylıyorsan \u0027evet\u0027 yaz (30 sn)."}
+{"ts":1795512122392,"zaman":"2026-11-24 12:22:02","tur":"GIRDI","metin":"evet"}
+{"ts":1795512122398,"zaman":"2026-11-24 12:22:02","tur":"ONAY","metin":"BAGLANTI_KES  (0)"}
+{"ts":1795512122406,"zaman":"2026-11-24 12:22:02","tur":"KOMUT","metin":"BAGLANTI_KES 0","komut_id":"1795512122401-9682"}
+{"ts":1795512123685,"zaman":"2026-11-24 12:22:03","tur":"CEVAP","metin":"Komutu gönderdim, eklenti hata bildirmedi. Etkisini telemetriden doğrulayamıyorum."}
+{"ts":1795512126848,"zaman":"2026-11-24 12:22:06","tur":"GIRDI","metin":"rafineriyi kapat"}
+{"ts":1795512126867,"zaman":"2026-11-24 12:22:06","tur":"HATA","metin":"\u0027rafineriyi\u0027 adında bir blok bulamadım. Blok adını telemetrideki gibi yaz."}
+{"ts":1795512130110,"zaman":"2026-11-24 12:22:10","tur":"GIRDI","metin":"maç kaç kaç biter"}
+{"ts":1795512146194,"zaman":"2026-11-24 12:22:26","tur":"CEVAP","metin":"Bu bir oyun değil, bir mühendislik simülasyonudur. Mevcut verilerde maç bilgisi bulunmamaktadır."}
+{"ts":1795512149354,"zaman":"2026-11-24 12:22:29","tur":"GIRDI","metin":"bu gemi çok güzel görünüyor"}
+{"ts":1795512155683,"zaman":"2026-11-24 12:22:35","tur":"CEVAP","metin":"Geminin görünümü hakkında bir değerlendirme yapamam, sadece mevcut teknik verileri analiz edebilirim."}
+{"ts":1795512159136,"zaman":"2026-11-24 12:22:39","tur":"GIRDI","metin":"batarya şarj seviyesi kaç"}
+{"ts":1795512164620,"zaman":"2026-11-24 12:22:44","tur":"CEVAP","metin":"Ana batarya şu anda %88 şarj seviyesindedir."}
+{"ts":1795512168070,"zaman":"2026-11-24 12:22:48","tur":"GIRDI","metin":"şarj moduna al"}
+{"ts":1795512168090,"zaman":"2026-11-24 12:22:48","tur":"CEVAP","metin":"\u0027bataryaları şarj moduna almak\u0027 mı demek istedin? (evet / hayır)"}
+{"ts":1795512171533,"zaman":"2026-11-24 12:22:51","tur":"GIRDI","metin":"evet"}
+{"ts":1795512171548,"zaman":"2026-11-24 12:22:51","tur":"ANI_NOT","metin":"Ogrenilen ifade: \u0027sarj moduna al\u0027 = BATARYA_SARJ"}
+{"ts":1795512171563,"zaman":"2026-11-24 12:22:51","tur":"KOMUT","metin":"BATARYA_MOD 0:Recharge","komut_id":"1795512171558-61"}
+{"ts":1795512172834,"zaman":"2026-11-24 12:22:52","tur":"CEVAP","metin":"Doğrulandı: 2 batarya şarj moduna alındı."}
+{"ts":1795512176043,"zaman":"2026-11-24 12:22:56","tur":"GIRDI","metin":"şarj moduna al"}
+{"ts":1795512176068,"zaman":"2026-11-24 12:22:56","tur":"CEVAP","metin":"Bu işlemi henüz yapamıyorum."}
+{"ts":1795512179257,"zaman":"2026-11-24 12:22:59","tur":"GIRDI","metin":"neler öğrendin"}
+{"ts":1795512179269,"zaman":"2026-11-24 12:22:59","tur":"CEVAP","metin":"Öğrendiklerim (1): \u0027 sarj moduna al\u0027 = bataryaları şarj moduna almak"}
+{"ts":1795512182729,"zaman":"2026-11-24 12:23:02","tur":"GIRDI","metin":"şarj moduna al ifadesini unut"}
+{"ts":1795512182742,"zaman":"2026-11-24 12:23:02","tur":"CEVAP","metin":"1 ifadeyi unuttum."}
+{"ts":1795512334192,"zaman":"2026-11-24 12:25:34","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795512634824,"zaman":"2026-11-24 12:30:34","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795512935151,"zaman":"2026-11-24 12:35:35","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795513235996,"zaman":"2026-11-24 12:40:35","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795513536751,"zaman":"2026-11-24 12:45:36","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795513837494,"zaman":"2026-11-24 12:50:37","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795514137928,"zaman":"2026-11-24 12:55:37","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}
+{"ts":1795514438122,"zaman":"2026-11-24 13:00:38","tur":"HATA","metin":"[UYARI] Hasar tespit edildi: Hangar Kapisi %35."}

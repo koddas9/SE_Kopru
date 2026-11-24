@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<SourcesConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ShowWarning>false</ShowWarning>
+  <MaxSourceAge>2</MaxSourceAge>
+  <LocalHubSources />
+  <RemoteHubSources>
+    <RemoteHub>
+      <Name>PluginHub</Name>
+      <Repo>StarCpt/PluginHub</Repo>
+      <Branch>main</Branch>
+      <LastCheck>2026-11-24T00:48:14.3710731Z</LastCheck>
+      <Hash>b51d8c9102cf27a9bc43bdb758bb278d9e646d32</Hash>
+      <Enabled>true</Enabled>
+      <Trusted>true</Trusted>
+    </RemoteHub>
+  </RemoteHubSources>
+  <RemotePluginSources />
+  <LocalPluginSources>
+    <LocalPlugin>
+      <Name>AtlasPlugin</Name>
+      <Folder>C:\SE_Kopru\AtlasPlugin</Folder>
+      <File>Atlas.xml</File>
+      <Enabled>true</Enabled>
+    </LocalPlugin>
+  </LocalPluginSources>
+  <ModSources />
+</SourcesConfig>

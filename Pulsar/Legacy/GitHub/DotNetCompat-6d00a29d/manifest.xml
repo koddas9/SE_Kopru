@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CacheManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Fingerprint>b42882e88b805b6b2c4f57e30b6d66bad2d217608513a979280732a58af30d36</Fingerprint>
+  <Runtime>.NET 10.0.7</Runtime>
+  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  <PulsarVersion>2.4.3.0</PulsarVersion>
+  <GameVersion>1.211.18</GameVersion>
+  <Assets />
+</CacheManifest>
